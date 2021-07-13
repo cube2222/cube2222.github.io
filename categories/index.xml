@@ -28,23 +28,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Apache Spark</title>
-      <link>https://cube2222.github.io/categories/apache-spark/</link>
-      <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
-      
-      <guid>https://cube2222.github.io/categories/apache-spark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scala</title>
-      <link>https://cube2222.github.io/categories/scala/</link>
-      <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
-      
-      <guid>https://cube2222.github.io/categories/scala/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
