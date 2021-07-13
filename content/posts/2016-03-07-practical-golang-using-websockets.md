@@ -48,7 +48,8 @@ Let&#8217;s name it creatively, like _index.html_
 
 Now the contents:
 
-<pre><code class="html">&lt;!DOCTYPE HTML&gt;
+```html
+&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
 &lt;head&gt;
 
@@ -79,7 +80,7 @@ Now the contents:
 &lt;textarea id="textarea1"&gt;MyTextArea&lt;/textarea&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+```
 
 I&#8217;ll just go over it quickly as the main subject here is the go code.
 
@@ -87,7 +88,8 @@ We create a button and a textarea, after the user clicks the button he connects 
 
 We will also need our, so creatively named, main.go file, with the basic structure and file server written:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "github.com/gorilla/websocket"
@@ -115,7 +117,7 @@ func main() {
     })
     http.ListenAndServe(":3000", nil)
 }
-</code></pre>
+```
 
 Awesome, now let&#8217;s create the websocket part.
 
@@ -129,23 +131,26 @@ Our server will create a Person object containing a name and age in seconds. Eve
 
 First we&#8217;ll need to define our Person type:
 
-<pre><code class="go">type Person struct {
+```go
+type Person struct {
     Name string
     Age  int
 }
-</code></pre>
+```
 
 We&#8217;ll also need to create an upgraded variable, in which we define our read and write buffer sizes.
 
-<pre><code class="go">var upgrader = websocket.Upgrader{
+```go
+var upgrader = websocket.Upgrader{
     ReadBufferSize: 1024,
     WriteBufferSize: 1024,
 }
-</code></pre>
+```
 
 Now, how do we create the websocket connection? Pretty easily in fact:
 
-<pre><code class="go">http.HandleFunc("/websocket", func(w http.ResponseWriter, r *http.Request) {
+```go
+http.HandleFunc("/websocket", func(w http.ResponseWriter, r *http.Request) {
   conn, err := upgrader.Upgrade(w, r, nil)
   if err != nil {
     fmt.Println(err)
@@ -153,21 +158,23 @@ Now, how do we create the websocket connection? Pretty easily in fact:
   }
   fmt.Println("Client subscribed")
 }
-</code></pre>
+```
 
 That&#8217;s all we need to have a client. Now let&#8217;s create Bill, our person, right after we get the client subscribed:
 
-<pre><code class="go">fmt.Println("Client subscribed")
+```go
+fmt.Println("Client subscribed")
 
 myPerson := Person{
   Name: "Bill",
   Age:  0,
 }
-</code></pre>
+```
 
 Now we need the main websocket handling code, which we will wrap into an endless for loop, which we get out of only if the channel closes or Bill gets 40 seconds old.
 
-<pre><code class="go">for {
+```go
+for {
   time.Sleep(2 * time.Second)
   if myPerson.Age &lt; 40 {
     myJson, err := json.Marshal(myPerson)
@@ -187,7 +194,7 @@ Now we need the main websocket handling code, which we will wrap into an endless
   }
 }
 fmt.Println("Client unsubscribed")
-</code></pre>
+```
 
 We send the messages using conn.WriteMessage in which we specify the message type, can be binary or text, and the content. If Bill is 40 years old or more, we break out of the loop. So far so good, but what if we want bidirectional communication?
 
@@ -199,7 +206,8 @@ As before, we will need a **_html_** folder for our html file with the creative 
 
 And here&#8217;s the code:
 
-<pre><code class="html">&lt;!DOCTYPE HTML&gt;
+```html
+&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
 &lt;head&gt;
 
@@ -241,13 +249,14 @@ And here&#8217;s the code:
 &lt;textarea id="textarea1"&gt;MyTextArea&lt;/textarea&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
+```
 
 The only differences are, that when we open the connection, we send a &#8220;ping&#8221; message and notify our user about it. Now, whenever we get back a &#8220;pong&#8221; message, we append it to our textarea and after 2 seconds we answer with a &#8220;ping&#8221; message again.
 
 We will again need the basic go file structure with the upgrader defined already, and the connection created:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "github.com/gorilla/websocket"
@@ -284,13 +293,14 @@ func main() {
     })
     http.ListenAndServe(":3000", nil)
 }
-</code></pre>
+```
 
 ### Writing the websocket code
 
 Ok, so now, whenever we get a &#8220;ping&#8221; message, we wait 2 seconds and answer with a &#8220;pong&#8221; message. If we get anything else, we just close the connection.
 
-<pre><code class="go">conn, err := upgrader.Upgrade(w, r, nil)
+```go
+conn, err := upgrader.Upgrade(w, r, nil)
 if err != nil {
   fmt.Println(err)
   return
@@ -315,7 +325,7 @@ for {
     return
   }
 }
-</code></pre>
+```
 
 Using the ReadMessage function on our connection we get the type, content, and maybe error. We check the message and answer.
 

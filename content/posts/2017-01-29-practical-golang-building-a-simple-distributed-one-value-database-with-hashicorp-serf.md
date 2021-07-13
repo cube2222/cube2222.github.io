@@ -61,7 +61,8 @@ Now let&#8217;s get to the implementation&#8230;
 
 First, we&#8217;ll of course have to put in all our imports:
 
-<pre><code class="go">import (
+```go
+import (
     "context"
     "fmt"
     "log"
@@ -77,13 +78,14 @@ First, we&#8217;ll of course have to put in all our imports:
     "github.com/pkg/errors"
     "golang.org/x/sync/errgroup"
 )
-</code></pre>
+```
 
 Following this, it&#8217;s time to write a simple thread-safe, one-value store.  
 An important thing is, the database will also hold the _generation_ of the variable. This way, when one instance gets notified about a new value, it can check if the incoming notification actually has a higher generation count. Only then, will it change the current local value.  
 So our database structure will hold exactly this: the number, generation and a mutex.
 
-<pre><code class="go">type oneAndOnlyNumber struct {
+```go
+type oneAndOnlyNumber struct {
     num        int
     generation int
     numMutex   sync.RWMutex
@@ -94,12 +96,13 @@ func InitTheNumber(val int) *oneAndOnlyNumber {
         num: val,
     }
 }
-</code></pre>
+```
 
 We&#8217;ll also need a way to set and get the value.  
 Setting the value will also advance the generation count, so when we notify the rest of this cluster, we will overwrite their values and generation counts.
 
-<pre><code class="go">func (n *oneAndOnlyNumber) setValue(newVal int) {
+```go
+func (n *oneAndOnlyNumber) setValue(newVal int) {
     n.numMutex.Lock()
     defer n.numMutex.Unlock()
     n.num = newVal
@@ -111,12 +114,13 @@ func (n *oneAndOnlyNumber) getValue() (int, int) {
     defer n.numMutex.RUnlock()
     return n.num, n.generation
 }
-</code></pre>
+```
 
 Finally, we will need a way to notify the database of changes that happened elsewhere, if they have a higher generation count.  
 For that we&#8217;ll have a small notify method, which will return true, if anything has been changed:
 
-<pre><code class="go">func (n *oneAndOnlyNumber) notifyValue(curVal int, curGeneration int) bool {
+```go
+func (n *oneAndOnlyNumber) notifyValue(curVal int, curGeneration int) bool {
     if curGeneration &gt; n.generation {
         n.numMutex.Lock()
         defer n.numMutex.Unlock()
@@ -126,16 +130,18 @@ For that we&#8217;ll have a small notify method, which will return true, if anyt
     }
     return false
 }
-</code></pre>
+```
 
 We&#8217;ll also create a const describing how many nodes we will notify about the new value every time.
 
-<pre><code class="go">const MembersToNotify = 2
-</code></pre>
+```go
+const MembersToNotify = 2
+```
 
 Now let&#8217;s get to the actual functioning of the application. First we&#8217;ll have to start an instance of serf, using two variables. The address of our instance in the network and the -optional- address of the cluster to join.
 
-<pre><code class="go">func main() {
+```go
+func main() {
     cluster, err := setupCluster(
         os.Getenv("ADVERTISE_ADDR"),
         os.Getenv("CLUSTER_ADDR"))
@@ -143,11 +149,12 @@ Now let&#8217;s get to the actual functioning of the application. First we&#8217
         log.Fatal(err)
     }
     defer cluster.Leave()
-</code></pre>
+```
 
 How does the setupCluster function work, you may ask? Here it is:
 
-<pre><code class="go">func setupCluster(advertiseAddr string, clusterAddr string) (*serf.Serf, error) {
+```go
+func setupCluster(advertiseAddr string, clusterAddr string) (*serf.Serf, error) {
     conf := serf.DefaultConfig()
     conf.Init()
     conf.MemberlistConfig.AdvertiseAddr = advertiseAddr
@@ -164,7 +171,7 @@ How does the setupCluster function work, you may ask? Here it is:
 
     return cluster, nil
 }
-</code></pre>
+```
 
 As we can see, we are creating the cluster, only changing the advertise address.
 
@@ -175,28 +182,32 @@ or the cluster doesn&#8217;t exist (omitting network failures), which means we c
 To continue with, we initialize the database and the REST API:  
 (I&#8217;ve really chosen the number at random&#8230; really!)
 
-<pre><code class="go">    theOneAndOnlyNumber := InitTheNumber(42)
+```go
+    theOneAndOnlyNumber := InitTheNumber(42)
     launchHTTPAPI(theOneAndOnlyNumber)
-</code></pre>
+```
 
 And this is what the API creation looks like:
 
-<pre><code class="go">func launchHTTPAPI(db *oneAndOnlyNumber) {
+```go
+func launchHTTPAPI(db *oneAndOnlyNumber) {
     go func() {
         m := mux.NewRouter()
-</code></pre>
+```
 
 We first asynchronously start our server. Then we declare our getter:
 
-<pre><code class="go">        m.HandleFunc("/get", func(w http.ResponseWriter, r *http.Request) {
+```go
+        m.HandleFunc("/get", func(w http.ResponseWriter, r *http.Request) {
             val, _ := db.getValue()
             fmt.Fprintf(w, "%v", val)
         })
-</code></pre>
+```
 
 our setter:
 
-<pre><code class="go">m.HandleFunc("/set/{newVal}", func(w http.ResponseWriter, r *http.Request) {
+```go
+m.HandleFunc("/set/{newVal}", func(w http.ResponseWriter, r *http.Request) {
             vars := mux.Vars(r)
             newVal, err := strconv.Atoi(vars["newVal"])
             if err != nil {
@@ -209,11 +220,12 @@ our setter:
 
             fmt.Fprintf(w, "%v", newVal)
         })
-</code></pre>
+```
 
 and finally the API endpoint which allows other _nodes_ to notify this instance of changes:
 
-<pre><code class="go">        m.HandleFunc("/notify/{curVal}/{curGeneration}", func(w http.ResponseWriter, r *http.Request) {
+```go
+        m.HandleFunc("/notify/{curVal}/{curGeneration}", func(w http.ResponseWriter, r *http.Request) {
             vars := mux.Vars(r)
             curVal, err := strconv.Atoi(vars["curVal"])
             if err != nil {
@@ -240,7 +252,7 @@ and finally the API endpoint which allows other _nodes_ to notify this instance 
         log.Fatal(http.ListenAndServe(":8080", m))
     }()
 }
-</code></pre>
+```
 
 It&#8217;s also here where we start our server and print some debug info when getting notified of new values by other _members_ of our cluster.
 
@@ -254,15 +266,17 @@ We&#8217;ll also put a value into it, the name of our host, just for the debug l
 It&#8217;s a good thing to put into the context, as it&#8217;s not something crucial for the functioning of our program,  
 and the context will get passed further anyways.
 
-<pre><code class="go">    ctx := context.Background()
+```go
+    ctx := context.Background()
     if name, err := os.Hostname(); err == nil {
         ctx = context.WithValue(ctx, "name", name)
     }
-</code></pre>
+```
 
 Having done this, we can set up our main loop, including the intervals at which we&#8217;ll be sending state updates to peers and printing debug info.
 
-<pre><code class="go">    debugDataPrinterTicker := time.Tick(time.Second * 5)
+```go
+    debugDataPrinterTicker := time.Tick(time.Second * 5)
     numberBroadcastTicker := time.Tick(time.Second * 2)
     for {
         select {
@@ -275,23 +289,25 @@ Having done this, we can set up our main loop, including the intervals at which 
             log.Printf("State: Val: %v Gen: %v\n", curVal, curGen)
         }
     }
-</code></pre>
+```
 
 Ok, that seems to be it.
 
 Just kidding. Time to finish up our service with the notification code.  
 We&#8217;ll now get a list of **other** members in the cluster, set a timeout, and asynchronously notify a part of those others.
 
-<pre><code class="go">        case &lt;-numberBroadcastTicker:
+```go
+        case &lt;-numberBroadcastTicker:
             members := getOtherMembers(cluster)
 
             ctx, _ := context.WithTimeout(ctx, time.Second*2)
             go notifyOthers(ctx, members, theOneAndOnlyNumber)
-</code></pre>
+```
 
 Now, let&#8217;s look at the _getOtherMembers_ function. It&#8217;s actually just a function scanning through the memberlist, deleting ourselves and other nodes that aren&#8217;t alive at the moment.
 
-<pre><code class="go">func getOtherMembers(cluster *serf.Serf) []serf.Member {
+```go
+func getOtherMembers(cluster *serf.Serf) []serf.Member {
     members := cluster.Members()
     for i := 0; i &lt; len(members); {
         if members[i].Name == cluster.LocalMember().Name || members[i].Status != serf.StatusAlive {
@@ -306,13 +322,14 @@ Now, let&#8217;s look at the _getOtherMembers_ function. It&#8217;s actually jus
     }
     return members
 }
-</code></pre>
+```
 
 There&#8217;s not much to it I suppose. It&#8217;s using slicing to cut out or cut off members not conforming to our predicates.
 
 Finally the function we use to notify others:
 
-<pre><code class="go">func notifyOthers(ctx context.Context, otherMembers []serf.Member, db *oneAndOnlyNumber) {
+```go
+func notifyOthers(ctx context.Context, otherMembers []serf.Member, db *oneAndOnlyNumber) {
     g, ctx := errgroup.WithContext(ctx)
 
     if len(otherMembers) &lt;= MembersToNotify {
@@ -339,14 +356,15 @@ Finally the function we use to notify others:
         log.Printf("Error when notifying other members: %v", err)
     }
 }
-</code></pre>
+```
 
 If there are only two members then it sends the notifications to them, otherwise it chooses a random index in the members array and chooses subsequent members from there on.  
 How does the errgroup work? It&#8217;s a nifty library Brian Ketelsen wrote a [great article][7] about. It&#8217;s basically a wait group which also gathers errors and aborts when one happens.
 
 Now to finish our code, the _notifyMember_ function:
 
-<pre><code class="go">func notifyMember(ctx context.Context, addr string, db *oneAndOnlyNumber) error {
+```go
+func notifyMember(ctx context.Context, addr string, db *oneAndOnlyNumber) error {
     val, gen := db.getValue()
     req, err := http.NewRequest("POST", fmt.Sprintf("http://%v:8080/notify/%v/%v?notifier=%v", addr, val, gen, ctx.Value("name")), nil)
     if err != nil {
@@ -361,7 +379,7 @@ Now to finish our code, the _notifyMember_ function:
     return nil
 }
 
-</code></pre>
+```
 
 We craft a path with the formula _{nodeAddress}:8080/notify/{curVal}/{curGen}?notifier={selfHostName}_  
 We add the context to the request, so we get the timeout functionality, and finally make the request.
@@ -372,11 +390,12 @@ And that&#8217;s actually all there is to the code.
 
 We&#8217;ll test our database using docker. The necessary dockerfile to put into your project directory looks like this:
 
-<pre><code class="go">FROM alpine
+```go
+FROM alpine
 WORKDIR /app
 COPY distApp /app/
 ENTRYPOINT ["./distApp"]
-</code></pre>
+```
 
 Now, first build your application (if you&#8217;re not on linux, you have to set the env variables GOOS=linux and GOARCH=amd64)  
 Later build the docker image:

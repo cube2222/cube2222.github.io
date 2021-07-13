@@ -53,7 +53,8 @@ In this tutorial we&#8217;ll write code in one file. In production you would wan
 
 Let&#8217;s start with a basic go web app structure:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
   "fmt"
@@ -63,15 +64,16 @@ import (
 func main() {
   fmt.Println(http.ListenAndServe(":3000", nil))
 }
-</code></pre>
+```
 
 Now we&#8217;ll set up a simple site:
 
-<pre><code class="go">const htmlIndex = `&lt;html&gt;&lt;body&gt;
+```go
+const htmlIndex = `&lt;html&gt;&lt;body&gt;
 &lt;a href="/GoogleLogin"&gt;Log in with Google&lt;/a&gt;
 &lt;/body&gt;&lt;/html&gt;
 `
-</code></pre>
+```
 
 We will also need:  
 * The home page, where we will click the login button from.  
@@ -80,7 +82,8 @@ We will also need:
 
 So let&#8217;s set up the base structure for that:
 
-<pre><code class="go">func main() {
+```go
+func main() {
     http.HandleFunc("/", handleMain)
     http.HandleFunc("/GoogleLogin", handleGoogleLogin)
     http.HandleFunc("/GoogleCallback", handleGoogleCallback)
@@ -95,7 +98,7 @@ func handleGoogleLogin(w http.ResponseWriter, r *http.Request) {
 
 func handleGoogleCallback(w http.ResponseWriter, r *http.Request) {
 }
-</code></pre>
+```
 
 ## Dependencies
 
@@ -121,14 +124,16 @@ That&#8217;s the flow of OAuth2:
 Before starting remember to import the _golang.org/x/oauth2_ package.  
 To begin with, let&#8217;s write the home page handler:
 
-<pre><code class="go">func handleMain(w http.ResponseWriter, r *http.Request) {
+```go
+func handleMain(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, htmlIndex)
 }
-</code></pre>
+```
 
 Next we need to create a variable we&#8217;ll use for storing data and communicating with Google and the **_random state variable_**:
 
-<pre><code class="go">var (
+```go
+var (
     googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
         ClientID:     os.Getenv("googlekey"),
@@ -140,7 +145,7 @@ Next we need to create a variable we&#8217;ll use for storing data and communica
 // Some random string, random for each request
     oauthStateString = "random"
 )
-</code></pre>
+```
 
 The _Scopes_ variable defines the amount of access we get over the users account.
 
@@ -150,11 +155,12 @@ Note that the _oauthStateString_ should be randomly generated on a per user basi
 
 This is the code that creates a login link and redirects the user to it:
 
-<pre><code class="go">func handleGoogleLogin(w http.ResponseWriter, r *http.Request) {
+```go
+func handleGoogleLogin(w http.ResponseWriter, r *http.Request) {
     url := googleOauthConfig.AuthCodeURL(oauthStateString)
     http.Redirect(w, r, url, http.StatusTemporaryRedirect)
 }
-</code></pre>
+```
 
 We use the _googleOauthConfig_ variable to create a login link using the random state variable, and later redirect the user to it.
 
@@ -162,7 +168,8 @@ We use the _googleOauthConfig_ variable to create a login link using the random 
 
 Now we need the logic that get&#8217;s the code after the user logs in and checks if the state variable matches:
 
-<pre><code class="go">func handleGoogleCallback(w http.ResponseWriter, r *http.Request) {
+```go
+func handleGoogleCallback(w http.ResponseWriter, r *http.Request) {
     state := r.FormValue("state")
     if state != oauthStateString {
         fmt.Printf("invalid oauth state, expected '%s', got '%s'\n", oauthStateString, state)
@@ -184,7 +191,7 @@ Now we need the logic that get&#8217;s the code after the user logs in and check
     contents, err := ioutil.ReadAll(response.Body)
     fmt.Fprintf(w, "Content: %s\n", contents)
 }
-</code></pre>
+```
 
 First we check the state variable, and notify the user if it doesn&#8217;t match. If it matches we get the code and communicate with google using the _Exchange_ function. We have no context so we use _NoContext_.
 

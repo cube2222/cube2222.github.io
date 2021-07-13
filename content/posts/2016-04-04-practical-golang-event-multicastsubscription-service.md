@@ -32,7 +32,8 @@ Let&#8217;s start with a basic structure. We&#8217;ll define the **API** and set
 1. The **_subscriber list_** with their register/lastKeepAlive dates.  
 2. The **_mutex_** controlling access to our subscriber list.
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -77,7 +78,7 @@ func handleSubscriberListing(w http.ResponseWriter, r *http.Request) {
 
 func killZombieServices() {
 }
-</code></pre>
+```
 
 We initialize our subscriber list and mutex, and also launch, on another thread, a function that will regularly delete _ghost subscribers_.
 
@@ -86,7 +87,8 @@ We can now start getting into each functions implementation.
 
 We can begin with the registerAndKeepAlive which does both things. Registering a new subscriber, or updating an existing one. This works because in both cases we just update the map entry with the subscriber address to contain the current time.
 
-<pre><code class="go">func registerAndKeepAlive(w http.ResponseWriter, r *http.Request) {
+```go
+func registerAndKeepAlive(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
         //Subscriber registration
     } else {
@@ -94,11 +96,12 @@ We can begin with the registerAndKeepAlive which does both things. Registering a
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 The register function should be called with a **POST** request. That&#8217;s why the first thing we do, is checking if the method is right, otherwise we answer with an error. If it&#8217;s ok, then we register the client:
 
-<pre><code class="go">if r.Method == http.MethodPost {
+```go
+if r.Method == http.MethodPost {
     values, err := url.ParseQuery(r.URL.RawQuery)
     if err != nil {
         w.WriteHeader(http.StatusBadRequest)
@@ -112,11 +115,12 @@ The register function should be called with a **POST** request. That&#8217;s why
     }
 
 }
-</code></pre>
+```
 
 We check if the _URL arguments_ are correct, and finally register the subscriber:
 
-<pre><code class="go">if len(values.Get("address")) == 0 {
+```go
+if len(values.Get("address")) == 0 {
     w.WriteHeader(http.StatusBadRequest)
     fmt.Fprint(w, "Error:","Wrong input address.")
     return
@@ -127,13 +131,14 @@ registeredServiceStorage[values.Get("address")] = time.Now()
 serviceStorageMutex.Unlock()
 
 fmt.Fprint(w, "success")
-</code></pre>
+```
 
 Awesome!
 
 Let&#8217;s now implement the function which shall delete the entry when the subscriber wants to deregister.
 
-<pre><code class="go">func deregister(w http.ResponseWriter, r *http.Request) {
+```go
+func deregister(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodDelete {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -154,11 +159,12 @@ Let&#8217;s now implement the function which shall delete the entry when the sub
         fmt.Fprint(w, "Error: Only DELETE accepted")
     }
 }
-</code></pre>
+```
 
 Again do we check if the _request method_ is good and if the _address_ argument is correct. If that&#8217;s the case, then we can remove this client from our subscriber list.
 
-<pre><code class="go">if len(values.Get("address")) == 0 {
+```go
+if len(values.Get("address")) == 0 {
     w.WriteHeader(http.StatusBadRequest)
     fmt.Fprint(w, "Error:","Wrong input address.")
     return
@@ -169,11 +175,12 @@ delete(registeredServiceStorage, values.Get("address"))
 serviceStorageMutex.Unlock()
 
 fmt.Fprint(w, "success")
-</code></pre>
+```
 
 Now it&#8217;s time for the main functionality. Namely handling messages and sending them to all subscribers:
 
-<pre><code class="go">func handleMessage(w http.ResponseWriter, r *http.Request) {
+```go
+func handleMessage(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
 
     } else {
@@ -181,13 +188,14 @@ Now it&#8217;s time for the main functionality. Namely handling messages and sen
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 As usual, we check if the request method is correct.
 
 Then, we read the data we got, so we can pass it to multiple concurrent sending functions.
 
-<pre><code class="go">if r.Method == http.MethodPost {
+```go
+if r.Method == http.MethodPost {
 
     data, err := ioutil.ReadAll(r.Body)
     if err != nil {
@@ -195,13 +203,14 @@ Then, we read the data we got, so we can pass it to multiple concurrent sending 
     }
     //...
 }
-</code></pre>
+```
 
 We then lock the mutex **_for read_**. That&#8217;s important so that we can handle huge amounts of messages efficiently. Basically, it means that we allow others to read while we are reading, because concurrent reading is supported by maps. We can use this unless there&#8217;s no one modifying the map.
 
 While we lock the map for read, we check the list of subscribers we have to send the message to, and start concurrent functions that will do the sending. As we don&#8217;t want to lock the map for the entire sending time, we only need the addresses.
 
-<pre><code class="go">    data, err := ioutil.ReadAll(r.Body)
+```go
+    data, err := ioutil.ReadAll(r.Body)
     if err != nil {
         fmt.Println(err)
     }
@@ -213,25 +222,27 @@ While we lock the map for read, we check the list of subscribers we have to send
     serviceStorageMutex.RUnlock()
 
     fmt.Fprint(w, "success")
-</code></pre>
+```
 
 Which means we now have to implement the _sendMessageToSubscriber(&#8230;)_ function.
 
 It&#8217;s pretty simple, we just make a post, and print an error if it happened.
 
-<pre><code class="go">func sendMessageToSubscriber(data []byte, address string) {
+```go
+func sendMessageToSubscriber(data []byte, address string) {
     _, err := http.Post("http://" + address + "/event", "", bytes.NewBuffer(data))
     if err != nil {
         fmt.Println(err)
     }
 }
-</code></pre>
+```
 
 It&#8217;s important to notice, that we have to create a _buffer_ from the data, as the _http.Post(&#8230;)_ function needs a reader type data structure.
 
 We&#8217;ll also implement the function which makes it possible to list all the subscribers. Mainly for debugging purposes. There&#8217;s nothing new in it. We check if the method is alright, lock the mutex for read, and finally print the map with a correct format of the register time.
 
-<pre><code class="go">func handleSubscriberListing(w http.ResponseWriter, r *http.Request) {
+```go
+func handleSubscriberListing(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodGet {
         serviceStorageMutex.RLock()
 
@@ -245,23 +256,25 @@ We&#8217;ll also implement the function which makes it possible to list all the 
         fmt.Fprint(w, "Error: Only GET accepted")
     }
 }
-</code></pre>
+```
 
 Now there&#8217;s only one function left. The one that will make sure no ghost services stay for too long. It will check all the services once per minute. This way we&#8217;re making it cheap on performance:
 
-<pre><code class="go">func killZombieServices() {
+```go
+func killZombieServices() {
     t := time.Tick(1 * time.Minute)
 
     for range t {
     }
 }
-</code></pre>
+```
 
 This is a nice way to launch the code every minute. We create a channel which will send us the time every minute, and range over it, ignoring the received values.
 
 We can now get the check and remove working.
 
-<pre><code class="go">for range t {
+```go
+for range t {
     timeNow := time.Now()
     serviceStorageMutex.Lock()
     for address, timeKeepAlive := range registeredServiceStorage {
@@ -271,7 +284,7 @@ We can now get the check and remove working.
     }
     serviceStorageMutex.Unlock()
 }
-</code></pre>
+```
 
 We just range over the subscribers and delete those that haven&#8217;t kept their subscription alive.
 

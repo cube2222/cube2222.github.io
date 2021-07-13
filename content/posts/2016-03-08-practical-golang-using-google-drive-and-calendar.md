@@ -38,7 +38,8 @@ So make sure to:
 
 For both of our apps we&#8217;ll need the same basic OAuth2 app structure. You can learn more about it in [my previous article][1]
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "fmt"
@@ -100,12 +101,13 @@ func handleGoogleCallback(w http.ResponseWriter, r *http.Request) {
 
     client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
 }
-</code></pre>
+```
 
 There is one thing I haven&#8217;t covered in my previous blog post, namely the last line:
 
-<pre><code class="go">client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
-</code></pre>
+```go
+client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
+```
 
 We need an **_OAuth2 client_** to use the Google API, so we create one. It takes a _context_, for lack of which we just use the _background context_. It also needs a _token source_. As we only want to make one request and know that this token will suffice we create a _static token source_ which will always generate the same _token_ which we&#8217;ve passed to it.
 
@@ -117,14 +119,15 @@ First, as described in [my previous article][1], you should enable the Google Ca
 
 Also, we&#8217;ll need to ask for permission, so add the **_https://www.googleapis.com/auth/calendar_** scope to our googleOauthConfig:
 
-<pre><code class="go">googleOauthConfig = &oauth2.Config{
+```go
+googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
         ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
         ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
         Scopes:       []string{"https://www.googleapis.com/auth/calendar"},
         Endpoint:     google.Endpoint,
     }
-</code></pre>
+```
 
 Remember to import google.golang.org/api/calendar/v3
 
@@ -134,14 +137,15 @@ We&#8217;ll add everything we write right after creating our OAuth2 client.
 
 First, as I described before, we&#8217;ll need an app service, here it will be the calendar service, so let&#8217;s create it!
 
-<pre><code class="go">client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
+```go
+client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
 
 calendarService, err := calendar.New(client)
 if err != nil {
   fmt.Fprintln(w, err)
   return
 }
-</code></pre>
+```
 
 It just uses the OAuth client to create the service and errors out if something goes wrong.
 
@@ -149,41 +153,46 @@ It just uses the OAuth client to create the service and errors out if something 
 
 Now we will create a request, add a few optional parameters to it and start it. We&#8217;ll build it up step by step.
 
-<pre><code class="go">calendarService, err := calendar.New(client)
+```go
+calendarService, err := calendar.New(client)
 if err != nil {
   fmt.Fprintln(w, err)
   return
 }
 
 calendarService.Events.List("primary")
-</code></pre>
+```
 
 This creates a request to list all events in your primary calendar. You could also name a specific calendar, but using _primary_ will take the primary calendar of that user.
 
 So&#8230; I think we don&#8217;t really care about the events 5 years ago. So let&#8217;s only take the upcoming ones.
 
-<pre><code class="go">calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339))
-</code></pre>
+```go
+calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339))
+```
 
 We add an option _TimeMin_ which takes a _DateTime_ by string&#8230; No idea why it isn&#8217;t a nice struct like _time.DateTime_. You also need to format it as a string in the RFC3339 format.
 
 Ok&#8230; but that could be a lot of events, so we&#8217;ll just take the 5 first:
 
-<pre><code class="go">calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5)
-</code></pre>
+```go
+calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5)
+```
 
 Now we just have to **_Do()_** it, and store the results:
 
-<pre><code class="go">calendarEvents, err := calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5).Do()
+```go
+calendarEvents, err := calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5).Do()
 if err != nil {
   fmt.Fprintln(w, err)
   return
 }
-</code></pre>
+```
 
 How can we now do something with the results? Simple! :
 
-<pre><code class="go">calendarEvents, err := calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5).Do()
+```go
+calendarEvents, err := calendarService.Events.List("primary").TimeMin(time.Now().Format(time.RFC3339)).MaxResults(5).Do()
 if err != nil {
   fmt.Fprintln(w, err)
   return
@@ -194,7 +203,7 @@ if len(calendarEvents.Items) &gt; 0 {
         fmt.Fprintln(w, i.Summary, " ", i.Start.DateTime)
     }
 }
-</code></pre>
+```
 
 We access a list of events using the **_Items_** field in the _calendarEvents_ variable, if there is at least one element, then for each element we write the _summary_ and _start time_ to the _response writer_ using a _for range_ loop.
 
@@ -203,7 +212,8 @@ We access a list of events using the **_Items_** field in the _calendarEvents_ v
 Ok, we already know how to list events, now let&#8217;s create an event!  
 First, we need an event object:
 
-<pre><code class="go">if len(calendarEvents.Items) &gt; 0 {
+```go
+if len(calendarEvents.Items) &gt; 0 {
     for _, i := range calendarEvents.Items {
         fmt.Fprintln(w, i.Summary, " ", i.Start.DateTime)
     }
@@ -213,36 +223,39 @@ newEvent := calendar.Event{
     Start: &calendar.EventDateTime{DateTime: time.Date(2016, 3, 11, 12, 24, 0, 0, time.UTC).Format(time.RFC3339)},
     End: &calendar.EventDateTime{DateTime: time.Date(2016, 3, 11, 13, 24, 0, 0, time.UTC).Format(time.RFC3339)},
 }
-</code></pre>
+```
 
 We create an Event struct and pass in the **_summary_** &#8211; title of the event.  
 We also pass the start and finish **_DateTime_**. We create a _date_ using the stdlib _time_ package, and then convert it to a string in the RFC3339 format. There are tons of other optional fields you can specify if you want to.
 
 Next we need to create an **_insert_** request object:
 
-<pre><code class="go">newEvent := calendar.Event{
+```go
+newEvent := calendar.Event{
     Summary: "Testevent",
     Start: &calendar.EventDateTime{DateTime: time.Date(2016, 3, 11, 12, 24, 0, 0, time.UTC).Format(time.RFC3339)},
     End: &calendar.EventDateTime{DateTime: time.Date(2016, 3, 11, 13, 24, 0, 0, time.UTC).Format(time.RFC3339)},
 }
 calendarService.Events.Insert("primary", &newEvent)
-</code></pre>
+```
 
 The **_Insert_** request takes two arguments, the calendar name and an event object.
 
 As usual we neeed to **_Do()_** the request! and saving the resulting created event can also come handy in the future:
 
-<pre><code class="go">createdEvent, err := calendarService.Events.Insert("primary", &newEvent).Do()
+```go
+createdEvent, err := calendarService.Events.Insert("primary", &newEvent).Do()
 if err != nil {
     fmt.Fprintln(w, err)
     return
 }
-</code></pre>
+```
 
 In the end let&#8217;s just print some kind of confirmation to the user:
 
-<pre><code class="go">fmt.Fprintln(w, "New event in your calendar: \"", createdEvent.Summary, "\" starting at ", createdEvent.Start.DateTime)
-</code></pre>
+```go
+fmt.Fprintln(w, "New event in your calendar: \"", createdEvent.Summary, "\" starting at ", createdEvent.Start.DateTime)
+```
 
 ### Hint
 
@@ -256,14 +269,15 @@ First, enable the Google Drive API in the **_Google Cloud Console_**
 
 Again we will need to ask the user for permission. So we have to use the https://www.googleapis.com/auth/drive and https://www.googleapis.com/auth/drive.file scopes:
 
-<pre><code class="go">googleOauthConfig = &oauth2.Config{
+```go
+googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
         ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
         ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
         Scopes:       []string{"https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file"},
         Endpoint:     google.Endpoint,
     }
-</code></pre>
+```
 
 Remember to import google.golang.org/api/drive/v3&#8243;
 
@@ -271,14 +285,15 @@ Remember to import google.golang.org/api/drive/v3&#8243;
 
 Again we need to start from our basic OAuth2 app structure with an OAuth2 client, and create an app service. Here, this will be the **_Drive service_**:
 
-<pre><code class="go">client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
+```go
+client := oauth2.NewClient(context.Background(), oauth2.StaticTokenSource(token))
 
 driveService, err := drive.New(client)
 if err != nil {
     fmt.Fprintln(w, err)
     return
 }
-</code></pre>
+```
 
 #### Listing files
 
@@ -286,44 +301,49 @@ Ok, to begin with let&#8217;s learn how to list files from the **_Google Drive_*
 
 As before with the calendar app, we create a list request.
 
-<pre><code class="go">driveService, err := drive.New(client)
+```go
+driveService, err := drive.New(client)
 if err != nil {
     fmt.Fprintln(w, err)
     return
 }
 
 driveService.Files.List()
-</code></pre>
+```
 
 But we can also set an option. The ordering for example:
 
-<pre><code class="go">driveService.Files.List().OrderBy("name")
-</code></pre>
+```go
+driveService.Files.List().OrderBy("name")
+```
 
 Ok, now let&#8217;s **_Do()_** it and save the results:
 
-<pre><code class="go">myFilesList, err := driveService.Files.List().OrderBy("name").Do()
+```go
+myFilesList, err := driveService.Files.List().OrderBy("name").Do()
 if err != nil {
     fmt.Fprintf(w, "Couldn't retrieve files ", err)
 }
-</code></pre>
+```
 
 As I wrote before, this is one page of files, now let&#8217;s go over it:
 
-<pre><code class="go">if len(myFilesList.Files) &gt; 0 {
+```go
+if len(myFilesList.Files) &gt; 0 {
     for _, i := range myFilesList.Files {
         fmt.Fprintln(w, i.Name, " ", i.Id)
     }
 } else {
     fmt.Fprintln(w, "No files found.")
 }
-</code></pre>
+```
 
 We check if there are any files, and if there are, we range over them printing the _name_ and _Id_ of each one, else we print that there are none.
 
 Now, let&#8217;s get more pages, it&#8217;s the **_myFilesList.NextPageToken_** holding the token for the next page. If it is an empty string, then this was the last page. While it is present we load new pages into our _myFilesList_ variable.
 
-<pre><code class="go">for myFilesList.NextPageToken != "" {
+```go
+for myFilesList.NextPageToken != "" {
     myFilesList, err = driveService.Files.List().OrderBy("name").PageToken(myFilesList.NextPageToken).Do()
     if err != nil {
         fmt.Fprintf(w, "Couldn't retrieve files ", err)
@@ -338,12 +358,13 @@ Now, let&#8217;s get more pages, it&#8217;s the **_myFilesList.NextPageToken_** 
         fmt.Fprintln(w, "No files found.")
     }
 }
-</code></pre>
+```
 
 To retrieve the next page we add the **_PageToken_** option to our file listing request
 
-<pre><code class="go">    myFilesList, err = driveService.Files.List().OrderBy("name").PageToken(myFilesList.NextPageToken).Do()
-</code></pre>
+```go
+    myFilesList, err = driveService.Files.List().OrderBy("name").PageToken(myFilesList.NextPageToken).Do()
+```
 
 Whenever we start printing the new page, we notify a user that a new page just started. Later we check if we have any files, and if we do, then we range over them as before, printing the _names_ and _Id&#8217;s_
 
@@ -353,7 +374,8 @@ We already know how to list files in our _Google Drive_. Now let&#8217;s learn h
 
 First, we need to create the file metadata:
 
-<pre><code class="go">for myFilesList.NextPageToken != "" {
+```go
+for myFilesList.NextPageToken != "" {
     myFilesList, err = driveService.Files.List().OrderBy("name").PageToken(myFilesList.NextPageToken).Do()
     if err != nil {
         fmt.Fprintf(w, "Couldn't retrieve files ", err)
@@ -371,30 +393,33 @@ First, we need to create the file metadata:
 
 
 myFile := drive.File{Name: "cats.png"}
-</code></pre>
+```
 
 Again, the _Id_ will be generated for us if we do not provide any.
 
 Putting the file into _Google Drive_ is pretty easy now. We create a _create request_, referencing our file metadata in it:
 
-<pre><code class="go">myFile := drive.File{Name: "cats.png"}
+```go
+myFile := drive.File{Name: "cats.png"}
 
 driveService.Files.Create(&myFile)
-</code></pre>
+```
 
 and **_Do()_** it, saving the results:
 
-<pre><code class="go">createdFile, err := driveService.Files.Create(&myFile).Do()
+```go
+createdFile, err := driveService.Files.Create(&myFile).Do()
 if err != nil {
     fmt.Fprintf(w, "Couldn't create file ", err)
 }
-</code></pre>
+```
 
 Ok, if you started this code, you would get a **_cats.png_** file. However, it&#8217;s empty. So let&#8217;s add some data to it!
 
 To add it, we&#8217;ll first need some data. We can load it from a file:
 
-<pre><code class="go">createdFile, err := driveService.Files.Create(&myFile).Do()
+```go
+createdFile, err := driveService.Files.Create(&myFile).Do()
 if err != nil {
     fmt.Fprintf(w, "Couldn't create file ", err)
 }
@@ -402,30 +427,33 @@ myImage, err := os.Open("/tmp/image.png")
 if err != nil {
     fmt.Fprintln(w, err)
 }
-</code></pre>
+```
 
 Now we have to create the updated file metadata:
 
-<pre><code class="go">myImage, err := os.Open("/tmp/image.png")
+```go
+myImage, err := os.Open("/tmp/image.png")
 if err != nil {
     fmt.Fprintln(w, err)
 }
 updatedFile := drive.File{Name: "catsUpdated.png"}
-</code></pre>
+```
 
 We have to construct an update request:
 
-<pre><code class="go">driveService.Files.Update(createdFile.Id, &updatedFile)
-</code></pre>
+```go
+driveService.Files.Update(createdFile.Id, &updatedFile)
+```
 
 Here we specify the **_Id_** of the file to modify, and the new metadata. We&#8217;ll now add the data to the update request, and **_Do()_** it, checking for errors and ignoring the result.
 
-<pre><code class="go">_, err = driveService.Files.Update(createdFile.Id, &updatedFile).Media(myImage).Do()
+```go
+_, err = driveService.Files.Update(createdFile.Id, &updatedFile).Media(myImage).Do()
 if err != nil {
     fmt.Fprintln(w, err)
 }
 fmt.Fprintln(w, createdFile.Id)
-</code></pre>
+```
 
 In the end we send the new file id to the user.
 

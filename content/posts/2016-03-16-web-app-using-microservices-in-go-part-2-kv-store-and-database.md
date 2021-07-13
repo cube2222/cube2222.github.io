@@ -35,7 +35,8 @@ The design hasn&#8217;t changed much. We will save the key-value pairs as a glob
 
 First, let&#8217;s create the structure:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -69,13 +70,14 @@ func remove(w http.ResponseWriter, r *http.Request) {
 func list(w http.ResponseWriter, r *http.Request) {
 }
 
-</code></pre>
+```
 
 And now let&#8217;s dive into the implementation.
 
 First, we should add parameter parsing in the get function and verify that the key parameter is right.
 
-<pre><code class="go">func get(w http.ResponseWriter, r *http.Request) {
+```go
+func get(w http.ResponseWriter, r *http.Request) {
     if(r.Method == http.MethodGet) {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -93,14 +95,15 @@ First, we should add parameter parsing in the get function and verify that the k
         fmt.Fprint(w, "Error: Only GET accepted.")
     }
 }
-</code></pre>
+```
 
 The _key_ shouldn&#8217;t have a length of 0, hence the length check. We also check if the method is GET, if it isn&#8217;t we print it and set the status code to **_bad request_**.  
 We answer with an explicit **_Error:_** before each error message so it doesn&#8217;t get misinterpreted by the client as a value.
 
 Now, let&#8217;s access our map and send back a response:
 
-<pre><code class="go">if len(values.Get("key")) == 0 {
+```go
+if len(values.Get("key")) == 0 {
     w.WriteHeader(http.StatusBadRequest)
     fmt.Fprint(w, "Error:","Wrong input key.")
     return
@@ -111,13 +114,14 @@ value := keyValueStore[string(values.Get("key"))]
 kVStoreMutex.RUnlock()
 
 fmt.Fprint(w, value)
-</code></pre>
+```
 
 We copy the value into a variable so that we don&#8217;t block the map while sending back the response.
 
 Now let&#8217;s create the set function, it&#8217;s actually pretty similar.
 
-<pre><code class="go">func set(w http.ResponseWriter, r *http.Request) {
+```go
+func set(w http.ResponseWriter, r *http.Request) {
     if(r.Method == http.MethodPost) {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -146,13 +150,14 @@ Now let&#8217;s create the set function, it&#8217;s actually pretty similar.
         fmt.Fprint(w, "Error: Only POST accepted.")
     }
 }
-</code></pre>
+```
 
 The only difference is that we also check if there is a right value parameter and check if the method is POST.
 
 Now we can add the implementation of the list function which is also pretty simple:
 
-<pre><code class="go">func list(w http.ResponseWriter, r *http.Request) {
+```go
+func list(w http.ResponseWriter, r *http.Request) {
     if(r.Method == http.MethodGet) {
         kVStoreMutex.RLock()
         for key, value := range keyValueStore {
@@ -164,13 +169,14 @@ Now we can add the implementation of the list function which is also pretty simp
         fmt.Fprint(w, "Error: Only GET accepted.")
     }
 }
-</code></pre>
+```
 
 It just ranges over the map and prints everything. Simple yet effective.
 
 And to finish the key-value store we will implement the _remove_ function:
 
-<pre><code class="go">func remove(w http.ResponseWriter, r *http.Request) {
+```go
+func remove(w http.ResponseWriter, r *http.Request) {
     if(r.Method == http.MethodDelete) {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -194,7 +200,7 @@ And to finish the key-value store we will implement the _remove_ function:
         fmt.Fprint(w, "Error: Only DELETE accepted.")
     }
 }
-</code></pre>
+```
 
 It&#8217;s the same as setting a value, but instead of setting it we delete it.
 
@@ -222,7 +228,8 @@ How it will work:
 
 First, we should create the API and later we will add the implementations of the functionality as before with the key-value store. We will also need a global map being our data store, a variable pointing to the oldest not started task, and mutexes for accessing the datastore and pointer.
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -271,7 +278,7 @@ func setById(w http.ResponseWriter, r *http.Request) {
 
 func list(w http.ResponseWriter, r *http.Request) {
 }
-</code></pre>
+```
 
 We also already declared the **_Task_** type which we will use for storage.
 
@@ -279,7 +286,8 @@ So far so good. Now let&#8217;s implement all those functions!
 
 First, let&#8217;s implement the getById function.
 
-<pre><code class="go">func getById(w http.ResponseWriter, r *http.Request) {
+```go
+func getById(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodGet {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -327,7 +335,7 @@ First, let&#8217;s implement the getById function.
         fmt.Fprint(w, "Error: Only GET accepted")
     }
 }
-</code></pre>
+```
 
 We check if the **_GET_** method has been used. Later we parse the _id_ argument and check if it&#8217;s proper. We then get the _id_ as an **int** using the _strconv.Atoi_ function. Next we make sure it is not out of bounds for our _datastore_, which we have to do using _mutexes_ because we&#8217;re accessing a map which could be accessed from another thread. If everything is ok, then, again using _mutexes_, we get the task using the _id_.
 
@@ -335,17 +343,19 @@ After that we use the _JSON_ library to marshal our struct into a _JSON object_ 
 
 It&#8217;s also time to implement our _Task_ struct:
 
-<pre><code class="go">type Task struct {
+```go
+type Task struct {
     Id int `json:"id"`
     State int `json:"state"`
 }
-</code></pre>
+```
 
 It&#8217;s all that&#8217;s needed. We also added the information the _JSON_ marshaller needs.
 
 We can now go on with implementing the _newTask_ function:
 
-<pre><code class="go">func newTask(w http.ResponseWriter, r *http.Request) {
+```go
+func newTask(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
         datastoreMutex.Lock()
         taskToAdd := Task{
@@ -361,7 +371,7 @@ We can now go on with implementing the _newTask_ function:
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 It&#8217;s pretty small actually. Creating a new _Task_ with the next id and adding it to the _datastore_. After that it sends back the new _Tasks_ Id.
 
@@ -369,7 +379,8 @@ That means we can go on to implementing the function used to list all _Tasks_, a
 
 It&#8217;s basically the same as with the key-value store:
 
-<pre><code class="go">func list(w http.ResponseWriter, r *http.Request) {
+```go
+func list(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodGet {
         datastoreMutex.RLock()
         for key, value := range datastore {
@@ -381,11 +392,12 @@ It&#8217;s basically the same as with the key-value store:
         fmt.Fprint(w, "Error: Only GET accepted")
     }
 }
-</code></pre>
+```
 
 Ok, so now we will implement the function which can set the _Task_ by _id_:
 
-<pre><code class="go">func setById(w http.ResponseWriter, r *http.Request) {
+```go
+func setById(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
         taskToSet := Task{}
 
@@ -423,13 +435,14 @@ Ok, so now we will implement the function which can set the _Task_ by _id_:
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 Nothing new. We get the request and try to unmarshal it. If it succeeds we put it into the map, checking if it isn&#8217;t out of bounds or if the state is invalid. If it is then we print an error, otherwise we print _success_.
 
 If we already have this we can now implement the finish task function, because it&#8217;s very simple:
 
-<pre><code class="go">func finishTask(w http.ResponseWriter, r *http.Request) {
+```go
+func finishTask(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -474,13 +487,14 @@ If we already have this we can now implement the finish task function, because i
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 It&#8217;s pretty similar to the _getById_ function. The difference here is that here we update the state and only if it is currently _in progress_.
 
 And now to one of the most interesting functions. The _getNewTask_ function. It has to handle updating the oldest known finished task, and it also needs to handle the situation when someone takes a task but crashes during work. This would lead to a ghost task forever being _in progress_. That&#8217;s why we&#8217;ll add functionality which after 120 seconds from starting a task will set it back to _not started_:
 
-<pre><code class="go">func getNewTask(w http.ResponseWriter, r *http.Request) {
+```go
+func getNewTask(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
 
         bErrored := false
@@ -546,24 +560,26 @@ And now to one of the most interesting functions. The _getNewTask_ function. It 
         fmt.Fprint(w, "Error: Only POST accepted")
     }
 }
-</code></pre>
+```
 
 First we try to find the oldest task that hasn&#8217;t started yet. By the way we update the oldestNotFinishedTask variable. If a task is finished and is pointed on by the variable, the variable get&#8217;s incremented. If we find something that&#8217;s not started, then we break out of the loop and send it back to the user setting it to _in progress_. However, on the way we start a function on another thread that will change the state of the task back to _not started_ if it&#8217;s still in progress after 120 seconds.
 
 Now the last thing. A database is useless&#8230; when you don&#8217;t know where it is! That&#8217;s why we&#8217;ll now implement the mechanism that the database will use to register itself in the _key-value store_:
 
-<pre><code class="go">func main() {
+```go
+func main() {
 
     if !registerInKVStore() {
         return
     }
 
     datastore = make(map[int]Task)
-</code></pre>
+```
 
 and later we define the function:
 
-<pre><code class="go">func registerInKVStore() bool {
+```go
+func registerInKVStore() bool {
     if len(os.Args) &lt; 3 {
         fmt.Println("Error: Too few arguments.")
         return false
@@ -587,7 +603,7 @@ and later we define the function:
     }
     return true
 }
-</code></pre>
+```
 
 We check if there are at least 3 arguments. (The first being the executable) We read the current _database address_ from the second argument and the _key-value store address_ from the third argument. We use them to make a POST request where we add a **_databaseAddress_** key to the _k/v store_ and set its value to the current _database address_. If the status code of the response isn&#8217;t **_OK_** then we know we messed up and we print the error we got. After that we quit the program.
 

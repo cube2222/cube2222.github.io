@@ -37,7 +37,8 @@ As usual we will start with a basic structure which is similar to the structure 
 
 So here&#8217;s our basic structure:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "os"
@@ -115,7 +116,7 @@ func sendImageToStorage(storageAddress string, myTask Task, myImage image.Image)
 }
 func registerFinishedTask(masterAddress string, myTask Task) error {
 }
-</code></pre>
+```
 
 It may seem to be much but there is nothing new actually in the most dense parts. We define the _Task_ structure first and declare the needed addresses/locations.
 
@@ -125,7 +126,8 @@ For the worker we will want a command line parameter to set the number of concur
 
 Now let&#8217;s parse the thread count:
 
-<pre><code class="go">storageLocation = string(data)
+```go
+storageLocation = string(data)
 if len(storageLocation) == 0 {
     fmt.Println("Error: can't get storage address. Length is zero.")
     return
@@ -136,13 +138,14 @@ if err != nil {
     fmt.Println("Error: Couldn't parse thread count.")
     return
 }
-</code></pre>
+```
 
 We use the _atoi_ function to parse the string argument to an int.
 
 And now we come to the main for loop which runs on each thread:
 
-<pre><code class="go">myWG := sync.WaitGroup{}
+```go
+myWG := sync.WaitGroup{}
 myWG.Add(threadCount)
 for i := 0; i &lt; threadCount; i++ {
     go func() {
@@ -152,14 +155,15 @@ for i := 0; i &lt; threadCount; i++ {
     }()
 }
 myWG.Wait()
-</code></pre>
+```
 
 Ok, what are we doing there? We create a **_waitGroup_**. The main function has to be waiting for the **goroutines** and not just finish execution, that&#8217;s why we create a waitGroup and add the thread count. You could add a functionality to break the endless for loop and after that use the _Done()_ function on the waitgroup. We won&#8217;t be adding this as we just want endless for work loops.
 
 Now we will write down the execution process for each _Task_.  
 First we get a new _Task_:
 
-<pre><code class="go">for {
+```go
+for {
     myTask, err := getNewTask(masterLocation)
     if err != nil {
         fmt.Println(err)
@@ -167,13 +171,14 @@ First we get a new _Task_:
         time.Sleep(time.Second * 2)
         continue
     }
-</code></pre>
+```
 
 If we error, then we wait 2 seconds, so it doesn&#8217;t make a lot of errored requests to the master at once. As this could flood the other services.
 
 If we successfully get the _Task_, then we get the image to work on from the storage:
 
-<pre><code class="go">myTask, err := getNewTask(masterLocation)
+```go
+myTask, err := getNewTask(masterLocation)
 if err != nil {
     fmt.Println(err)
     fmt.Println("Waiting 2 second timeout...")
@@ -188,11 +193,12 @@ if err != nil {
     time.Sleep(time.Second * 2)
     continue
 }
-</code></pre>
+```
 
 Ok, now it&#8217;s time to do something with the image!!!
 
-<pre><code class="go">myImage, err := getImageFromStorage(storageLocation, myTask)
+```go
+myImage, err := getImageFromStorage(storageLocation, myTask)
 if err != nil {
     fmt.Println(err)
     fmt.Println("Waiting 2 second timeout...")
@@ -201,11 +207,12 @@ if err != nil {
 }
 
 myImage = doWorkOnImage(myImage)
-</code></pre>
+```
 
 We now of course have to save the image back to the storage:
 
-<pre><code class="go">myImage = doWorkOnImage(myImage)
+```go
+myImage = doWorkOnImage(myImage)
 
 err = sendImageToStorage(storageLocation, myTask, myImage)
 if err != nil {
@@ -214,11 +221,12 @@ if err != nil {
     time.Sleep(time.Second * 2)
     continue
 }
-</code></pre>
+```
 
 And finally if that succeeds we register our successfully finished _Task_!
 
-<pre><code class="go">        err = sendImageToStorage(storageLocation, myTask, myImage)
+```go
+        err = sendImageToStorage(storageLocation, myTask, myImage)
         if err != nil {
             fmt.Println(err)
             fmt.Println("Waiting 2 second timeout...")
@@ -235,11 +243,12 @@ And finally if that succeeds we register our successfully finished _Task_!
         }
     }
 }()
-</code></pre>
+```
 
 Ok, so now we can continue with implementing these functions. Let&#8217;s first implement the _getNewTask_ function:
 
-<pre><code class="go">func getNewTask(masterAddress string) (Task, error) {
+```go
+func getNewTask(masterAddress string) (Task, error) {
     response, err := http.Post("http://" + masterAddress + "/getNewTask", "text/plain", nil)
     if err != nil || response.StatusCode != http.StatusOK {
         return Task{-1, -1}, err
@@ -257,13 +266,14 @@ Ok, so now we can continue with implementing these functions. Let&#8217;s first 
 
     return myTask, nil
 }
-</code></pre>
+```
 
 We make the request to the master and check if it was successful. We read the response _body_ to memory and finally _Unmarshal_ the response _body_ to our _Task_ structure. Finally we return it.
 
 Now we can implement the function to get the image from storage!
 
-<pre><code class="go">func getImageFromStorage(storageAddress string, myTask Task) (image.Image, error) {
+```go
+func getImageFromStorage(storageAddress string, myTask Task) (image.Image, error) {
     response, err := http.Get("http://" + storageAddress + "/getImage?state=working&id=" + strconv.Itoa(myTask.Id))
     if err != nil || response.StatusCode != http.StatusOK {
         return nil, err
@@ -276,13 +286,14 @@ Now we can implement the function to get the image from storage!
 
     return myImage, nil
 }
-</code></pre>
+```
 
 We get the response whose body is the raw image, so we just _Decode_ it and return it if we succeed.
 
 Now that we have our image we can finally do some work on it:
 
-<pre><code class="go">func doWorkOnImage(myImage image.Image) image.Image {
+```go
+func doWorkOnImage(myImage image.Image) image.Image {
     myCanvas := image.NewRGBA(myImage.Bounds())
 
     for i := 0; i &lt; myCanvas.Rect.Max.X; i++ {
@@ -299,13 +310,14 @@ Now that we have our image we can finally do some work on it:
 
     return myCanvas.SubImage(myImage.Bounds())
 }
-</code></pre>
+```
 
 The work is largely irrelevant, but I&#8217;ll explain it anyways. First we create a RGBA. That&#8217;s something like a canvas for drawing, and we create it with the size of our image. Later we draw on the canvas swapping the red with the green channel. Later we use the RGBA to return a new modified image, created from our canvas with the size of our original image.
 
 After working on the image we have to send it back to the _storage system_. So let&#8217;s implement the **_sendImageToStorage_** function:
 
-<pre><code class="go">func sendImageToStorage(storageAddress string, myTask Task, myImage image.Image) error {
+```go
+func sendImageToStorage(storageAddress string, myTask Task, myImage image.Image) error {
     data := []byte{}
     buffer := bytes.NewBuffer(data)
     err := png.Encode(buffer, myImage)
@@ -319,13 +331,14 @@ After working on the image we have to send it back to the _storage system_. So l
 
     return nil
 }
-</code></pre>
+```
 
 We create a **data** _byte slice_, and from that a data _buffer_ which allows us to use it as a _readwriter_ interface. We then use this interface to encode our image to png into, and finally send it using a **POST** to the server. If everything works out, then we just return.
 
 When we successfully saved the image, we can register to the _Master_ that we finished the _Task_.
 
-<pre><code class="go">func registerFinishedTask(masterAddress string, myTask Task) error {
+```go
+func registerFinishedTask(masterAddress string, myTask Task) error {
     response, err := http.Post("http://" + masterAddress + "/registerTaskFinished?id=" + strconv.Itoa(myTask.Id), "test/plain", nil)
     if err != nil || response.StatusCode != http.StatusOK {
         return err
@@ -333,7 +346,7 @@ When we successfully saved the image, we can register to the _Master_ that we fi
 
     return nil
 }
-</code></pre>
+```
 
 Nothing fancy. Just sending a **POST** request to notify about finishing the task.
 
@@ -345,7 +358,8 @@ This one will show the user the website and also parse the user form so the back
 
 As usual, we&#8217;ll begin with the basic structure of the file:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -403,20 +417,22 @@ func handleCheckForReadiness(w http.ResponseWriter, r *http.Request) {
 
 func serveImage(w http.ResponseWriter, r *http.Request) {
 }
-</code></pre>
+```
 
 We&#8217;ve got the code of our index web page here, and we also have the **_API_** declared. After starting the program we check if we have the k/v store address. If we do (we hope so), then we can get the _master address_ from it.
 
 Now we can go on to implementing the functions. We&#8217;ll start with the simples. The index handler:
 
-<pre><code class="go">func handleIndex(w http.ResponseWriter, r *http.Request) {
+```go
+func handleIndex(w http.ResponseWriter, r *http.Request) {
     fmt.Fprint(w, indexPage)
 }
-</code></pre>
+```
 
 After writing this we can go on to writing the more complicated functions. We will start with the _handleTask_ function. This function is responsible for parsing the user form and sending the raw image data to the master.
 
-<pre><code class="go">func handleTask(w http.ResponseWriter, r *http.Request) {
+```go
+func handleTask(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodPost {
     err := r.ParseMultipartForm(10000000)
     if err != nil {
@@ -430,11 +446,12 @@ After writing this we can go on to writing the more complicated functions. We wi
         fmt.Fprint(w, "Wrong input")
         return
     }
-</code></pre>
+```
 
 Ok, what do we have here? We check the method as we always do, and later parse the multipart form. We&#8217;ve got a nice lovely magic number there. The number is responsible for setting the max size of the form held in RAM. The rest will be stored in temporary files. We later do the request using the file we got:
 
-<pre><code class="go">    if err != nil {
+```go
+    if err != nil {
         w.WriteHeader(http.StatusBadRequest)
         fmt.Fprint(w, "Wrong input")
         return
@@ -459,13 +476,14 @@ Ok, what do we have here? We check the method as we always do, and later parse t
     w.WriteHeader(http.StatusBadRequest)
     fmt.Fprint(w, "Error: Only POST accepted")
 }
-</code></pre>
+```
 
 We send the user back the new _Task id_ we got back from the _master_.
 
 Now we can implement the function which will handle the request to check if the _Task_ is finished and ready:
 
-<pre><code class="go">func handleCheckForReadiness(w http.ResponseWriter, r *http.Request) {
+```go
+func handleCheckForReadiness(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodGet {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -505,11 +523,12 @@ Now we can implement the function which will handle the request to check if the 
         fmt.Fprint(w, "Error: Only GET accepted")
     }
 }
-</code></pre>
+```
 
 Most of this is the same as the function in the _master_. We just check if the id is correct and make a request to the _master_. The interesting part is this:
 
-<pre><code class="go">switch string(data) {
+```go
+switch string(data) {
 case "0":
     fmt.Fprint(w, "Your image is not ready yet.")
 case "1":
@@ -517,13 +536,14 @@ case "1":
 default :
     fmt.Fprint(w, "Internal server error.")
 }
-</code></pre>
+```
 
 We cast the _response body_ to a string, and if it matches 1 or 0 we answer. If it&#8217;s something else then we know something went really wrong, and send back an error.
 
 Now we can get to the last function, the function to serve the actual images:
 
-<pre><code class="go">func serveImage(w http.ResponseWriter, r *http.Request) {
+```go
+func serveImage(w http.ResponseWriter, r *http.Request) {
     if r.Method == http.MethodGet {
         values, err := url.ParseQuery(r.URL.RawQuery)
         if err != nil {
@@ -554,7 +574,7 @@ Now we can get to the last function, the function to serve the actual images:
         fmt.Fprint(w, "Error: Only GET accepted")
     }
 }
-</code></pre>
+```
 
 It just checks the _id_, sends the _request_, and copies the _response_ to answer the user.
 

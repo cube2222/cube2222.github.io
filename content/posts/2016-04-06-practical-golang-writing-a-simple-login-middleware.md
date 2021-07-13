@@ -32,7 +32,8 @@ We will mainly use the _stdlib_, and will use _cookies_ to remember who&#8217;s 
 
 We will start with a basic structure of our system with an already existing &#8220;Hello World!!!&#8221; handler:
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -71,11 +72,12 @@ func authenticate(h http.Handler) authenticationMiddleware {
 
 func handleLogin(w http.ResponseWriter, r *http.Request) {
 }
-</code></pre>
+```
 
 Ok, lets go over this code.
 
-<pre><code class="go">package main
+```go
+package main
 
 import (
     "net/http"
@@ -100,7 +102,7 @@ type helloWorldHandler struct {
 func (h helloWorldHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "Hello World!!!")
 }
-</code></pre>
+```
 
 First we declare the package, imports and the html code of the login page.
 
@@ -108,7 +110,8 @@ We also declare the basic hello world handler.
 
 Now to get to the interesting part.
 
-<pre><code class="go">type authenticationMiddleware struct {
+```go
+type authenticationMiddleware struct {
     wrappedHandler http.Handler
 }
 
@@ -121,43 +124,47 @@ func authenticate(h http.Handler) authenticationMiddleware {
 
 func handleLogin(w http.ResponseWriter, r *http.Request) {
 }
-</code></pre>
+```
 
 we create a handler which will supply authorization, and if authorized successfully, will let the user through to the underlying handler. We also define the _authenticate_ method, a simple function wrapper over creating a struct, and a function to handle the login.
 
 That means we can also define the last route, the secured hello world route.
 
-<pre><code class="go">func main() {
+```go
+func main() {
     http.Handle("/hello", helloWorldHandler{})
     http.Handle("/secureHello", authenticate(helloWorldHandler{}))
     http.HandleFunc("/login", handleLogin)
 
     http.ListenAndServe(":3000", nil)
 }
-</code></pre>
+```
 
 Ok, we will also need a simple client struct, which will just save if the target client session is authorized, and a map containing our Clients with cookie values being the keys.
 
-<pre><code class="go">var sessionStore map[string]Client
+```go
+var sessionStore map[string]Client
 var storageMutex sync.RWMutex
 
 type Client struct {
     loggedIn bool
 }
-</code></pre>
+```
 
 We also need the mutex for concurrent map access. In the main function we initialize the map:
 
-<pre><code class="go">func main() {
+```go
+func main() {
     sessionStore = make(map[string]Client)
     http.Handle("/hello", helloWorldHandler{})
-</code></pre>
+```
 
 Now we can go to the authenticationMiddleware&#8217;s ServeHTTP function:
 
 We&#8217;ll begin with checking if the cookie is present, if it isn&#8217;t there, we&#8217;ll continue and create a new. If the error is nonstandard then we just return.
 
-<pre><code class="go">func (h authenticationMiddleware) ServeHTTP(w http.ResponseWriter,r *http.Request) {
+```go
+func (h authenticationMiddleware) ServeHTTP(w http.ResponseWriter,r *http.Request) {
     cookie, err := r.Cookie("session")
     if err != nil {
         if err != http.ErrNoCookie {
@@ -167,11 +174,12 @@ We&#8217;ll begin with checking if the cookie is present, if it isn&#8217;t ther
             err = nil
         }
     }
-</code></pre>
+```
 
 We later check, unless the cookie exists, if it&#8217;s saved in our map. If it&#8217;s not, then we will later generate a new one.
 
-<pre><code class="go">var present bool
+```go
+var present bool
 var client Client
 if cookie != nil {
     storageMutex.RLock()
@@ -180,11 +188,12 @@ if cookie != nil {
 } else {
     present = false
 }
-</code></pre>
+```
 
 Now, if the cookie wasn&#8217;t present, then we can generate a new one!:
 
-<pre><code class="go">if present == false {
+```go
+if present == false {
     cookie = &http.Cookie{
         Name: "session",
         Value: uuid.NewV4().String(),
@@ -194,11 +203,12 @@ Now, if the cookie wasn&#8217;t present, then we can generate a new one!:
     sessionStore[cookie.Value] = client
     storageMutex.Unlock()
 }
-</code></pre>
+```
 
 We can then set the cookie to our response writer, and if the client isn&#8217;t logged in, send him the login page, however, if he is logged in, then we can send him what he wanted:
 
-<pre><code class="go">    http.SetCookie(w, cookie)
+```go
+    http.SetCookie(w, cookie)
     if client.loggedIn == false {
         fmt.Fprint(w, loginPage)
         return
@@ -208,11 +218,12 @@ We can then set the cookie to our response writer, and if the client isn&#8217;t
         return
     }
 }
-</code></pre>
+```
 
 So far so good, that&#8217;s actually already about the main part of the middleware, now we&#8217;ll write a function just for handling the login logic. The _handleLogin_ function:
 
-<pre><code class="go">func handleLogin(w http.ResponseWriter, r *http.Request) {
+```go
+func handleLogin(w http.ResponseWriter, r *http.Request) {
     cookie, err := r.Cookie("session")
     if err != nil {
         if err != http.ErrNoCookie {
@@ -244,11 +255,12 @@ So far so good, that&#8217;s actually already about the main part of the middlew
     }
     http.SetCookie(w, cookie)}
 }
-</code></pre>
+```
 
 First we created the part which is accountable for the cookie handling, as in the recent function. Now we get to the form parsing and the actual login part.
 
-<pre><code class="go">http.SetCookie(w, cookie)
+```go
+http.SetCookie(w, cookie)
 err = r.ParseForm()
 if err != nil {
     fmt.Fprint(w, err)
@@ -260,18 +272,19 @@ if subtle.ConstantTimeCompare([]byte(r.FormValue("password")), []byte("password1
 } else {
     fmt.Fprintln(w, "Wrong password.")
 }
-</code></pre>
+```
 
 We parse the login form and check if the login conditions are met. Here we only need the password to be correct. If it is we log the client in:
 
-<pre><code class="go">if subtle.ConstantTimeCompare([]byte(r.FormValue("password")), []byte("password123")) == 1 {
+```go
+if subtle.ConstantTimeCompare([]byte(r.FormValue("password")), []byte("password123")) == 1 {
     client.loggedIn = true
     fmt.Fprintln(w, "Thank you for logging in.")
     storageMutex.Lock()
     sessionStore[cookie.Value] = client
     storageMutex.Unlock()
 }
-</code></pre>
+```
 
 We use _subtle.ConstantTimeCompare_ as it protects us from time-based attacks. (Thanks for the tip in the reddit comment.)
 
