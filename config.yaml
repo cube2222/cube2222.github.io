@@ -10,7 +10,7 @@ buildExpired: false
 enableInlineShortcodes: true
 enableEmoji: true
 
-#googleAnalytics: UA-123-45
+googleAnalytics: UA-74339391-1
 
 minify:
     disableXML: true
@@ -21,9 +21,9 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Jacob Martin
     keywords: [Blog, Portfolio]
-    author: Me
+    author: Jacob Martin
     # author: ["Me", "You"] # multiple authors
-    images: ["<link or path of image for opengraph, twitter-cards>"]
+    images: ["images/avatar.jpg"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
@@ -53,30 +53,17 @@ params:
     label:
         text: "Jacob Martin"
 
-    # profile-mode
-    profileMode:
-        enabled: false # needs to be explicitly set
-        title: Jacob Martin
-        info: |
-          test
-
-          test2aaaa
-        imageUrl: "images/avatar.jpg"
-        imageWidth: 256
-        imageHeight: 256
-        imageTitle: my image
-        # buttons:
-        #     - name: Posts
-        #       url: posts
-        description: "hello"
-
     # home-info mode
     homeInfoParams:
-        Title: "Hi there \U0001F44B"
+        Title: "Hey there! \U0001F44B"
         Content: |
-          Welcome to my blog
+          I'm Kuba (short for Jacob), a Software Engineer with experience working in high scale distributed systems environments.
 
-          something something
+          I've got a practical mindset of shipping, and building projects in as simple a way - but not simpler - as possible.
+
+          I've got experience with most of the widely used programming paradigms, and fancy trying out new ones, though so far I'm mostly finding myself using Go professionaly.
+
+          On the side I develop [OctoSQL](https://github.com/cube2222/octosql), a SQL execution engine as CLI which lets you query multiple datasources and files simultaneously using SQL.
 
     socialIcons:
         - name: github
@@ -86,13 +73,9 @@ params:
         - name: twitter
           url: https://twitter.com/cube2222_2
 
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        bing:
-            SiteVerificationTag: "XYZabc"
-        yandex:
-            SiteVerificationTag: "XYZabc"
+#    analytics:
+#        google:
+#            SiteVerificationTag: "XYZabc"
 
     cover:
         hidden: true # hide everywhere but not in structured data
@@ -100,7 +83,7 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        URL: "https://github.com/<path_to_repo>/content"
+        URL: "https://github.com/cube2222/cube2222.github.io/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
