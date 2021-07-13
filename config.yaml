@@ -65,6 +65,8 @@ params:
 
           On the side I develop [OctoSQL](https://github.com/cube2222/octosql), a SQL execution engine as CLI which lets you query multiple datasources and files simultaneously using SQL.
 
+          At some point I've also created [jql](https://github.com/cube2222/jql), which may seem dead on first glance, but it's simply finished. I'm using it daily.
+
     socialIcons:
         - name: github
           url: "https://github.com/cube2222"
