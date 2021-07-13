@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>practical on Jacob Martin</title>
+    <link>https://examplesite.com/tags/practical/</link>
+    <description>Recent content in practical on Jacob Martin</description>
+    <image>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Apr 2016 11:08:18 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/practical/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practical Golang: Writing a simple login middleware</title>
+      <link>https://examplesite.com/2016/04/06/practical-golang-writing-a-simple-login-middleware/</link>
+      <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
+      
+      <guid>https://examplesite.com/2016/04/06/practical-golang-writing-a-simple-login-middleware/</guid>
+      <description>Introduction In this part we’ll be creating a simple middleware you can easily apply to your handlers to get authentication/authorization. Middleware like this is an awesome way to add additional functionality to your Go server. Here we will only do authorization as we will only ask for a password, not a login. Although if you want, then you can easily extend this system to any authentication/authorization you’d like.
+Implementation We will mainly use the stdlib, and will use cookies to remember who’s already logged in.</description>
+    </item>
+    
+  </channel>
+</rss>

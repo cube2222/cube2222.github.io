@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>image on Jacob Martin</title>
+    <link>https://examplesite.com/tags/image/</link>
+    <description>Recent content in image on Jacob Martin</description>
+    <image>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Mar 2016 13:25:39 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web app using Microservices in Go: Part 3 – Storage and Master</title>
+      <link>https://examplesite.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
+      <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
+      
+      <guid>https://examplesite.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
+      <description>Previous part
+Introduction In this part we will implement the next part of the microservices needed for our web app. We will implement the:
+ Storage system Master  This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>
+    </item>
+    
+  </channel>
+</rss>
