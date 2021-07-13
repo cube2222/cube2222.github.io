@@ -2,202 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cube2222.github.io/categories/</loc>
+    <loc>https://jacobmartins.com/categories/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/cluster/</loc>
+    <loc>https://jacobmartins.com/tags/cluster/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/database/</loc>
+    <loc>https://jacobmartins.com/tags/database/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/distributed/</loc>
+    <loc>https://jacobmartins.com/tags/distributed/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/categories/go/</loc>
+    <loc>https://jacobmartins.com/categories/go/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/go/</loc>
+    <loc>https://jacobmartins.com/tags/go/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/golang/</loc>
+    <loc>https://jacobmartins.com/tags/golang/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/</loc>
+    <loc>https://jacobmartins.com/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/microservice/</loc>
+    <loc>https://jacobmartins.com/tags/microservice/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/microservices/</loc>
+    <loc>https://jacobmartins.com/tags/microservices/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/posts/</loc>
+    <loc>https://jacobmartins.com/posts/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/categories/practical-golang/</loc>
+    <loc>https://jacobmartins.com/categories/practical-golang/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</loc>
+    <loc>https://jacobmartins.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/resiliency/</loc>
+    <loc>https://jacobmartins.com/tags/resiliency/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/server/</loc>
+    <loc>https://jacobmartins.com/tags/server/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/</loc>
+    <loc>https://jacobmartins.com/tags/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/tutorial/</loc>
+    <loc>https://jacobmartins.com/tags/tutorial/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/event/</loc>
+    <loc>https://jacobmartins.com/tags/event/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/master/</loc>
+    <loc>https://jacobmartins.com/tags/master/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/message/</loc>
+    <loc>https://jacobmartins.com/tags/message/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/nats/</loc>
+    <loc>https://jacobmartins.com/tags/nats/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/pattern/</loc>
+    <loc>https://jacobmartins.com/tags/pattern/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/</loc>
+    <loc>https://jacobmartins.com/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/protobuf/</loc>
+    <loc>https://jacobmartins.com/tags/protobuf/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/pub/</loc>
+    <loc>https://jacobmartins.com/tags/pub/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/slave/</loc>
+    <loc>https://jacobmartins.com/tags/slave/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/sub/</loc>
+    <loc>https://jacobmartins.com/tags/sub/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/subscribe/</loc>
+    <loc>https://jacobmartins.com/tags/subscribe/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/worker/</loc>
+    <loc>https://jacobmartins.com/tags/worker/</loc>
     <lastmod>2016-06-06T11:51:48+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/binary/</loc>
+    <loc>https://jacobmartins.com/tags/binary/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/client/</loc>
+    <loc>https://jacobmartins.com/tags/client/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/google/</loc>
+    <loc>https://jacobmartins.com/tags/google/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/json/</loc>
+    <loc>https://jacobmartins.com/tags/json/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/05/24/practical-golang-using-protobuffs/</loc>
+    <loc>https://jacobmartins.com/2016/05/24/practical-golang-using-protobuffs/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/protobuffers/</loc>
+    <loc>https://jacobmartins.com/tags/protobuffers/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/protobuffs/</loc>
+    <loc>https://jacobmartins.com/tags/protobuffs/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/protocol-buffer/</loc>
+    <loc>https://jacobmartins.com/tags/protocol-buffer/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/transport/</loc>
+    <loc>https://jacobmartins.com/tags/transport/</loc>
     <lastmod>2016-05-24T11:44:26+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/app/</loc>
+    <loc>https://jacobmartins.com/tags/app/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/authentication/</loc>
+    <loc>https://jacobmartins.com/tags/authentication/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/authorization/</loc>
+    <loc>https://jacobmartins.com/tags/authorization/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/handler/</loc>
+    <loc>https://jacobmartins.com/tags/handler/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/middleware/</loc>
+    <loc>https://jacobmartins.com/tags/middleware/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/practical/</loc>
+    <loc>https://jacobmartins.com/tags/practical/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/04/06/practical-golang-writing-a-simple-login-middleware/</loc>
+    <loc>https://jacobmartins.com/2016/04/06/practical-golang-writing-a-simple-login-middleware/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/web/</loc>
+    <loc>https://jacobmartins.com/tags/web/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/architecture/</loc>
+    <loc>https://jacobmartins.com/tags/architecture/</loc>
     <lastmod>2016-04-04T10:30:24+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/04/04/practical-golang-event-multicastsubscription-service/</loc>
+    <loc>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</loc>
     <lastmod>2016-04-04T10:30:24+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/subscription/</loc>
+    <loc>https://jacobmartins.com/tags/subscription/</loc>
     <lastmod>2016-04-04T10:30:24+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/design/</loc>
+    <loc>https://jacobmartins.com/tags/design/</loc>
     <lastmod>2016-03-23T13:34:03+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/frontend/</loc>
+    <loc>https://jacobmartins.com/tags/frontend/</loc>
     <lastmod>2016-03-23T13:34:03+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</loc>
+    <loc>https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</loc>
     <lastmod>2016-03-23T13:34:03+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/image/</loc>
+    <loc>https://jacobmartins.com/tags/image/</loc>
     <lastmod>2016-03-21T13:25:39+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/storage/</loc>
+    <loc>https://jacobmartins.com/tags/storage/</loc>
     <lastmod>2016-03-21T13:25:39+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/web-app/</loc>
+    <loc>https://jacobmartins.com/tags/web-app/</loc>
     <lastmod>2016-03-21T13:25:39+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</loc>
+    <loc>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</loc>
     <lastmod>2016-03-21T13:25:39+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/key-value-store/</loc>
+    <loc>https://jacobmartins.com/tags/key-value-store/</loc>
     <lastmod>2016-03-16T12:30:40+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</loc>
+    <loc>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</loc>
     <lastmod>2016-03-16T12:30:40+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/14/web-app-using-microservices-in-go-part-1-design/</loc>
+    <loc>https://jacobmartins.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/</loc>
     <lastmod>2016-03-14T14:19:19+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/08/practical-golang-using-google-drive-and-calendar/</loc>
+    <loc>https://jacobmartins.com/2016/03/08/practical-golang-using-google-drive-and-calendar/</loc>
     <lastmod>2016-03-08T13:47:01+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/03/07/practical-golang-using-websockets/</loc>
+    <loc>https://jacobmartins.com/2016/03/07/practical-golang-using-websockets/</loc>
     <lastmod>2016-03-07T13:23:50+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/beginner/</loc>
+    <loc>https://jacobmartins.com/tags/beginner/</loc>
     <lastmod>2016-02-29T14:02:02+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/2016/02/29/getting-started-with-oauth2-in-go/</loc>
+    <loc>https://jacobmartins.com/2016/02/29/getting-started-with-oauth2-in-go/</loc>
     <lastmod>2016-02-29T14:02:02+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/tags/oauth2/</loc>
+    <loc>https://jacobmartins.com/tags/oauth2/</loc>
     <lastmod>2016-02-29T14:02:02+00:00</lastmod>
   </url><url>
-    <loc>https://cube2222.github.io/archive/</loc>
+    <loc>https://jacobmartins.com/archive/</loc>
   </url><url>
-    <loc>https://cube2222.github.io/tags/k/v-store/</loc>
+    <loc>https://jacobmartins.com/tags/k/v-store/</loc>
   </url><url>
-    <loc>https://cube2222.github.io/search/</loc>
+    <loc>https://jacobmartins.com/search/</loc>
   </url>
 </urlset>

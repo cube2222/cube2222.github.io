@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>k/v store on Jacob Martin</title>
-    <link>https://cube2222.github.io/tags/k/v-store/</link>
+    <link>https://jacobmartins.com/tags/k/v-store/</link>
     <description>Recent content in k/v store on Jacob Martin</description>
     <image>
-      <url>https://cube2222.github.io/images/avatar.jpg</url>
-      <link>https://cube2222.github.io/images/avatar.jpg</link>
+      <url>https://jacobmartins.com/images/avatar.jpg</url>
+      <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cube2222.github.io/tags/k/v-store/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://jacobmartins.com/tags/k/v-store/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web app using Microservices in Go: Part 2 – k/v store and Database</title>
-      <link>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
+      <link>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
       <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
+      <guid>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
       <description>Previous part
 Introduction In this part we will implement part of the microservices needed for our web app. We will implement the:
  key-value store Database  This will be a pretty code heavy tutorial so concentrate and have fun!

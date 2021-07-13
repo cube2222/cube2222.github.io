@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>subscription on Jacob Martin</title>
-    <link>https://cube2222.github.io/tags/subscription/</link>
+    <link>https://jacobmartins.com/tags/subscription/</link>
     <description>Recent content in subscription on Jacob Martin</description>
     <image>
-      <url>https://cube2222.github.io/images/avatar.jpg</url>
-      <link>https://cube2222.github.io/images/avatar.jpg</link>
+      <url>https://jacobmartins.com/images/avatar.jpg</url>
+      <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/subscription/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/subscription/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Event multicast/subscription service</title>
-      <link>https://cube2222.github.io/2016/04/04/practical-golang-event-multicastsubscription-service/</link>
+      <link>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/04/04/practical-golang-event-multicastsubscription-service/</guid>
+      <guid>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</guid>
       <description>Introduction In our microservice architectures we always need a method for communicating between services. There are various ways to achieve this. Few of them are, but are not limited to: Remote Procedure Call, REST API’s, message BUSses. In this comprehensive tutorial we’ll write a service, which you can use to distribute messages/events across your system.
 Design How will it work? It will accept registering subscribers (other microservices). Whenever it gets a message from a microservice, it will send it further to all subscribers, using a REST call to the other microservices /event URL.</description>
     </item>

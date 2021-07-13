@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>architecture on Jacob Martin</title>
-    <link>https://cube2222.github.io/tags/architecture/</link>
+    <link>https://jacobmartins.com/tags/architecture/</link>
     <description>Recent content in architecture on Jacob Martin</description>
     <image>
-      <url>https://cube2222.github.io/images/avatar.jpg</url>
-      <link>https://cube2222.github.io/images/avatar.jpg</link>
+      <url>https://jacobmartins.com/images/avatar.jpg</url>
+      <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Event multicast/subscription service</title>
-      <link>https://cube2222.github.io/2016/04/04/practical-golang-event-multicastsubscription-service/</link>
+      <link>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/04/04/practical-golang-event-multicastsubscription-service/</guid>
+      <guid>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</guid>
       <description>Introduction In our microservice architectures we always need a method for communicating between services. There are various ways to achieve this. Few of them are, but are not limited to: Remote Procedure Call, REST API’s, message BUSses. In this comprehensive tutorial we’ll write a service, which you can use to distribute messages/events across your system.
 Design How will it work? It will accept registering subscribers (other microservices). Whenever it gets a message from a microservice, it will send it further to all subscribers, using a REST call to the other microservices /event URL.</description>
     </item>
     
     <item>
       <title>Web app using Microservices in Go: Part 4 – Worker and Frontend</title>
-      <link>https://cube2222.github.io/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
+      <link>https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
+      <guid>https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
       <description>Previous part
 Introduction In this part we will finally finish writing our application. We will implement the last two services:
  The Worker The Frontend  The Worker The worker will communicate with the Master to get new Tasks. When it gets a Task it will get the corresponding data from the storage and will start working on the task. When it finishes it will send the finished data to the storage service, and if that succeeds it will register the Task as finished to the Master.</description>
@@ -33,10 +33,10 @@ Introduction In this part we will finally finish writing our application. We wil
     
     <item>
       <title>Web app using Microservices in Go: Part 3 – Storage and Master</title>
-      <link>https://cube2222.github.io/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
+      <link>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
+      <guid>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
       <description>Previous part
 Introduction In this part we will implement the next part of the microservices needed for our web app. We will implement the:
  Storage system Master  This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>
@@ -44,10 +44,10 @@ Introduction In this part we will implement the next part of the microservices n
     
     <item>
       <title>Web app using Microservices in Go: Part 2 – k/v store and Database</title>
-      <link>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
+      <link>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
       <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
+      <guid>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
       <description>Previous part
 Introduction In this part we will implement part of the microservices needed for our web app. We will implement the:
  key-value store Database  This will be a pretty code heavy tutorial so concentrate and have fun!
@@ -56,10 +56,10 @@ The key-value store Design The design hasn’t changed much. We will save the ke
     
     <item>
       <title>Web app using Microservices in Go: Part 1 – Design</title>
-      <link>https://cube2222.github.io/2016/03/14/web-app-using-microservices-in-go-part-1-design/</link>
+      <link>https://jacobmartins.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/</link>
       <pubDate>Mon, 14 Mar 2016 14:19:19 +0000</pubDate>
       
-      <guid>https://cube2222.github.io/2016/03/14/web-app-using-microservices-in-go-part-1-design/</guid>
+      <guid>https://jacobmartins.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/</guid>
       <description>Introduction Recently it’s a constantly repeated buzzword – Microservices. You can love ’em or hate ’em, but you really shouldn’t ignore ’em. In this short series we’ll create a web app using a microservice architecture. We’ll try not to use 3rd party tools and libraries. Remember though that when creating a production web app it is highly recommended to use 3rd party libraries (even if only to save you time).</description>
     </item>
     
