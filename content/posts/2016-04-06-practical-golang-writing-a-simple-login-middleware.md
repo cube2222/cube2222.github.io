@@ -42,7 +42,7 @@ import (
     "sync"
 )
 
-const loginPage = "&lt;html&gt;&lt;head&gt;&lt;title&gt;Login&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=\"login\" method=\"post\"&gt; &lt;input type=\"password\" name=\"password\" /&gt; &lt;input type=\"submit\" value=\"login\" /&gt; &lt;/form&gt; &lt;/body&gt; &lt;/html&gt;"
+const loginPage = "<html><head><title>Login</title></head><body><form action=\"login\" method=\"post\"> <input type=\"password\" name=\"password\" /> <input type=\"submit\" value=\"login\" /> </form> </body> </html>"
 
 func main() {
 
@@ -86,7 +86,7 @@ import (
     "sync"
 )
 
-const loginPage = "&lt;html&gt;&lt;head&gt;&lt;title&gt;Login&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=\"login\" method=\"post\"&gt; &lt;input type=\"password\" name=\"password\" /&gt; &lt;input type=\"submit\" value=\"login\" /&gt; &lt;/form&gt; &lt;/body&gt; &lt;/html&gt;"
+const loginPage = "<html><head><title>Login</title></head><body><form action=\"login\" method=\"post\"> <input type=\"password\" name=\"password\" /> <input type=\"submit\" value=\"login\" /> </form> </body> </html>"
 
 func main() {
 

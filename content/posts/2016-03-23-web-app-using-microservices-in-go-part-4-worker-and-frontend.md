@@ -65,7 +65,7 @@ var storageLocation string
 var keyValueStoreAddress string
 
 func main() {
-    if len(os.Args) &lt; 3 {
+    if len(os.Args) < 3 {
         fmt.Println("Error: Too few arguments.")
         return
     }
@@ -147,7 +147,7 @@ And now we come to the main for loop which runs on each thread:
 ```go
 myWG := sync.WaitGroup{}
 myWG.Add(threadCount)
-for i := 0; i &lt; threadCount; i++ {
+for i := 0; i < threadCount; i++ {
     go func() {
         for {
             //Do work...
@@ -296,8 +296,8 @@ Now that we have our image we can finally do some work on it:
 func doWorkOnImage(myImage image.Image) image.Image {
     myCanvas := image.NewRGBA(myImage.Bounds())
 
-    for i := 0; i &lt; myCanvas.Rect.Max.X; i++ {
-        for j := 0; j &lt; myCanvas.Rect.Max.Y; j++ {
+    for i := 0; i < myCanvas.Rect.Max.X; i++ {
+        for j := 0; j < myCanvas.Rect.Max.Y; j++ {
             r, g, b, _ := myImage.At(i, j).RGBA()
             myColor := new(color.RGBA)
             myColor.R = uint8(g)
@@ -370,13 +370,13 @@ import (
     "io"
 )
 
-const indexPage = "&lt;html&gt;&lt;head&gt;&lt;title&gt;Upload file&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form enctype=\"multipart/form-data\" action=\"submitTask\" method=\"post\"&gt; &lt;input type=\"file\" name=\"uploadfile\" /&gt; &lt;input type=\"submit\" value=\"upload\" /&gt; &lt;/form&gt; &lt;/body&gt; &lt;/html&gt;"
+const indexPage = "<html><head><title>Upload file</title></head><body><form enctype=\"multipart/form-data\" action=\"submitTask\" method=\"post\"> <input type=\"file\" name=\"uploadfile\" /> <input type=\"submit\" value=\"upload\" /> </form> </body> </html>"
 
 var keyValueStoreAddress string
 var masterLocation string
 
 func main() {
-    if len(os.Args) &lt; 2 {
+    if len(os.Args) < 2 {
         fmt.Println("Error: Too few arguments.")
         return
     }

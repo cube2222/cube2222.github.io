@@ -49,11 +49,11 @@ Let&#8217;s name it creatively, like _index.html_
 Now the contents:
 
 ```html
-&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
+<!DOCTYPE HTML>
+<html>
+<head>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
          function myWebsocketStart()
          {
                var ws = new WebSocket("ws://localhost:3000/websocket");
@@ -72,14 +72,14 @@ Now the contents:
 
          }
 
-    &lt;/script&gt;
+    </script>
 
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button onclick="javascript:myWebsocketStart()"&gt;Subscribe&lt;/button&gt;
-&lt;textarea id="textarea1"&gt;MyTextArea&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</head>
+<body>
+<button onclick="javascript:myWebsocketStart()">Subscribe</button>
+<textarea id="textarea1">MyTextArea</textarea>
+</body>
+</html>
 ```
 
 I&#8217;ll just go over it quickly as the main subject here is the go code.
@@ -176,7 +176,7 @@ Now we need the main websocket handling code, which we will wrap into an endless
 ```go
 for {
   time.Sleep(2 * time.Second)
-  if myPerson.Age &lt; 40 {
+  if myPerson.Age < 40 {
     myJson, err := json.Marshal(myPerson)
     if err != nil {
       fmt.Println(err)
@@ -207,11 +207,11 @@ As before, we will need a **_html_** folder for our html file with the creative 
 And here&#8217;s the code:
 
 ```html
-&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
+<!DOCTYPE HTML>
+<html>
+<head>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
          function myWebsocketStart()
          {
                var ws = new WebSocket("ws://localhost:3000/websocket");
@@ -241,14 +241,14 @@ And here&#8217;s the code:
 
          }
 
-    &lt;/script&gt;
+    </script>
 
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button onclick="javascript:myWebsocketStart()"&gt;Start websocket!&lt;/button&gt;
-&lt;textarea id="textarea1"&gt;MyTextArea&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</head>
+<body>
+<button onclick="javascript:myWebsocketStart()">Start websocket!</button>
+<textarea id="textarea1">MyTextArea</textarea>
+</body>
+</html>
 ```
 
 The only differences are, that when we open the connection, we send a &#8220;ping&#8221; message and notify our user about it. Now, whenever we get back a &#8220;pong&#8221; message, we append it to our textarea and after 2 seconds we answer with a &#8220;ping&#8221; message again.

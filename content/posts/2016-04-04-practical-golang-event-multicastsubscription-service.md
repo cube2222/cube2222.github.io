@@ -278,7 +278,7 @@ for range t {
     timeNow := time.Now()
     serviceStorageMutex.Lock()
     for address, timeKeepAlive := range registeredServiceStorage {
-        if timeNow.Sub(timeKeepAlive).Minutes() &gt; 2 {
+        if timeNow.Sub(timeKeepAlive).Minutes() > 2 {
             delete(registeredServiceStorage, address)
         }
     }

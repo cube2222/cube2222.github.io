@@ -60,7 +60,7 @@ func serveImage(w http.ResponseWriter, r *http.Request) {
 }
 
 func registerInKVStore() bool {
-    if len(os.Args) &lt; 3 {
+    if len(os.Args) < 3 {
         fmt.Println("Error: Too few arguments.")
         return false
     }
@@ -260,7 +260,7 @@ func registerTaskFinished(w http.ResponseWriter, r *http.Request) {
 }
 
 func registerInKVStore() bool {
-    if len(os.Args) &lt; 3 {
+    if len(os.Args) < 3 {
         fmt.Println("Error: Too few arguments.")
         return false
     }

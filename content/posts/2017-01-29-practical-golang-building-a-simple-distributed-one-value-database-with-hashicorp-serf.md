@@ -121,7 +121,7 @@ For that we&#8217;ll have a small notify method, which will return true, if anyt
 
 ```go
 func (n *oneAndOnlyNumber) notifyValue(curVal int, curGeneration int) bool {
-    if curGeneration &gt; n.generation {
+    if curGeneration > n.generation {
         n.numMutex.Lock()
         defer n.numMutex.Unlock()
         n.generation = curGeneration
@@ -280,9 +280,9 @@ Having done this, we can set up our main loop, including the intervals at which 
     numberBroadcastTicker := time.Tick(time.Second * 2)
     for {
         select {
-        case &lt;-numberBroadcastTicker:
+        case <-numberBroadcastTicker:
         // Notification code goes here...
-        case &lt;-debugDataPrinterTicker:
+        case <-debugDataPrinterTicker:
             log.Printf("Members: %v\n", cluster.Members())
 
             curVal, curGen := theOneAndOnlyNumber.getValue()
@@ -297,7 +297,7 @@ Just kidding. Time to finish up our service with the notification code.
 We&#8217;ll now get a list of **other** members in the cluster, set a timeout, and asynchronously notify a part of those others.
 
 ```go
-        case &lt;-numberBroadcastTicker:
+        case <-numberBroadcastTicker:
             members := getOtherMembers(cluster)
 
             ctx, _ := context.WithTimeout(ctx, time.Second*2)
@@ -309,9 +309,9 @@ Now, let&#8217;s look at the _getOtherMembers_ function. It&#8217;s actually jus
 ```go
 func getOtherMembers(cluster *serf.Serf) []serf.Member {
     members := cluster.Members()
-    for i := 0; i &lt; len(members); {
+    for i := 0; i < len(members); {
         if members[i].Name == cluster.LocalMember().Name || members[i].Status != serf.StatusAlive {
-            if i &lt; len(members)-1 {
+            if i < len(members)-1 {
                 members = append(members[:i], members[i + 1:]...)
             } else {
                 members = members[:i]
@@ -332,7 +332,7 @@ Finally the function we use to notify others:
 func notifyOthers(ctx context.Context, otherMembers []serf.Member, db *oneAndOnlyNumber) {
     g, ctx := errgroup.WithContext(ctx)
 
-    if len(otherMembers) &lt;= MembersToNotify {
+    if len(otherMembers) <= MembersToNotify {
         for _, member := range otherMembers {
             curMember := member
             g.Go(func() error {
@@ -341,7 +341,7 @@ func notifyOthers(ctx context.Context, otherMembers []serf.Member, db *oneAndOnl
         }
     } else {
         randIndex := rand.Int() % len(otherMembers)
-        for i := 0; i &lt; MembersToNotify; i++ {
+        for i := 0; i < MembersToNotify; i++ {
             g.Go(func() error {
                 return notifyMember(
                     ctx,

@@ -308,7 +308,7 @@ func getById(w http.ResponseWriter, r *http.Request) {
         }
 
         datastoreMutex.RLock()
-        bIsInError := err != nil || id &gt;= len(datastore) // Reading the length of a slice must be done in a synchronized manner. That's why the mutex is used.
+        bIsInError := err != nil || id >= len(datastore) // Reading the length of a slice must be done in a synchronized manner. That's why the mutex is used.
         datastoreMutex.RUnlock()
 
         if bIsInError {
@@ -416,7 +416,7 @@ func setById(w http.ResponseWriter, r *http.Request) {
 
         bErrored := false
         datastoreMutex.Lock()
-        if taskToSet.Id &gt;= len(datastore) || taskToSet.State &gt; 2 || taskToSet.State &lt; 0 {
+        if taskToSet.Id >= len(datastore) || taskToSet.State > 2 || taskToSet.State < 0 {
             bErrored = true
         } else {
             datastore[taskToSet.Id] = taskToSet
@@ -515,7 +515,7 @@ func getNewTask(w http.ResponseWriter, r *http.Request) {
 
         oNFTMutex.Lock()
         datastoreMutex.Lock()
-        for i := oldestNotFinishedTask; i &lt; len(datastore); i++ {
+        for i := oldestNotFinishedTask; i < len(datastore); i++ {
             if datastore[i].State == 2 && i == oldestNotFinishedTask {
                 oldestNotFinishedTask++
                 continue
@@ -580,7 +580,7 @@ and later we define the function:
 
 ```go
 func registerInKVStore() bool {
-    if len(os.Args) &lt; 3 {
+    if len(os.Args) < 3 {
         fmt.Println("Error: Too few arguments.")
         return false
     }

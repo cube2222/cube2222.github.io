@@ -69,9 +69,9 @@ func main() {
 Now we&#8217;ll set up a simple site:
 
 ```go
-const htmlIndex = `&lt;html&gt;&lt;body&gt;
-&lt;a href="/GoogleLogin"&gt;Log in with Google&lt;/a&gt;
-&lt;/body&gt;&lt;/html&gt;
+const htmlIndex = `<html><body>
+<a href="/GoogleLogin">Log in with Google</a>
+</body></html>
 `
 ```
 

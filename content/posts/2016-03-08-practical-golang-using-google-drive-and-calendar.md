@@ -54,8 +54,8 @@ import (
 var (
     googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
-        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
-        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
+        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
+        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
         Scopes:       []string{},
         Endpoint:     google.Endpoint,
     }
@@ -63,9 +63,9 @@ var (
     oauthStateString = "random"
 )
 
-const htmlIndex = `&lt;html&gt;&lt;body&gt;
-&lt;a href="/GoogleLogin"&gt;Log in with Google&lt;/a&gt;
-&lt;/body&gt;&lt;/html&gt;
+const htmlIndex = `<html><body>
+<a href="/GoogleLogin">Log in with Google</a>
+</body></html>
 `
 
 func main() {
@@ -122,8 +122,8 @@ Also, we&#8217;ll need to ask for permission, so add the **_https://www.googleap
 ```go
 googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
-        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
-        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
+        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
+        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
         Scopes:       []string{"https://www.googleapis.com/auth/calendar"},
         Endpoint:     google.Endpoint,
     }
@@ -198,7 +198,7 @@ if err != nil {
   return
 }
 
-if len(calendarEvents.Items) &gt; 0 {
+if len(calendarEvents.Items) > 0 {
     for _, i := range calendarEvents.Items {
         fmt.Fprintln(w, i.Summary, " ", i.Start.DateTime)
     }
@@ -213,7 +213,7 @@ Ok, we already know how to list events, now let&#8217;s create an event!
 First, we need an event object:
 
 ```go
-if len(calendarEvents.Items) &gt; 0 {
+if len(calendarEvents.Items) > 0 {
     for _, i := range calendarEvents.Items {
         fmt.Fprintln(w, i.Summary, " ", i.Start.DateTime)
     }
@@ -272,8 +272,8 @@ Again we will need to ask the user for permission. So we have to use the https:/
 ```go
 googleOauthConfig = &oauth2.Config{
         RedirectURL:    "http://localhost:3000/GoogleCallback",
-        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
-        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/&lt;your-project-id&gt;/apiui/credential
+        ClientID:     os.Getenv("googlekey"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
+        ClientSecret: os.Getenv("googlesecret"), // from https://console.developers.google.com/project/<your-project-id>/apiui/credential
         Scopes:       []string{"https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file"},
         Endpoint:     google.Endpoint,
     }
@@ -329,7 +329,7 @@ if err != nil {
 As I wrote before, this is one page of files, now let&#8217;s go over it:
 
 ```go
-if len(myFilesList.Files) &gt; 0 {
+if len(myFilesList.Files) > 0 {
     for _, i := range myFilesList.Files {
         fmt.Fprintln(w, i.Name, " ", i.Id)
     }
@@ -350,7 +350,7 @@ for myFilesList.NextPageToken != "" {
         break
     }
     fmt.Fprintln(w, "Next Page: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    if len(myFilesList.Files) &gt; 0 {
+    if len(myFilesList.Files) > 0 {
         for _, i := range myFilesList.Files {
             fmt.Fprintln(w, i.Name, " ", i.Id)
         }
@@ -382,7 +382,7 @@ for myFilesList.NextPageToken != "" {
         break
     }
     fmt.Fprintln(w, "Next Page: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    if len(myFilesList.Files) &gt; 0 {
+    if len(myFilesList.Files) > 0 {
         for _, i := range myFilesList.Files {
             fmt.Fprintln(w, i.Name, " ", i.Id)
         }

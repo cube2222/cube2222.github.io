@@ -551,7 +551,7 @@ So, we want to create 20 test Tasks, so we run the loop 20 times:
 
 ```go
 func initTestTasks() {
-    for i := 0; i &lt; 20; i++ {
+    for i := 0; i < 20; i++ {
     }
 }
 ```
@@ -559,7 +559,7 @@ func initTestTasks() {
 We create a new _Task_ and ask the _File Server_ for its address:
 
 ```go
-for i := 0; i &lt; 20; i++ {
+for i := 0; i < 20; i++ {
     newTask := Transport.Task{Uuid: uuid.NewV4().String(), State: 0}
     fileServerAddressTransport := Transport.DiscoverableServiceTransport{}
     msg, err := nc.Request("Discovery.FileServer", nil, 1000 * time.Millisecond)
@@ -614,7 +614,7 @@ How do we get the next Task? We just loop over the Task to find one that is not 
 func getNextTask() (*Transport.Task, bool) {
     TaskMutex.Lock()
     defer TaskMutex.Unlock()
-    for i := oldestFinishedTaskPointer; i &lt; len(Tasks); i++ {
+    for i := oldestFinishedTaskPointer; i < len(Tasks); i++ {
         if i == oldestFinishedTaskPointer && Tasks[i].State == 2 {
             oldestFinishedTaskPointer++
         } else {
@@ -694,7 +694,7 @@ func main() {
         fmt.Println(err)
     }
 
-    for i := 0; i &lt; 8; i++ {
+    for i := 0; i < 8; i++ {
         go doWork()
     }
 
@@ -754,7 +754,7 @@ func doWork() {
         words := strings.Split(string(data), ",")
         sort.Strings(words)
         wordCounts := make(map[string]int)
-        for i := 0; i &lt; len(words); i++{
+        for i := 0; i < len(words); i++{
             wordCounts[words[i]] = wordCounts[words[i]] + 1
         }
 
@@ -841,7 +841,7 @@ Ok, how can we just publish simple event-structs? Totally intuitive, like that:
 ```go
 defer ec.Close()
 
-for i := 0; i &lt; 5; i++ {
+for i := 0; i < 5; i++ {
     myMessage := Transport.TextMessage{Id: int32(i), Body: "Hello over standard!"}
 
     err := ec.Publish("Messaging.Text.Standard", &myMessage)
@@ -860,7 +860,7 @@ err := ec.Request(topic, *body, *response, timeout)
 So our request sending part will look like this:
 
 ```go
-for i := 5; i &lt; 10; i++ {
+for i := 5; i < 10; i++ {
     myMessage := Transport.TextMessage{Id: int32(i), Body: "Hello, please respond!"}
 
     res := Transport.TextMessage{}
@@ -879,10 +879,10 @@ The last thing we can do is sending them via Channels, which is relatively the s
 ```go
 sendChannel := make(chan *Transport.TextMessage)
 ec.BindSendChan("Messaging.Text.Channel", sendChannel)
-for i := 10; i &lt; 15; i++ {
+for i := 10; i < 15; i++ {
     myMessage := Transport.TextMessage{Id: int32(i), Body: "Hello over channel!"}
 
-    sendChannel &lt;- &myMessage
+    sendChannel <- &myMessage
 }
 ```
 
