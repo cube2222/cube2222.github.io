@@ -2,479 +2,479 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Jacob Martin</title>
-    <link>https://examplesite.com/tags/</link>
+    <link>https://cube2222.github.io/tags/</link>
     <description>Recent content in Tags on Jacob Martin</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cluster</title>
-      <link>https://examplesite.com/tags/cluster/</link>
+      <link>https://cube2222.github.io/tags/cluster/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/cluster/</guid>
+      <guid>https://cube2222.github.io/tags/cluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>database</title>
-      <link>https://examplesite.com/tags/database/</link>
+      <link>https://cube2222.github.io/tags/database/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/database/</guid>
+      <guid>https://cube2222.github.io/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>distributed</title>
-      <link>https://examplesite.com/tags/distributed/</link>
+      <link>https://cube2222.github.io/tags/distributed/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/distributed/</guid>
+      <guid>https://cube2222.github.io/tags/distributed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>https://examplesite.com/tags/go/</link>
+      <link>https://cube2222.github.io/tags/go/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/go/</guid>
+      <guid>https://cube2222.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://examplesite.com/tags/golang/</link>
+      <link>https://cube2222.github.io/tags/golang/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/golang/</guid>
+      <guid>https://cube2222.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microservice</title>
-      <link>https://examplesite.com/tags/microservice/</link>
+      <link>https://cube2222.github.io/tags/microservice/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/microservice/</guid>
+      <guid>https://cube2222.github.io/tags/microservice/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microservices</title>
-      <link>https://examplesite.com/tags/microservices/</link>
+      <link>https://cube2222.github.io/tags/microservices/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/microservices/</guid>
+      <guid>https://cube2222.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>resiliency</title>
-      <link>https://examplesite.com/tags/resiliency/</link>
+      <link>https://cube2222.github.io/tags/resiliency/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/resiliency/</guid>
+      <guid>https://cube2222.github.io/tags/resiliency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>server</title>
-      <link>https://examplesite.com/tags/server/</link>
+      <link>https://cube2222.github.io/tags/server/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/server/</guid>
+      <guid>https://cube2222.github.io/tags/server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://examplesite.com/tags/tutorial/</link>
+      <link>https://cube2222.github.io/tags/tutorial/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/tutorial/</guid>
+      <guid>https://cube2222.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>event</title>
-      <link>https://examplesite.com/tags/event/</link>
+      <link>https://cube2222.github.io/tags/event/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/event/</guid>
+      <guid>https://cube2222.github.io/tags/event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>master</title>
-      <link>https://examplesite.com/tags/master/</link>
+      <link>https://cube2222.github.io/tags/master/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/master/</guid>
+      <guid>https://cube2222.github.io/tags/master/</guid>
       <description></description>
     </item>
     
     <item>
       <title>message</title>
-      <link>https://examplesite.com/tags/message/</link>
+      <link>https://cube2222.github.io/tags/message/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/message/</guid>
+      <guid>https://cube2222.github.io/tags/message/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NATS</title>
-      <link>https://examplesite.com/tags/nats/</link>
+      <link>https://cube2222.github.io/tags/nats/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/nats/</guid>
+      <guid>https://cube2222.github.io/tags/nats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pattern</title>
-      <link>https://examplesite.com/tags/pattern/</link>
+      <link>https://cube2222.github.io/tags/pattern/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/pattern/</guid>
+      <guid>https://cube2222.github.io/tags/pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protobuf</title>
-      <link>https://examplesite.com/tags/protobuf/</link>
+      <link>https://cube2222.github.io/tags/protobuf/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/protobuf/</guid>
+      <guid>https://cube2222.github.io/tags/protobuf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pub</title>
-      <link>https://examplesite.com/tags/pub/</link>
+      <link>https://cube2222.github.io/tags/pub/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/pub/</guid>
+      <guid>https://cube2222.github.io/tags/pub/</guid>
       <description></description>
     </item>
     
     <item>
       <title>slave</title>
-      <link>https://examplesite.com/tags/slave/</link>
+      <link>https://cube2222.github.io/tags/slave/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/slave/</guid>
+      <guid>https://cube2222.github.io/tags/slave/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sub</title>
-      <link>https://examplesite.com/tags/sub/</link>
+      <link>https://cube2222.github.io/tags/sub/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/sub/</guid>
+      <guid>https://cube2222.github.io/tags/sub/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subscribe</title>
-      <link>https://examplesite.com/tags/subscribe/</link>
+      <link>https://cube2222.github.io/tags/subscribe/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/subscribe/</guid>
+      <guid>https://cube2222.github.io/tags/subscribe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>worker</title>
-      <link>https://examplesite.com/tags/worker/</link>
+      <link>https://cube2222.github.io/tags/worker/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/worker/</guid>
+      <guid>https://cube2222.github.io/tags/worker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>binary</title>
-      <link>https://examplesite.com/tags/binary/</link>
+      <link>https://cube2222.github.io/tags/binary/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/binary/</guid>
+      <guid>https://cube2222.github.io/tags/binary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>client</title>
-      <link>https://examplesite.com/tags/client/</link>
+      <link>https://cube2222.github.io/tags/client/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/client/</guid>
+      <guid>https://cube2222.github.io/tags/client/</guid>
       <description></description>
     </item>
     
     <item>
       <title>google</title>
-      <link>https://examplesite.com/tags/google/</link>
+      <link>https://cube2222.github.io/tags/google/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/google/</guid>
+      <guid>https://cube2222.github.io/tags/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSON</title>
-      <link>https://examplesite.com/tags/json/</link>
+      <link>https://cube2222.github.io/tags/json/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/json/</guid>
+      <guid>https://cube2222.github.io/tags/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protobuffers</title>
-      <link>https://examplesite.com/tags/protobuffers/</link>
+      <link>https://cube2222.github.io/tags/protobuffers/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/protobuffers/</guid>
+      <guid>https://cube2222.github.io/tags/protobuffers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protobuffs</title>
-      <link>https://examplesite.com/tags/protobuffs/</link>
+      <link>https://cube2222.github.io/tags/protobuffs/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/protobuffs/</guid>
+      <guid>https://cube2222.github.io/tags/protobuffs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protocol buffer</title>
-      <link>https://examplesite.com/tags/protocol-buffer/</link>
+      <link>https://cube2222.github.io/tags/protocol-buffer/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/protocol-buffer/</guid>
+      <guid>https://cube2222.github.io/tags/protocol-buffer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>transport</title>
-      <link>https://examplesite.com/tags/transport/</link>
+      <link>https://cube2222.github.io/tags/transport/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/transport/</guid>
+      <guid>https://cube2222.github.io/tags/transport/</guid>
       <description></description>
     </item>
     
     <item>
       <title>app</title>
-      <link>https://examplesite.com/tags/app/</link>
+      <link>https://cube2222.github.io/tags/app/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/app/</guid>
+      <guid>https://cube2222.github.io/tags/app/</guid>
       <description></description>
     </item>
     
     <item>
       <title>authentication</title>
-      <link>https://examplesite.com/tags/authentication/</link>
+      <link>https://cube2222.github.io/tags/authentication/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/authentication/</guid>
+      <guid>https://cube2222.github.io/tags/authentication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>authorization</title>
-      <link>https://examplesite.com/tags/authorization/</link>
+      <link>https://cube2222.github.io/tags/authorization/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/authorization/</guid>
+      <guid>https://cube2222.github.io/tags/authorization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>handler</title>
-      <link>https://examplesite.com/tags/handler/</link>
+      <link>https://cube2222.github.io/tags/handler/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/handler/</guid>
+      <guid>https://cube2222.github.io/tags/handler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>middleware</title>
-      <link>https://examplesite.com/tags/middleware/</link>
+      <link>https://cube2222.github.io/tags/middleware/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/middleware/</guid>
+      <guid>https://cube2222.github.io/tags/middleware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>practical</title>
-      <link>https://examplesite.com/tags/practical/</link>
+      <link>https://cube2222.github.io/tags/practical/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/practical/</guid>
+      <guid>https://cube2222.github.io/tags/practical/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>https://examplesite.com/tags/web/</link>
+      <link>https://cube2222.github.io/tags/web/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/web/</guid>
+      <guid>https://cube2222.github.io/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>architecture</title>
-      <link>https://examplesite.com/tags/architecture/</link>
+      <link>https://cube2222.github.io/tags/architecture/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/architecture/</guid>
+      <guid>https://cube2222.github.io/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subscription</title>
-      <link>https://examplesite.com/tags/subscription/</link>
+      <link>https://cube2222.github.io/tags/subscription/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/subscription/</guid>
+      <guid>https://cube2222.github.io/tags/subscription/</guid>
       <description></description>
     </item>
     
     <item>
       <title>design</title>
-      <link>https://examplesite.com/tags/design/</link>
+      <link>https://cube2222.github.io/tags/design/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/design/</guid>
+      <guid>https://cube2222.github.io/tags/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>frontend</title>
-      <link>https://examplesite.com/tags/frontend/</link>
+      <link>https://cube2222.github.io/tags/frontend/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/frontend/</guid>
+      <guid>https://cube2222.github.io/tags/frontend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>image</title>
-      <link>https://examplesite.com/tags/image/</link>
+      <link>https://cube2222.github.io/tags/image/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/image/</guid>
+      <guid>https://cube2222.github.io/tags/image/</guid>
       <description></description>
     </item>
     
     <item>
       <title>storage</title>
-      <link>https://examplesite.com/tags/storage/</link>
+      <link>https://cube2222.github.io/tags/storage/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/storage/</guid>
+      <guid>https://cube2222.github.io/tags/storage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web app</title>
-      <link>https://examplesite.com/tags/web-app/</link>
+      <link>https://cube2222.github.io/tags/web-app/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/web-app/</guid>
+      <guid>https://cube2222.github.io/tags/web-app/</guid>
       <description></description>
     </item>
     
     <item>
       <title>key value store</title>
-      <link>https://examplesite.com/tags/key-value-store/</link>
+      <link>https://cube2222.github.io/tags/key-value-store/</link>
       <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/key-value-store/</guid>
+      <guid>https://cube2222.github.io/tags/key-value-store/</guid>
       <description></description>
     </item>
     
     <item>
       <title>apache spark</title>
-      <link>https://examplesite.com/tags/apache-spark/</link>
+      <link>https://cube2222.github.io/tags/apache-spark/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/apache-spark/</guid>
+      <guid>https://cube2222.github.io/tags/apache-spark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scala</title>
-      <link>https://examplesite.com/tags/scala/</link>
+      <link>https://cube2222.github.io/tags/scala/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/scala/</guid>
+      <guid>https://cube2222.github.io/tags/scala/</guid>
       <description></description>
     </item>
     
     <item>
       <title>setup</title>
-      <link>https://examplesite.com/tags/setup/</link>
+      <link>https://cube2222.github.io/tags/setup/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/setup/</guid>
+      <guid>https://cube2222.github.io/tags/setup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spark</title>
-      <link>https://examplesite.com/tags/spark/</link>
+      <link>https://cube2222.github.io/tags/spark/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/spark/</guid>
+      <guid>https://cube2222.github.io/tags/spark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>windows</title>
-      <link>https://examplesite.com/tags/windows/</link>
+      <link>https://cube2222.github.io/tags/windows/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/windows/</guid>
+      <guid>https://cube2222.github.io/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>beginner</title>
-      <link>https://examplesite.com/tags/beginner/</link>
+      <link>https://cube2222.github.io/tags/beginner/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/beginner/</guid>
+      <guid>https://cube2222.github.io/tags/beginner/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oauth2</title>
-      <link>https://examplesite.com/tags/oauth2/</link>
+      <link>https://cube2222.github.io/tags/oauth2/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/oauth2/</guid>
+      <guid>https://cube2222.github.io/tags/oauth2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>k/v store</title>
-      <link>https://examplesite.com/tags/k/v-store/</link>
+      <link>https://cube2222.github.io/tags/k/v-store/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://examplesite.com/tags/k/v-store/</guid>
+      <guid>https://cube2222.github.io/tags/k/v-store/</guid>
       <description></description>
     </item>
     

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Apache Spark on Jacob Martin</title>
-    <link>https://examplesite.com/categories/apache-spark/</link>
+    <link>https://cube2222.github.io/categories/apache-spark/</link>
     <description>Recent content in Apache Spark on Jacob Martin</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Mar 2016 15:48:15 +0000</lastBuildDate><atom:link href="https://examplesite.com/categories/apache-spark/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Mar 2016 15:48:15 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/categories/apache-spark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with Apache Spark and Scala on Windows</title>
-      <link>https://examplesite.com/2016/03/02/getting-started-with-apache-spark-and-scala-on-windows/</link>
+      <link>https://cube2222.github.io/2016/03/02/getting-started-with-apache-spark-and-scala-on-windows/</link>
       <pubDate>Wed, 02 Mar 2016 15:48:15 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/03/02/getting-started-with-apache-spark-and-scala-on-windows/</guid>
+      <guid>https://cube2222.github.io/2016/03/02/getting-started-with-apache-spark-and-scala-on-windows/</guid>
       <description>Introduction This tutorial is intended for people who really need to run Apache Spark on windows. Usually it would be better to run it in a Linux VM or on Docker.
 There are a few things that cause problems with Spark on windows. But using this way of installation I managed to minimize the impact.
 Getting the needed files First, download the spark-1.6.0-bin-hadoop2.6.tgz file from the Apache Spark Downloads website. You should also install a program to open it, for example 7zip.</description>

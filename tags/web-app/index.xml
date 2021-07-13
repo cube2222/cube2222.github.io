@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>web app on Jacob Martin</title>
-    <link>https://examplesite.com/tags/web-app/</link>
+    <link>https://cube2222.github.io/tags/web-app/</link>
     <description>Recent content in web app on Jacob Martin</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2016 13:25:39 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/web-app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Mar 2016 13:25:39 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/web-app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web app using Microservices in Go: Part 3 – Storage and Master</title>
-      <link>https://examplesite.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
+      <link>https://cube2222.github.io/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
+      <guid>https://cube2222.github.io/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
       <description>Previous part
 Introduction In this part we will implement the next part of the microservices needed for our web app. We will implement the:
  Storage system Master  This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>
@@ -23,10 +23,10 @@ Introduction In this part we will implement the next part of the microservices n
     
     <item>
       <title>Web app using Microservices in Go: Part 2 – k/v store and Database</title>
-      <link>https://examplesite.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
+      <link>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</link>
       <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
+      <guid>https://cube2222.github.io/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
       <description>Previous part
 Introduction In this part we will implement part of the microservices needed for our web app. We will implement the:
  key-value store Database  This will be a pretty code heavy tutorial so concentrate and have fun!
@@ -35,19 +35,19 @@ The key-value store Design The design hasn’t changed much. We will save the ke
     
     <item>
       <title>Web app using Microservices in Go: Part 1 – Design</title>
-      <link>https://examplesite.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/</link>
+      <link>https://cube2222.github.io/2016/03/14/web-app-using-microservices-in-go-part-1-design/</link>
       <pubDate>Mon, 14 Mar 2016 14:19:19 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/</guid>
+      <guid>https://cube2222.github.io/2016/03/14/web-app-using-microservices-in-go-part-1-design/</guid>
       <description>Introduction Recently it’s a constantly repeated buzzword – Microservices. You can love ’em or hate ’em, but you really shouldn’t ignore ’em. In this short series we’ll create a web app using a microservice architecture. We’ll try not to use 3rd party tools and libraries. Remember though that when creating a production web app it is highly recommended to use 3rd party libraries (even if only to save you time).</description>
     </item>
     
     <item>
       <title>Getting started with OAuth2 in Go</title>
-      <link>https://examplesite.com/2016/02/29/getting-started-with-oauth2-in-go/</link>
+      <link>https://cube2222.github.io/2016/02/29/getting-started-with-oauth2-in-go/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/02/29/getting-started-with-oauth2-in-go/</guid>
+      <guid>https://cube2222.github.io/2016/02/29/getting-started-with-oauth2-in-go/</guid>
       <description>Introduction Authentication is usually a crucial part in any web app. You could always roll your own authentication mechanics if you wanted, however, this creates an additional barrier between the user and your web app: Registration.
 That’s why OAuth, and earlier OAuth2, was created. It makes it much more convenient to log in to your app, because the user can log in with one of the many accounts he already has.</description>
     </item>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>protobuffers on Jacob Martin</title>
-    <link>https://examplesite.com/tags/protobuffers/</link>
+    <link>https://cube2222.github.io/tags/protobuffers/</link>
     <description>Recent content in protobuffers on Jacob Martin</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 24 May 2016 11:44:26 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/protobuffers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2016 11:44:26 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/protobuffers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Using Protobuffs</title>
-      <link>https://examplesite.com/2016/05/24/practical-golang-using-protobuffs/</link>
+      <link>https://cube2222.github.io/2016/05/24/practical-golang-using-protobuffs/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/05/24/practical-golang-using-protobuffs/</guid>
+      <guid>https://cube2222.github.io/2016/05/24/practical-golang-using-protobuffs/</guid>
       <description>Introduction Most apps we make need a means of communication. We usually use JSON, or just plain text. JSON has got especially popular because of the rise of Node.js. The truth though, is, that JSON isn’t really a fast format. The marshaller in Go also isn’t that fast. That’s why in this article we’ll learn how to use google protocol buffers. They are in fact very easy to use, and are much faster than JSON.</description>
     </item>
     

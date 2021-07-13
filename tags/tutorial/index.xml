@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>tutorial on Jacob Martin</title>
-    <link>https://examplesite.com/tags/tutorial/</link>
+    <link>https://cube2222.github.io/tags/tutorial/</link>
     <description>Recent content in tutorial on Jacob Martin</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://cube2222.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://examplesite.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://cube2222.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Building a simple, distributed one-value database with Hashicorp Serf</title>
-      <link>https://examplesite.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</link>
+      <link>https://cube2222.github.io/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://examplesite.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</guid>
+      <guid>https://cube2222.github.io/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</guid>
       <description>Introduction With the advent of distributed applications, we see new storage solutions emerging constantly.
 They include, but are not limited to, Cassandra, Redis, CockroachDB, Consul or RethinkDB.
 Most of you probably use one, or more, of them.
@@ -26,10 +26,10 @@ You probably wouldn’t use anything near this in production, but it should be a
     
     <item>
       <title>Web app using Microservices in Go: Part 4 – Worker and Frontend</title>
-      <link>https://examplesite.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
+      <link>https://cube2222.github.io/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
-      <guid>https://examplesite.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
+      <guid>https://cube2222.github.io/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
       <description>Previous part
 Introduction In this part we will finally finish writing our application. We will implement the last two services:
  The Worker The Frontend  The Worker The worker will communicate with the Master to get new Tasks. When it gets a Task it will get the corresponding data from the storage and will start working on the task. When it finishes it will send the finished data to the storage service, and if that succeeds it will register the Task as finished to the Master.</description>
