@@ -9,22 +9,31 @@
       <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>architecture</title>
-      <link>https://jacobmartins.com/tags/architecture/</link>
-      <pubDate>Mon, 01 Aug 2022 13:19:19 +0000</pubDate>
+      <title>dalle</title>
+      <link>https://jacobmartins.com/tags/dalle/</link>
+      <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/tags/architecture/</guid>
+      <guid>https://jacobmartins.com/tags/dalle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>design</title>
       <link>https://jacobmartins.com/tags/design/</link>
-      <pubDate>Mon, 01 Aug 2022 13:19:19 +0000</pubDate>
+      <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
       <guid>https://jacobmartins.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>octosql</title>
+      <link>https://jacobmartins.com/tags/octosql/</link>
+      <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
+      
+      <guid>https://jacobmartins.com/tags/octosql/</guid>
       <description></description>
     </item>
     
@@ -349,6 +358,15 @@
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
       <guid>https://jacobmartins.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://jacobmartins.com/tags/architecture/</link>
+      <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
+      
+      <guid>https://jacobmartins.com/tags/architecture/</guid>
       <description></description>
     </item>
     

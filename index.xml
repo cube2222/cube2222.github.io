@@ -9,13 +9,13 @@
       <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Generated The Logo for OctoSQL with DALL·E 2</title>
-      <link>https://jacobmartins.com/posts/test-post/</link>
-      <pubDate>Mon, 01 Aug 2022 13:19:19 +0000</pubDate>
+      <link>https://jacobmartins.com/posts/how-i-generated-the-logo-for-octosql-with-dalle2/</link>
+      <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/posts/test-post/</guid>
+      <guid>https://jacobmartins.com/posts/how-i-generated-the-logo-for-octosql-with-dalle2/</guid>
       <description>Everybody has heard about the latest cool thing™, which is DALL·E 2 (henceforth called Dall-e). A few months ago, when the first previews started, it was basically everywhere. Now, a few weeks ago, the floodgates have been opened and lots of people on the waitlist got access - that group included me.
 I&amp;rsquo;ve spent a day playing around with it, learned some basics (like the fact that adding &amp;ldquo;artstation&amp;rdquo; to the end of your phrase automatically makes the output much better&amp;hellip;), and generated a bunch of (even a few nice-looking) images.</description>
     </item>
