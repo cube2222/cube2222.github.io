@@ -321,3 +321,163 @@ Doing a chain of variations based on it, we got one nice octopus, one psycho, an
     </figure>
 </div>
 {{< /rawhtml >}}
+
+Not really a great direction. Maybe we can edit the original to fit our needs. Right now its very playful. However, OctoSQL is meant for some serious data munching, the logo should reflect that. And really, I can't think of anything that would inspire more confidence than a yellow safety helmet (oviously; honestly, I can, but a helmet looks good on a logo), so let's try to add that!
+
+Dragging the transparency brush over the top of its head, and providing the following phrase:
+
+> Cute baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles
+
+we get some nice results!
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.00.15 - Cute baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.00.25 - Cute baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+Those are actually really good.
+
+Then I went on a slight detour, trying to generate octopi with helmets right away (and variations based on them). Even though it didn't lead anywhere useful, the cuteness of the resulting octopi is just heartwarming, so I'm leaving them here for you to enjoy. Also, there's one more plain octopus playing with cubes which I didn't use but looked very nice.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.04.13 - Cute baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.04.18.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.04.21.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.04.26 - Cute baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.04.34 - baby octopus playing with cubes wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bub.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.10.51 - Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+And then I thought, maybe cubes, data records, databases and blue data storage cylinders just aren't something that octopi are used to playing with? How about something more natural, like mussels?
+
+> Cute baby octopus playing with mussels, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.12.09 - Cute baby octopus playing with mussels, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+This one really got me. Good size, quite cute, actually mostly correct (not too many artifacts) and the mussels look nice.
+
+So then I edited in a helmet, and then edited a side of the helmet to fix an artifact.
+
+> Cute baby octopus playing with mussels wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.14.09 - Cute baby octopus playing with mussels wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerf.jpg"></img>
+        <figcaption style="text-align: center">helmet with artifact</figcaption>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.14.16 - Cute baby octopus playing with mussels wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerf.jpg"></img>
+        <figcaption style="text-align: center">artifact fixed</figcaption>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+Its left eye is also broken. We can fix that by brushing over it and keeping the same phrase. This way Dalle will regenerate just the eye.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.16.38 - Cute baby octopus playing with mussels wearing a yellow safety helmet, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerf.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+Fixed! Coming back to those mussels. They look cute, but seen from far away they are just too many, too small. Moreover, it doesn't really get the original message across. Let's try to replace them with some "3d shapes" by drawing over the tentacles and adding back "playing with 3d shapes".
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.18.55 - Cute baby octopus playing with 3d shapes like cubes and spheres, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bu.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.19.03 - Cute baby octopus playing with 3d shapes like cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.19.06 - Cute baby octopus playing with 3d shapes like cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+I really liked the first one, but the rightermost sphere is just too way too big. And maybe add a different shape? Anyhow, let's just paint over it and see if "3d shapes like cubes and spheres" gets us something nice.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.21.38 - Cute baby octopus playing with 3d shapes like cubes and spheres, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bu.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.21.40 - Cute baby octopus playing with 3d shapes like cubes and spheres, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bu.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.21.51 - Cute baby octopus playing with 3d shapes like cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+And as you saw in the beginning, the middle one won. That sphere in a cube looks intriguing, it's manipulting a few objects, it's very logo-shaped, it's fairly cute, it inspires (some) confidence, and doesn't have any tiny elements, so looks good at a distance.
+
+Having generated this, I used Procreate to make the background transparent, resize the image to be slightly smaller and make the bubble with the octopus occupy the whole image, leading to this - previously shown - result.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/logo.png"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+I'll be honest, I would prefer something slightly simpler with less complex shapes, but I failed to persuade Dalle into generating that for me. 
+
+## Conclusion
+
+All in all, it was a fun journey. The end result isn't ideal, but I'm very happy with it. As far as Dalle goes, I think right now it's still very much in a "first iteration" phase for most bits and purposes (the main exception being pencil sketches, those are mind-blowingly good). Artists don't have anything to worry about for now (quite similarly to how it is with Copilot) - stock photo websites on the other hand...
+
+To prove my point regarding pencil sketches, look at this
+
+> A mouse teaching other mice data visualization on a whiteboard, digital art, pencil sketch, cute
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.27.44 - A mouse teaching other mice data visualization on a whiteboard, digital art, pencil sketch, cute.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 17.27.50 - A mouse teaching other mice data visualization on a whiteboard, digital art, pencil sketch, cute.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+<photo>
+
+That's just the ideal kind of content for illustrating presentations, articles or books, and the results have been much more consistent than with other tags.
+
+From a monetary perspective, I've spent 30 bucks for the whole thing (in the end I was generating 2-3 edits/variations per minute). In other words, not too much.
+
+Though I think the real breakthrough will come when Dalle gets 10-100x cheaper (and faster). I would then envision the following process of working with it (that is really just an optimization on top of what I've been doing):
