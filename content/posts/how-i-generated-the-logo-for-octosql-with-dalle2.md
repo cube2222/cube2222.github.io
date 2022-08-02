@@ -2,12 +2,13 @@
 title: 'How I Generated The Logo for OctoSQL with DALL·E 2'
 author: Jacob Martin
 type: posts
-date: 2022-08-01T13:19:19+00:00
+date: 2022-08-02T13:19:19+00:00
 categories:
-  - Test
+  - OctoSQL
 tags:
-  - architecture
   - design
+  - octosql
+  - dalle
 
 ---
 
