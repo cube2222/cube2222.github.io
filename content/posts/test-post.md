@@ -216,4 +216,108 @@ Those do have their charm! Let's try to edit them and add some stuff into their 
 </div>
 {{< /rawhtml >}}
 
-Every time I've marked a part of the image to be replaced and let Dalle do its thing.
+Every time I've marked a part of the image to be replaced and let Dalle do its thing. 
+
+Those were fine, but I decided to do another try without the bells and whistles, but with the "logo" tag.
+
+> Baby octopus, logo, digital art, drawing
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.29.16 - Baby octopus, logo, digital art, drawing.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+And this one actually led to an epiphany! Logos will often have a background. This dark background circle was what I needed. It will also force Dalle to mostly stay in the confines of it (and not draw on the whole available space).
+
+Trying a basic phrase we already get some nice logos!
+
+> Baby octopus, logo, digital art, drawing, in a dark circle as the background
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.32.00 - Baby octopus, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.32.04 - Baby octopus, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+... and they're nicely confined to a space in the center, which is very useful for a logo.
+
+Now maybe we can try to add some entities for the octopus to play with.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.33.34 - Baby octopus playing with data records, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+        <figcaption style="text-align: center">data records</figcaption>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.33.40 - Baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+        <figcaption style="text-align: center">cubes</figcaption>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.34.05 - Baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+        <figcaption style="text-align: center">... cubes again</figcaption>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+But those are a bunch of dangerously-looking octopi. I used baby to get something a tad more adorable.
+
+So lets try to turn up the cuteness factor:
+
+> Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.38.03 - Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.38.10 - Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.38.18 - Baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+Much better! Could we add even more of it? Why, yes!
+
+> Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.40.03 - Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
+
+Doing a chain of variations based on it, we got one nice octopus, one psycho, and a bunch of app icons.
+
+{{< rawhtml >}}
+<div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.43.04.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.43.10.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.43.13.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.43.16.jpg"></img>
+    </figure>
+    <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
+        <img src="/images/dalle2/DALL·E 2022-08-02 16.44.06.jpg"></img>
+    </figure>
+</div>
+{{< /rawhtml >}}
