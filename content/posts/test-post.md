@@ -11,7 +11,7 @@ tags:
 
 ---
 
-Everybody has heard about the *latest cool thing™*, which is DALL·E 2 (henceforth called DALLE). A few months ago, when the first previews started, it was basically **everywhere**. Now, a few weeks ago, the floodgates have been opened and lots of people in the waitlist (that group included me) got access.
+Everybody has heard about the *latest cool thing™*, which is DALL·E 2 (henceforth called Dall-e). A few months ago, when the first previews started, it was basically **everywhere**. Now, a few weeks ago, the floodgates have been opened and lots of people on the waitlist got access - that group included me.
 
 I've spent a day playing around with it, learned [some basics](http://dallery.gallery/wp-content/uploads/2022/07/The-DALL%C2%B7E-2-prompt-book-v1.02.pdf) (like the fact that adding "artstation" to the end of your phrase automatically makes the output much better...), and generated a bunch of (even a few nice-looking) images. In other words, I was already a bit warmed up.
 
@@ -216,7 +216,7 @@ Those do have their charm! Let's try to edit them and add some stuff into their 
 </div>
 {{< /rawhtml >}}
 
-Every time I've marked a part of the image to be replaced and let Dalle do its thing. 
+Every time I've marked a part of the image to be replaced and let Dall-e do its thing. 
 
 Those were fine, but I decided to do another try without the bells and whistles, but with the "logo" tag.
 
@@ -230,7 +230,7 @@ Those were fine, but I decided to do another try without the bells and whistles,
 </div>
 {{< /rawhtml >}}
 
-And this one actually led to an epiphany! Logos will often have a background. This dark background circle was what I needed. It will also force Dalle to mostly stay in the confines of it (and not draw on the whole available space).
+And this one actually led to an epiphany! Logos will often have a background. This dark background circle was what I needed. It will also force Dall-e to mostly stay in the confines of it (and not draw on the whole available space).
 
 Trying a basic phrase we already get some nice logos!
 
@@ -399,7 +399,7 @@ So then I edited in a helmet, and then edited a side of the helmet to fix an art
 </div>
 {{< /rawhtml >}}
 
-Its left eye is also broken. We can fix that by brushing over it and keeping the same phrase. This way Dalle will regenerate just the eye.
+Its left eye is also broken. We can fix that by brushing over it and keeping the same phrase. This way Dall-e will regenerate just the eye.
 
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
@@ -453,11 +453,11 @@ Having generated this, I used Procreate to make the background transparent, resi
 </div>
 {{< /rawhtml >}}
 
-I'll be honest, I would prefer something slightly simpler with less complex shapes, but I failed to persuade Dalle into generating that for me. 
+I'll be honest, I would prefer something slightly simpler with less complex shapes, but I failed to persuade Dall-e into generating that for me. 
 
 ## Conclusion
 
-All in all, it was a fun journey. The end result isn't ideal, but I'm very happy with it. As far as Dalle goes, I think right now it's still very much in a "first iteration" phase for most bits and purposes (the main exception being pencil sketches, those are mind-blowingly good). Artists don't have anything to worry about for now (quite similarly to how it is with Copilot) - stock photo websites on the other hand...
+All in all, it was a fun journey. The end result isn't ideal, but I'm very happy with it. As far as Dall-e goes, I think right now it's still very much in a "first iteration" phase for most bits and purposes (the main exception being pencil sketches, those are mind-blowingly good). Artists don't have anything to worry about for now (quite similarly to how it is with Copilot) - stock photo websites on the other hand...
 
 To prove my point regarding pencil sketches, look at this
 
@@ -480,4 +480,11 @@ That's just the ideal kind of content for illustrating presentations, articles o
 
 From a monetary perspective, I've spent 30 bucks for the whole thing (in the end I was generating 2-3 edits/variations per minute). In other words, not too much.
 
-Though I think the real breakthrough will come when Dalle gets 10-100x cheaper (and faster). I would then envision the following process of working with it (that is really just an optimization on top of what I've been doing):
+Though I think the real breakthrough will come when Dall-e gets 10-100x cheaper (and faster). I would then envision the following process of working with it (which is really just an optimization on top of what I've been doing):
+1. You write a phrase.
+2. You are shown a hundred pictures for that phrase.
+3. You select the top ones.
+4. Go back to 2, 4-5 times, getting better results every time.
+5. Now you can write a phrase for what you would like to change (edit) and the original image would be used as the baseline. Go back to 2 until happy.
+
+Thanks for reading!
