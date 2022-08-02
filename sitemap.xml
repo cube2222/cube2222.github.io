@@ -2,29 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jacobmartins.com/tags/architecture/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
     <loc>https://jacobmartins.com/categories/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/tags/design/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/posts/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/tags/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/categories/test/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
-  </url><url>
-    <loc>https://jacobmartins.com/posts/test-post/</loc>
-    <lastmod>2022-08-01T13:19:19+00:00</lastmod>
+    <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/cluster/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
@@ -44,10 +23,16 @@
     <loc>https://jacobmartins.com/tags/golang/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
+    <loc>https://jacobmartins.com/</loc>
+    <lastmod>2017-01-29T11:24:18+00:00</lastmod>
+  </url><url>
     <loc>https://jacobmartins.com/tags/microservice/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/microservices/</loc>
+    <lastmod>2017-01-29T11:24:18+00:00</lastmod>
+  </url><url>
+    <loc>https://jacobmartins.com/posts/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/categories/practical-golang/</loc>
@@ -60,6 +45,9 @@
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/server/</loc>
+    <lastmod>2017-01-29T11:24:18+00:00</lastmod>
+  </url><url>
+    <loc>https://jacobmartins.com/tags/</loc>
     <lastmod>2017-01-29T11:24:18+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/tutorial/</loc>
@@ -152,11 +140,17 @@
     <loc>https://jacobmartins.com/tags/web/</loc>
     <lastmod>2016-04-06T11:08:18+00:00</lastmod>
   </url><url>
+    <loc>https://jacobmartins.com/tags/architecture/</loc>
+    <lastmod>2016-04-04T10:30:24+00:00</lastmod>
+  </url><url>
     <loc>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</loc>
     <lastmod>2016-04-04T10:30:24+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/subscription/</loc>
     <lastmod>2016-04-04T10:30:24+00:00</lastmod>
+  </url><url>
+    <loc>https://jacobmartins.com/tags/design/</loc>
+    <lastmod>2016-03-23T13:34:03+00:00</lastmod>
   </url><url>
     <loc>https://jacobmartins.com/tags/frontend/</loc>
     <lastmod>2016-03-23T13:34:03+00:00</lastmod>

@@ -9,16 +9,7 @@
       <link>https://jacobmartins.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>This is just a test</title>
-      <link>https://jacobmartins.com/posts/test-post/</link>
-      <pubDate>Mon, 01 Aug 2022 13:19:19 +0000</pubDate>
-      
-      <guid>https://jacobmartins.com/posts/test-post/</guid>
-      <description>Introduction Just a test.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Event multicast/subscription service</title>
       <link>https://jacobmartins.com/2016/04/04/practical-golang-event-multicastsubscription-service/</link>
