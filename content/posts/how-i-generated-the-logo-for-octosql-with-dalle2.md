@@ -24,7 +24,7 @@ In practice, you'll see that the process looks a bit like the Westworld depictio
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
     <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
-        <img src="/images/dalle2/logo.png"></img>
+        <img src="/images/dalle2/logo.jpg"></img>
     </figure>
 </div>
 {{< /rawhtml >}}
