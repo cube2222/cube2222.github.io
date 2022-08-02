@@ -323,7 +323,7 @@ Doing a chain of variations based on it, I got one nice octopus, one psycho, and
 </div>
 {{< /rawhtml >}}
 
-Not really a great direction. Maybe we can edit the original to fit our needs. Right now its very playful. However, OctoSQL is meant for some serious data munching and the logo should reflect that. And really, I can't think of anything that would inspire more confidence than a yellow safety helmet (oviously; honestly, I can, but a helmet looks good on a logo), so let's try to add that!
+Not really a great direction. Maybe we can edit the original to fit our needs. Right now its very playful. However, OctoSQL is meant for some serious data munching and the logo should reflect that. And really, I can't think of anything that would inspire more confidence than a yellow safety helmet (obviously; honestly, I can, but a helmet looks good on a logo), so let's try to add that!
 
 Dragging the transparency brush over the top of its head, and providing the following phrase:
 
