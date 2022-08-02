@@ -1,5 +1,5 @@
 ---
-title: 'How I Generated The Logo for OctoSQL with DALL·E 2'
+title: 'How I Used DALL·E 2 to Generate The Logo for OctoSQL'
 author: Jacob Martin
 type: posts
 date: 2022-08-02T13:19:19+00:00
