@@ -16,9 +16,9 @@ Everybody has heard about the *latest cool thing™*, which is DALL·E 2 (hencef
 
 I've spent a day playing around with it, learned [some basics](http://dallery.gallery/wp-content/uploads/2022/07/The-DALL%C2%B7E-2-prompt-book-v1.02.pdf) (like the fact that adding "artstation" to the end of your phrase automatically makes the output much better...), and generated a bunch of (even a few nice-looking) images. In other words, I was already a bit warmed up.
 
-To add some more background, [OctoSQL](https://github.com/cube2222/octosql) - an open source project I'm developing - is a CLI query tool that let's you query multiple databases and file formats in a single SQL query. I knew for a while already that its logo should be updated, and with DALLE arriving, I could combine the fun with the practical.
+To add some more background, [OctoSQL](https://github.com/cube2222/octosql) - an open source project I'm developing - is a CLI query tool that let's you query multiple databases and file formats in a single SQL query. I knew for a while already that its logo should be updated, and with Dall-e arriving, I could combine the fun with the practical.
 
-In practice, you'll see that the process looks a bit like the Westworld depiction of writers creating storylines in season 4 (no worries, this is not a spoiler, but I do recommend the series).
+In practice, you'll see that the process looks a bit like the Westworld depiction of writers creating storylines in season 4 (no worries, this is not a spoiler, but I do recommend the series if you haven't watched it).
 
 **So TLDR, here's the logo I finally ended up with:**
 {{< rawhtml >}}
@@ -29,7 +29,7 @@ In practice, you'll see that the process looks a bit like the Westworld depictio
 </div>
 {{< /rawhtml >}}
 
-In the rest of this post you'll see where I started, what I went through, what I learned along the way, and how it slowly evolved into the finally chosen image. I will only show the mostly happy path here. I will only show images that were fairly ok (discarding the other 70+% that were terrible).
+In the rest of this post you'll see where I started, what I went through, what I learned along the way, and how it slowly evolved into the finally chosen image. I will only show the mostly happy path here. I will also only show images that were fairly ok (discarding the other 70+% that were terrible).
 
 But first, let's quickly describe how DALL·E 2 works. You get a bunch of free credits and you can buy more. A single credit enables you to do one of the following:
 - Generate: Generate 4 images for a given phrase.
@@ -74,7 +74,7 @@ That first one actually looks quite cool. Let's do a few variations around it.
 
 Nice! It does look cartoonish, even if I would prefer them to have a bit more depth. However, the main issue is that these octopi (the quite beautiful plural form of "octopus") are holding charts. OctoSQL doesn't deal with charts, it deals with data. This could give a false promise about what is possible with OctoSQL.
 
-Well then, back to the drawing - or shall I say, phrasing - board. Let's add some abstract shapes for the octopus to hold.
+Back to the drawing - or shall I say, phrasing - board, then. Let's add some abstract shapes for the octopus to hold.
 
 > A baby octopus juggling diagrams of databases, arm wrapped around one cube, digital art, cartoon, drawing
 
@@ -217,7 +217,7 @@ Those do have their charm! Let's try to edit them and add some stuff into their 
 </div>
 {{< /rawhtml >}}
 
-Every time I've marked a part of the image to be replaced and let Dall-e do its thing. 
+Each time I've marked a part of the image to be replaced and let Dall-e do its thing. 
 
 Those were fine, but I decided to do another try without the bells and whistles, but with the "logo" tag.
 
@@ -269,7 +269,7 @@ Now maybe we can try to add some entities for the octopus to play with.
 </div>
 {{< /rawhtml >}}
 
-But those are a bunch of dangerously-looking octopi. I used baby to get something a tad more adorable.
+But those are a bunch of dangerously-looking octopi. I used "baby" to get something a tad more adorable.
 
 So lets try to turn up the cuteness factor:
 
@@ -291,7 +291,7 @@ So lets try to turn up the cuteness factor:
 
 Much better! Could we add even more of it? Why, yes!
 
-> Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, vibrant, cheerful, bubbles
+> Cute baby octopus playing with cubes, logo, digital art, drawing, in a dark circle as the background, **vibrant, cheerful, bubbles**
 
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
@@ -301,7 +301,7 @@ Much better! Could we add even more of it? Why, yes!
 </div>
 {{< /rawhtml >}}
 
-Doing a chain of variations based on it, we got one nice octopus, one psycho, and a bunch of app icons.
+Doing a chain of variations based on it, I got one nice octopus, one psycho, and a bunch of app icons.
 
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
@@ -323,7 +323,7 @@ Doing a chain of variations based on it, we got one nice octopus, one psycho, an
 </div>
 {{< /rawhtml >}}
 
-Not really a great direction. Maybe we can edit the original to fit our needs. Right now its very playful. However, OctoSQL is meant for some serious data munching, the logo should reflect that. And really, I can't think of anything that would inspire more confidence than a yellow safety helmet (oviously; honestly, I can, but a helmet looks good on a logo), so let's try to add that!
+Not really a great direction. Maybe we can edit the original to fit our needs. Right now its very playful. However, OctoSQL is meant for some serious data munching and the logo should reflect that. And really, I can't think of anything that would inspire more confidence than a yellow safety helmet (oviously; honestly, I can, but a helmet looks good on a logo), so let's try to add that!
 
 Dragging the transparency brush over the top of its head, and providing the following phrase:
 
@@ -344,7 +344,7 @@ we get some nice results!
 
 Those are actually really good.
 
-Then I went on a slight detour, trying to generate octopi with helmets right away (and variations based on them). Even though it didn't lead anywhere useful, the cuteness of the resulting octopi is just heartwarming, so I'm leaving them here for you to enjoy. Also, there's one more plain octopus playing with cubes which I didn't use but looked very nice.
+Then I went on a slight detour, trying to generate octopi with helmets right away (and variations based on them). Even though it didn't lead to anything useful, the cuteness of the resulting octopi is just heartwarming, so I'm leaving them here for you to enjoy. Also, there's one more plain octopus playing with cubes which I didn't use but looked very nice.
 
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
@@ -426,7 +426,7 @@ Fixed! Coming back to those mussels. They look cute, but seen from far away they
 </div>
 {{< /rawhtml >}}
 
-I really liked the first one, but the rightermost sphere is just too way too big. And maybe add a different shape? Anyhow, let's just paint over it and see if "3d shapes like cubes and spheres" gets us something nice.
+I really liked the first one, but the rightermost sphere is just way too big. And maybe we could add a different shape than a sphere? Anyhow, let's just paint over it and see if "3d shapes like cubes and spheres" gets us something nice.
 
 {{< rawhtml >}}
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
@@ -442,7 +442,7 @@ I really liked the first one, but the rightermost sphere is just too way too big
 </div>
 {{< /rawhtml >}}
 
-And as you saw in the beginning, the middle one won. That sphere in a cube looks intriguing, it's manipulting a few objects, it's very logo-shaped, it's fairly cute, it inspires (some) confidence, and doesn't have any tiny elements, so looks good at a distance.
+And as you saw in the beginning, the middle one won. That sphere in a cube looks intriguing, the octopus is manipulting a few objects, it's very logo-shaped, it's fairly cute, it inspires (some) confidence, and doesn't have any tiny elements, so looks good at a distance.
 
 Having generated this, I used Procreate to make the background transparent, resize the image to be slightly smaller and make the bubble with the octopus occupy the whole image, leading to this - previously shown - result.
 
@@ -454,11 +454,13 @@ Having generated this, I used Procreate to make the background transparent, resi
 </div>
 {{< /rawhtml >}}
 
-I'll be honest, I would prefer something slightly simpler with less complex shapes, but I failed to persuade Dall-e into generating that for me. 
+Finally, I did a bunch of Google reverse image searches for it. You know, just to be sure.
+
+To be completely honest, I would prefer something slightly simpler with less complex shapes, but I failed to persuade Dall-e into generating that for me. Moreover, I really am content with this logo.
 
 ## Conclusion
 
-All in all, it was a fun journey. The end result isn't ideal, but I'm very happy with it. As far as Dall-e goes, I think right now it's still very much in a "first iteration" phase for most bits and purposes (the main exception being pencil sketches, those are mind-blowingly good). Artists don't have anything to worry about for now (quite similarly to how it is with Copilot) - stock photo websites on the other hand...
+All in all, it was a fun journey. The end result isn't ideal, but I'm very happy with it. As far as Dall-e goes, I think right now it's still very much in a "first iteration" phase for most bits and purposes (the main exception being pencil sketches, those are mind-blowingly good). Artists don't have anything to worry about for now in my opinion (quite similarly to how it is with Copilot) - stock photo websites on the other hand...
 
 To prove my point regarding pencil sketches, look at this
 
@@ -481,10 +483,10 @@ That's just the ideal kind of content for illustrating presentations, articles o
 
 From a monetary perspective, I've spent 30 bucks for the whole thing (in the end I was generating 2-3 edits/variations per minute). In other words, not too much.
 
-Though I think the real breakthrough will come when Dall-e gets 10-100x cheaper (and faster). I would then envision the following process of working with it (which is really just an optimization on top of what I've been doing):
+Though I think the real breakthrough will come when Dall-e gets 10-100x cheaper (and faster). I would then envision the following process of working with it (which is really just an optimization on top of what I've been doing now):
 1. You write a phrase.
-2. You are shown a hundred pictures for that phrase.
-3. You select the top ones.
+2. You are shown a hundred pictures for that phrase, preferably from very different regions of the latent space.
+3. You select the ones best matching what you want.
 4. Go back to 2, 4-5 times, getting better results every time.
 5. Now you can write a phrase for what you would like to change (edit) and the original image would be used as the baseline. Go back to 2 until happy.
 
