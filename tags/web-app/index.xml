@@ -18,7 +18,7 @@
       <guid>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
       <description>Previous part
 Introduction In this part we will implement the next part of the microservices needed for our web app. We will implement the:
- Storage system Master  This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>
+Storage system Master This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@ Introduction In this part we will implement the next part of the microservices n
       <guid>https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/</guid>
       <description>Previous part
 Introduction In this part we will implement part of the microservices needed for our web app. We will implement the:
- key-value store Database  This will be a pretty code heavy tutorial so concentrate and have fun!
+key-value store Database This will be a pretty code heavy tutorial so concentrate and have fun!
 The key-value store Design The design hasn’t changed much. We will save the key-value pairs as a global map, and create a global mutex for concurrent access. We’ll also add the ability to list all key-value pairs for debugging/analytical purposes.</description>
     </item>
     
