@@ -10,10 +10,9 @@
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Tue, 02 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dalle</title>
+      <title>dalle</title>
       <link>https://kubamartin.com/tags/dalle/</link>
       <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
@@ -22,7 +21,7 @@
     </item>
     
     <item>
-      <title>Design</title>
+      <title>design</title>
       <link>https://kubamartin.com/tags/design/</link>
       <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
@@ -31,7 +30,7 @@
     </item>
     
     <item>
-      <title>Octosql</title>
+      <title>octosql</title>
       <link>https://kubamartin.com/tags/octosql/</link>
       <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
@@ -40,7 +39,7 @@
     </item>
     
     <item>
-      <title>Cluster</title>
+      <title>cluster</title>
       <link>https://kubamartin.com/tags/cluster/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -49,7 +48,7 @@
     </item>
     
     <item>
-      <title>Database</title>
+      <title>database</title>
       <link>https://kubamartin.com/tags/database/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -58,7 +57,7 @@
     </item>
     
     <item>
-      <title>Distributed</title>
+      <title>distributed</title>
       <link>https://kubamartin.com/tags/distributed/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -67,7 +66,7 @@
     </item>
     
     <item>
-      <title>Go</title>
+      <title>go</title>
       <link>https://kubamartin.com/tags/go/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -76,7 +75,7 @@
     </item>
     
     <item>
-      <title>Golang</title>
+      <title>golang</title>
       <link>https://kubamartin.com/tags/golang/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -85,7 +84,7 @@
     </item>
     
     <item>
-      <title>Microservice</title>
+      <title>microservice</title>
       <link>https://kubamartin.com/tags/microservice/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -94,7 +93,7 @@
     </item>
     
     <item>
-      <title>Microservices</title>
+      <title>microservices</title>
       <link>https://kubamartin.com/tags/microservices/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -103,7 +102,7 @@
     </item>
     
     <item>
-      <title>Resiliency</title>
+      <title>resiliency</title>
       <link>https://kubamartin.com/tags/resiliency/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -112,7 +111,7 @@
     </item>
     
     <item>
-      <title>Server</title>
+      <title>server</title>
       <link>https://kubamartin.com/tags/server/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -121,7 +120,7 @@
     </item>
     
     <item>
-      <title>Tutorial</title>
+      <title>tutorial</title>
       <link>https://kubamartin.com/tags/tutorial/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
@@ -130,7 +129,7 @@
     </item>
     
     <item>
-      <title>Event</title>
+      <title>event</title>
       <link>https://kubamartin.com/tags/event/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -139,7 +138,7 @@
     </item>
     
     <item>
-      <title>Master</title>
+      <title>master</title>
       <link>https://kubamartin.com/tags/master/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -148,7 +147,7 @@
     </item>
     
     <item>
-      <title>Message</title>
+      <title>message</title>
       <link>https://kubamartin.com/tags/message/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -166,7 +165,7 @@
     </item>
     
     <item>
-      <title>Pattern</title>
+      <title>pattern</title>
       <link>https://kubamartin.com/tags/pattern/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -175,7 +174,7 @@
     </item>
     
     <item>
-      <title>Protobuf</title>
+      <title>protobuf</title>
       <link>https://kubamartin.com/tags/protobuf/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -184,7 +183,7 @@
     </item>
     
     <item>
-      <title>Pub</title>
+      <title>pub</title>
       <link>https://kubamartin.com/tags/pub/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -193,7 +192,7 @@
     </item>
     
     <item>
-      <title>Slave</title>
+      <title>slave</title>
       <link>https://kubamartin.com/tags/slave/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -202,7 +201,7 @@
     </item>
     
     <item>
-      <title>Sub</title>
+      <title>sub</title>
       <link>https://kubamartin.com/tags/sub/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -211,7 +210,7 @@
     </item>
     
     <item>
-      <title>Subscribe</title>
+      <title>subscribe</title>
       <link>https://kubamartin.com/tags/subscribe/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -220,7 +219,7 @@
     </item>
     
     <item>
-      <title>Worker</title>
+      <title>worker</title>
       <link>https://kubamartin.com/tags/worker/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
       
@@ -229,7 +228,7 @@
     </item>
     
     <item>
-      <title>Binary</title>
+      <title>binary</title>
       <link>https://kubamartin.com/tags/binary/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -238,7 +237,7 @@
     </item>
     
     <item>
-      <title>Client</title>
+      <title>client</title>
       <link>https://kubamartin.com/tags/client/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -247,7 +246,7 @@
     </item>
     
     <item>
-      <title>Google</title>
+      <title>google</title>
       <link>https://kubamartin.com/tags/google/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -265,7 +264,7 @@
     </item>
     
     <item>
-      <title>Protobuffers</title>
+      <title>protobuffers</title>
       <link>https://kubamartin.com/tags/protobuffers/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -274,7 +273,7 @@
     </item>
     
     <item>
-      <title>Protobuffs</title>
+      <title>protobuffs</title>
       <link>https://kubamartin.com/tags/protobuffs/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -283,7 +282,7 @@
     </item>
     
     <item>
-      <title>Protocol Buffer</title>
+      <title>protocol buffer</title>
       <link>https://kubamartin.com/tags/protocol-buffer/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -292,7 +291,7 @@
     </item>
     
     <item>
-      <title>Transport</title>
+      <title>transport</title>
       <link>https://kubamartin.com/tags/transport/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
       
@@ -301,7 +300,7 @@
     </item>
     
     <item>
-      <title>App</title>
+      <title>app</title>
       <link>https://kubamartin.com/tags/app/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -310,7 +309,7 @@
     </item>
     
     <item>
-      <title>Authentication</title>
+      <title>authentication</title>
       <link>https://kubamartin.com/tags/authentication/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -319,7 +318,7 @@
     </item>
     
     <item>
-      <title>Authorization</title>
+      <title>authorization</title>
       <link>https://kubamartin.com/tags/authorization/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -328,7 +327,7 @@
     </item>
     
     <item>
-      <title>Handler</title>
+      <title>handler</title>
       <link>https://kubamartin.com/tags/handler/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -337,7 +336,7 @@
     </item>
     
     <item>
-      <title>Middleware</title>
+      <title>middleware</title>
       <link>https://kubamartin.com/tags/middleware/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -346,7 +345,7 @@
     </item>
     
     <item>
-      <title>Practical</title>
+      <title>practical</title>
       <link>https://kubamartin.com/tags/practical/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -355,7 +354,7 @@
     </item>
     
     <item>
-      <title>Web</title>
+      <title>web</title>
       <link>https://kubamartin.com/tags/web/</link>
       <pubDate>Wed, 06 Apr 2016 11:08:18 +0000</pubDate>
       
@@ -364,7 +363,7 @@
     </item>
     
     <item>
-      <title>Architecture</title>
+      <title>architecture</title>
       <link>https://kubamartin.com/tags/architecture/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
@@ -373,7 +372,7 @@
     </item>
     
     <item>
-      <title>Subscription</title>
+      <title>subscription</title>
       <link>https://kubamartin.com/tags/subscription/</link>
       <pubDate>Mon, 04 Apr 2016 10:30:24 +0000</pubDate>
       
@@ -382,7 +381,7 @@
     </item>
     
     <item>
-      <title>Frontend</title>
+      <title>frontend</title>
       <link>https://kubamartin.com/tags/frontend/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
@@ -391,7 +390,7 @@
     </item>
     
     <item>
-      <title>Image</title>
+      <title>image</title>
       <link>https://kubamartin.com/tags/image/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
@@ -400,7 +399,7 @@
     </item>
     
     <item>
-      <title>Storage</title>
+      <title>storage</title>
       <link>https://kubamartin.com/tags/storage/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
@@ -409,7 +408,7 @@
     </item>
     
     <item>
-      <title>Web App</title>
+      <title>web app</title>
       <link>https://kubamartin.com/tags/web-app/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
@@ -418,16 +417,7 @@
     </item>
     
     <item>
-      <title>K/v Store</title>
-      <link>https://kubamartin.com/tags/k/v-store/</link>
-      <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
-      
-      <guid>https://kubamartin.com/tags/k/v-store/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Key Value Store</title>
+      <title>key value store</title>
       <link>https://kubamartin.com/tags/key-value-store/</link>
       <pubDate>Wed, 16 Mar 2016 12:30:40 +0000</pubDate>
       
@@ -436,7 +426,7 @@
     </item>
     
     <item>
-      <title>Beginner</title>
+      <title>beginner</title>
       <link>https://kubamartin.com/tags/beginner/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
       
@@ -445,11 +435,20 @@
     </item>
     
     <item>
-      <title>Oauth2</title>
+      <title>oauth2</title>
       <link>https://kubamartin.com/tags/oauth2/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
       
       <guid>https://kubamartin.com/tags/oauth2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k/v store</title>
+      <link>https://kubamartin.com/tags/k/v-store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubamartin.com/tags/k/v-store/</guid>
       <description></description>
     </item>
     

@@ -182,9 +182,6 @@
     <loc>https://kubamartin.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</loc>
     <lastmod>2016-03-21T13:25:39+00:00</lastmod>
   </url><url>
-    <loc>https://kubamartin.com/tags/k/v-store/</loc>
-    <lastmod>2016-03-16T12:30:40+00:00</lastmod>
-  </url><url>
     <loc>https://kubamartin.com/tags/key-value-store/</loc>
     <lastmod>2016-03-16T12:30:40+00:00</lastmod>
   </url><url>
@@ -210,6 +207,8 @@
     <lastmod>2016-02-29T14:02:02+00:00</lastmod>
   </url><url>
     <loc>https://kubamartin.com/archive/</loc>
+  </url><url>
+    <loc>https://kubamartin.com/tags/k/v-store/</loc>
   </url><url>
     <loc>https://kubamartin.com/search/</loc>
   </url>

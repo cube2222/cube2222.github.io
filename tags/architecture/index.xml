@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Architecture on Jacob Martin</title>
+    <title>architecture on Jacob Martin</title>
     <link>https://kubamartin.com/tags/architecture/</link>
-    <description>Recent content in Architecture on Jacob Martin</description>
+    <description>Recent content in architecture on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
       <url>https://kubamartin.com/images/avatar.jpg</url>
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
     <lastBuildDate>Mon, 04 Apr 2016 10:30:24 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Event multicast/subscription service</title>
