@@ -10,8 +10,6 @@ buildExpired: false
 enableInlineShortcodes: true
 enableEmoji: true
 
-googleAnalytics: UA-74339391-1
-
 minify:
     disableXML: true
     minifyOutput: true
