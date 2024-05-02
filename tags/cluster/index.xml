@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cluster on Jacob Martin</title>
-    <link>https://jacobmartins.com/tags/cluster/</link>
-    <description>Recent content in cluster on Jacob Martin</description>
+    <title>Cluster on Jacob Martin</title>
+    <link>https://kubamartin.com/tags/cluster/</link>
+    <description>Recent content in Cluster on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
-      <url>https://jacobmartins.com/images/avatar.jpg</url>
-      <link>https://jacobmartins.com/images/avatar.jpg</link>
+      <url>https://kubamartin.com/images/avatar.jpg</url>
+      <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Building a simple, distributed one-value database with Hashicorp Serf</title>
-      <link>https://jacobmartins.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</link>
+      <link>https://kubamartin.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</guid>
+      <guid>https://kubamartin.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</guid>
       <description>Introduction With the advent of distributed applications, we see new storage solutions emerging constantly.
 They include, but are not limited to, Cassandra, Redis, CockroachDB, Consul or RethinkDB.
 Most of you probably use one, or more, of them.

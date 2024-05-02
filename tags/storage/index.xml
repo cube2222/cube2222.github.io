@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>storage on Jacob Martin</title>
-    <link>https://jacobmartins.com/tags/storage/</link>
-    <description>Recent content in storage on Jacob Martin</description>
+    <title>Storage on Jacob Martin</title>
+    <link>https://kubamartin.com/tags/storage/</link>
+    <description>Recent content in Storage on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
-      <url>https://jacobmartins.com/images/avatar.jpg</url>
-      <link>https://jacobmartins.com/images/avatar.jpg</link>
+      <url>https://kubamartin.com/images/avatar.jpg</url>
+      <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Mar 2016 13:25:39 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/storage/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Mar 2016 13:25:39 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web app using Microservices in Go: Part 3 – Storage and Master</title>
-      <link>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
+      <link>https://kubamartin.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</link>
       <pubDate>Mon, 21 Mar 2016 13:25:39 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
+      <guid>https://kubamartin.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/</guid>
       <description>Previous part
 Introduction In this part we will implement the next part of the microservices needed for our web app. We will implement the:
 Storage system Master This way we will have the Master API ready when we’ll be writing the slaves/workers and the frontend. And we’ll already have the database, k/v store and storage when writing the master. SO every time we write something we’ll already have all its dependencies.</description>

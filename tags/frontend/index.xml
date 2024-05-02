@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>frontend on Jacob Martin</title>
-    <link>https://jacobmartins.com/tags/frontend/</link>
-    <description>Recent content in frontend on Jacob Martin</description>
+    <title>Frontend on Jacob Martin</title>
+    <link>https://kubamartin.com/tags/frontend/</link>
+    <description>Recent content in Frontend on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
-      <url>https://jacobmartins.com/images/avatar.jpg</url>
-      <link>https://jacobmartins.com/images/avatar.jpg</link>
+      <url>https://kubamartin.com/images/avatar.jpg</url>
+      <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Mar 2016 13:34:03 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Mar 2016 13:34:03 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web app using Microservices in Go: Part 4 – Worker and Frontend</title>
-      <link>https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
+      <link>https://kubamartin.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</link>
       <pubDate>Wed, 23 Mar 2016 13:34:03 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
+      <guid>https://kubamartin.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/</guid>
       <description>Previous part
 Introduction In this part we will finally finish writing our application. We will implement the last two services:
 The Worker The Frontend The Worker The worker will communicate with the Master to get new Tasks. When it gets a Task it will get the corresponding data from the storage and will start working on the task. When it finishes it will send the finished data to the storage service, and if that succeeds it will register the Task as finished to the Master.</description>

@@ -2,39 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Jacob Martin</title>
-    <link>https://jacobmartins.com/categories/</link>
+    <link>https://kubamartin.com/categories/</link>
     <description>Recent content in Categories on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
-      <url>https://jacobmartins.com/images/avatar.jpg</url>
-      <link>https://jacobmartins.com/images/avatar.jpg</link>
+      <url>https://kubamartin.com/images/avatar.jpg</url>
+      <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 02 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://jacobmartins.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Aug 2022 13:19:19 +0000</lastBuildDate><atom:link href="https://kubamartin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OctoSQL</title>
-      <link>https://jacobmartins.com/categories/octosql/</link>
+      <link>https://kubamartin.com/categories/octosql/</link>
       <pubDate>Tue, 02 Aug 2022 13:19:19 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/categories/octosql/</guid>
+      <guid>https://kubamartin.com/categories/octosql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://jacobmartins.com/categories/go/</link>
+      <link>https://kubamartin.com/categories/go/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/categories/go/</guid>
+      <guid>https://kubamartin.com/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Practical Golang</title>
-      <link>https://jacobmartins.com/categories/practical-golang/</link>
+      <link>https://kubamartin.com/categories/practical-golang/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
       
-      <guid>https://jacobmartins.com/categories/practical-golang/</guid>
+      <guid>https://kubamartin.com/categories/practical-golang/</guid>
       <description></description>
     </item>
     
