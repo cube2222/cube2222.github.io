@@ -549,5 +549,5 @@ Now we have finished the _Master_ and the _Storage system_. We now have the depe
 
 [Next part][2]
 
- [1]: https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/
- [2]: https://jacobmartins.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/
+ [1]: https://kubamartin.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/
+ [2]: https://kubamartin.com/2016/03/23/web-app-using-microservices-in-go-part-4-worker-and-frontend/

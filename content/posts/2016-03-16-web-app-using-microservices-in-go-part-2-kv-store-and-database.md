@@ -617,7 +617,7 @@ We now have finished our _k/v store_ and our _database_. You can even test them 
 
 [Next part][4]
 
- [1]: https://jacobmartins.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/
+ [1]: https://kubamartin.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/
  [2]: https://www.lucidchart.com/publicSegments/view/4cf0690e-3dbb-42d9-befd-4a6efaaf6f72/image.png
  [3]: https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo
- [4]: https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/
+ [4]: https://kubamartin.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/

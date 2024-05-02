@@ -467,4 +467,4 @@ I suppose this was a good short introduction into the structure of the **_Google
 
 Have fun integrating it into your app!
 
- [1]: https://jacobmartins.com/2016/02/29/getting-started-with-oauth2-in-go/
+ [1]: https://kubamartin.com/2016/02/29/getting-started-with-oauth2-in-go/

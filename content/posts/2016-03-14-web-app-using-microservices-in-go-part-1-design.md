@@ -186,4 +186,4 @@ This is basically everything regarding the design. In the next part we will writ
 [Next part][2]
 
  [1]: https://www.lucidchart.com/publicSegments/view/cb49c63f-9256-47ae-a21a-18afa85cc4fd/image.png
- [2]: https://jacobmartins.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/
+ [2]: https://kubamartin.com/2016/03/16/web-app-using-microservices-in-go-part-2-kv-store-and-database/

@@ -959,5 +959,5 @@ Now go and build something great!
  [1]: https://hub.docker.com/_/nats/
  [2]: https://github.com/nats-io/gnatsd/releases/
  [3]: https://github.com/nats-io/gnatsd
- [4]: https://jacobmartins.com/2016/05/24/practical-golang-using-protobuffs/
- [5]: https://jacobmartins.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/
+ [4]: https://kubamartin.com/2016/05/24/practical-golang-using-protobuffs/
+ [5]: https://kubamartin.com/2016/03/14/web-app-using-microservices-in-go-part-1-design/

@@ -590,4 +590,4 @@ All in all, good luck!
 
 UPDATE: Also remember, that when running the worker, it&#8217;s good to launch it with goroutines in the number of 2-4x your system threads. They have near-0 overhead in switching and this way your not unnecessarily blocking when waiting for http responses.
 
- [1]: https://jacobmartins.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/
+ [1]: https://kubamartin.com/2016/03/21/web-app-using-microservices-in-go-part-3-storage-and-master/
