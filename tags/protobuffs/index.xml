@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>protobuffs on Jacob Martin</title>
+    <title>Protobuffs on Jacob Martin</title>
     <link>https://kubamartin.com/tags/protobuffs/</link>
-    <description>Recent content in protobuffs on Jacob Martin</description>
+    <description>Recent content in Protobuffs on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
       <url>https://kubamartin.com/images/avatar.jpg</url>
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 24 May 2016 11:44:26 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/protobuffs/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.125.5</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 May 2016 11:44:26 +0000</lastBuildDate>
+    <atom:link href="https://kubamartin.com/tags/protobuffs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Using Protobuffs</title>
       <link>https://kubamartin.com/2016/05/24/practical-golang-using-protobuffs/</link>
       <pubDate>Tue, 24 May 2016 11:44:26 +0000</pubDate>
-      
       <guid>https://kubamartin.com/2016/05/24/practical-golang-using-protobuffs/</guid>
       <description>Introduction Most apps we make need a means of communication. We usually use JSON, or just plain text. JSON has got especially popular because of the rise of Node.js. The truth though, is, that JSON isn’t really a fast format. The marshaller in Go also isn’t that fast. That’s why in this article we’ll learn how to use google protocol buffers. They are in fact very easy to use, and are much faster than JSON.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>subscribe on Jacob Martin</title>
+    <title>Subscribe on Jacob Martin</title>
     <link>https://kubamartin.com/tags/subscribe/</link>
-    <description>Recent content in subscribe on Jacob Martin</description>
+    <description>Recent content in Subscribe on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
       <url>https://kubamartin.com/images/avatar.jpg</url>
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Jun 2016 11:51:48 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/subscribe/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.125.5</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Jun 2016 11:51:48 +0000</lastBuildDate>
+    <atom:link href="https://kubamartin.com/tags/subscribe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Getting started with NATS and related patterns</title>
       <link>https://kubamartin.com/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/</link>
       <pubDate>Mon, 06 Jun 2016 11:51:48 +0000</pubDate>
-      
       <guid>https://kubamartin.com/2016/06/06/practical-golang-getting-started-with-nats-and-related-patterns/</guid>
       <description>Practical Golang: Getting started with NATS and related patterns Introduction Microservices… the never disappearing buzzword of our times. They promise a lot, but can be slow or complicated if not implemented correctly. One of the main challenges when developing and using a microservice-based architecture is getting the communication right. Many will ask, why not REST? As I did at some point. Many will actually use it. But the truth is that it leads to tighter coupling, and is synchronous.</description>
     </item>
-    
   </channel>
 </rss>

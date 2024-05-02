@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>resiliency on Jacob Martin</title>
+    <title>Resiliency on Jacob Martin</title>
     <link>https://kubamartin.com/tags/resiliency/</link>
-    <description>Recent content in resiliency on Jacob Martin</description>
+    <description>Recent content in Resiliency on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
       <url>https://kubamartin.com/images/avatar.jpg</url>
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/resiliency/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.125.5</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Jan 2017 11:24:18 +0000</lastBuildDate>
+    <atom:link href="https://kubamartin.com/tags/resiliency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practical Golang: Building a simple, distributed one-value database with Hashicorp Serf</title>
       <link>https://kubamartin.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</link>
       <pubDate>Sun, 29 Jan 2017 11:24:18 +0000</pubDate>
-      
       <guid>https://kubamartin.com/2017/01/29/practical-golang-building-a-simple-distributed-one-value-database-with-hashicorp-serf/</guid>
       <description>Introduction With the advent of distributed applications, we see new storage solutions emerging constantly.
 They include, but are not limited to, Cassandra, Redis, CockroachDB, Consul or RethinkDB.
@@ -24,6 +25,5 @@ They seem to be really complex systems, because they actually are. This can’t 
 But it’s pretty easy to write a simple, one value database, featuring high availability.
 You probably wouldn’t use anything near this in production, but it should be a fruitful learning experience for you nevertheless.</description>
     </item>
-    
   </channel>
 </rss>

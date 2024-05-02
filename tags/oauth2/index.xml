@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>oauth2 on Jacob Martin</title>
+    <title>Oauth2 on Jacob Martin</title>
     <link>https://kubamartin.com/tags/oauth2/</link>
-    <description>Recent content in oauth2 on Jacob Martin</description>
+    <description>Recent content in Oauth2 on Jacob Martin</description>
     <image>
       <title>Jacob Martin</title>
       <url>https://kubamartin.com/images/avatar.jpg</url>
       <link>https://kubamartin.com/images/avatar.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 29 Feb 2016 14:02:02 +0000</lastBuildDate><atom:link href="https://kubamartin.com/tags/oauth2/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.125.5</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 29 Feb 2016 14:02:02 +0000</lastBuildDate>
+    <atom:link href="https://kubamartin.com/tags/oauth2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with OAuth2 in Go</title>
       <link>https://kubamartin.com/2016/02/29/getting-started-with-oauth2-in-go/</link>
       <pubDate>Mon, 29 Feb 2016 14:02:02 +0000</pubDate>
-      
       <guid>https://kubamartin.com/2016/02/29/getting-started-with-oauth2-in-go/</guid>
       <description>Introduction Authentication is usually a crucial part in any web app. You could always roll your own authentication mechanics if you wanted, however, this creates an additional barrier between the user and your web app: Registration.
 That’s why OAuth, and earlier OAuth2, was created. It makes it much more convenient to log in to your app, because the user can log in with one of the many accounts he already has.</description>
     </item>
-    
   </channel>
 </rss>
