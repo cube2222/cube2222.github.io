@@ -1,5 +1,5 @@
 baseURL: "https://kubamartin.com/"
-title: Jacob Martin
+title: Kuba Martin
 paginate: 5
 theme: PaperMod
 
@@ -17,9 +17,9 @@ minify:
 params:
     showAllPagesInArchive: true
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: Jacob Martin
+    title: Kuba Martin
     keywords: [Blog, Portfolio]
-    author: Jacob Martin
+    author: Kuba Martin
     # author: ["Me", "You"] # multiple authors
     images: ["images/avatar.jpg"]
     DateFormat: "January 2, 2006"
@@ -49,7 +49,7 @@ params:
     #    safari_pinned_tab: "<link / abs url>"
 
     label:
-        text: "Jacob Martin"
+        text: "Kuba Martin"
 
     # home-info mode
     homeInfoParams:
