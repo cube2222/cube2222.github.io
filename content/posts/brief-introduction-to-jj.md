@@ -2,7 +2,7 @@
 title: 'Introduction to the Jujutsu VCS'
 author: Kuba Martin
 type: posts
-date: 2025-01-28T17:19:19+00:00
+date: 2025-01-29T18:19:19+01:00
 tags:
   - vcs
   - jj
@@ -52,7 +52,11 @@ Let's see a sample of a `jj log` invocation:
 </pre>
 {{< /rawhtml >}}
 
-(quicktip: you can use [aha](https://github.com/theZiz/aha) to convert colorized shell output to html)
+{{< rawhtml >}}
+<div style="font-size: 0.9em; color: #666; margin-top: -10px; margin-bottom: 15px; font-style: italic;">
+Quick tip: you can use <a href="https://github.com/theZiz/aha" style="color: #0366d6;">aha</a> to convert colorized shell output to HTML. Also, I'm sorry, it's unreadable in light mode.
+</div>
+{{< /rawhtml >}}
 
 The IDs on the left side are change IDs, while on the right size you have revisions (commit SHAs). Unique prefixes of those IDs are marked in color, and you can use those prefixes instead of the full form when referring to changes. A change can be reffered to in jj commands by its ID, the underlying commit SHA, or any bookmark referring to it.
 
@@ -66,7 +70,20 @@ This much said, here's a quick demo of changing a file as part of a new change.
 
 `jj` on its own is an alias for `jj log`.
 
-Additionally, most jj commands default to operating on the current working change, but let you operate on an arbitrary change (or set of changes!) via the `--revision / -r` flag.
+{{< rawhtml >}}
+<div class="info-box">
+    <div class="info-box-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+    </div>
+    <div class="info-box-content">
+        Most jj commands default to operating on the current working change, but let you operate on an arbitrary change (or set of changes!) via the <code>--revision / -r</code> flag.
+    </div>
+</div>
+{{< /rawhtml >}}
 
 ## Pattern: git stash
 
@@ -76,7 +93,20 @@ In jj, I can just `jj new @-`, which will start a new change from the parent of 
 
 <demo>
 
-<info box> the `-` after the `@` means "go one level up". It's basically "take the working copy change, and go to its parent". We'll come back to this briefly later, but suffice it to say that there's a whole sensible expression language here, and `@--` is similarly valid to refer to your grandparent change.
+{{< rawhtml >}}
+<div class="info-box">
+    <div class="info-box-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+    </div>
+    <div class="info-box-content">
+        The <code>-</code> after the <code>@</code> means "go one level up". It's basically "take the working copy change, and go to its parent". We'll come back to this briefly later, but suffice it to say that there's a whole sensible expression language here, and <code>@--</code> is similarly valid to refer to your grandparent change.
+    </div>
+</div>
+{{< /rawhtml >}}
 
 ## Editing Changes in Weird Places
 
