@@ -10,7 +10,7 @@ tags:
 
 [Jujutsu](https://github.com/jj-vcs/jj) (jj), a new VCS, has popped up on my radar a few times over the past year. Looked interesting based on a cursory look, but being actually pretty satisfied with Git, and not having major problems with it, I haven't checked it out.
 
-That is, until a couple days ago, when I finally decided to give it a go! I dived into a couple blog posts for a few of hours, and surprisingly (noting that we're talking about a VCS) I found myself consistenly smiling, seeing the consistent design, and overall simplicity it managed to achieve. This post is meant to give you a feel for what's special about jj, and also describe a few patterns that have been working well for me, and which really are the reason I'm enjoying it.
+That is, until a couple days ago, when I finally decided to give it a go! I dived into a couple blog posts for a few of hours, and surprisingly (noting that we're talking about a VCS) I found myself enjoying it a lot, seeing the consistent design, and overall simplicity it managed to achieve. This post is meant to give you a feel for what's special about jj, and also describe a few patterns that have been working well for me, and which really are the reason I'm enjoying it.
 
 Before we dive in, one last thing you should take note of, is that most people use jj with its Git backend. You can use jj with your existing Git repos and reap its benefits in a way that is completely transparent to others you're collaborating with. Effectively, you can treat it like a Git frontend.
 
@@ -31,7 +31,7 @@ Changes in jj *can* be marked with bookmarks (what jj calls branches), but you'd
 Let's see a sample of a `jj log` invocation:
 
 {{< rawhtml >}}
-<pre style="font-size:14px;background-color:rgb(18, 19, 20);border-radius:6px;padding:12px;">
+<pre style="font-size:14px;background-color:rgb(18, 19, 20);color:rgb(196,196,197);border-radius:6px;padding:12px;">
 <span style="font-weight:bold;"></span><span style="font-weight:bold;color:green;">@</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:purple;">w</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">twtpovp</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;color:olive;">me@kubamartin.com</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">2025-01-29 23:46:57</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:blue;">6</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">dae3649</span><span style="font-weight:bold;"></span>
 │  <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:green;">(empty)</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:green;">(no description set)</span><span style="font-weight:bold;"></span>
 <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">◆</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">n</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">zvlmkly</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-29 23:33:23</span> <span style="color:purple;">main</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">e</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">04f25b9</span>
@@ -54,7 +54,7 @@ Let's see a sample of a `jj log` invocation:
 
 {{< rawhtml >}}
 <div style="font-size: 0.9em; color: #666; margin-top: -10px; margin-bottom: 15px; font-style: italic;">
-Quick tip: you can use <a href="https://github.com/theZiz/aha" style="color: #0366d6;">aha</a> to convert colorized shell output to HTML. Also, I'm sorry, it's unreadable in light mode.
+Quick tip: you can use <a href="https://github.com/theZiz/aha" style="color: #0366d6;">aha</a> to convert colorized shell output to HTML.
 </div>
 {{< /rawhtml >}}
 
@@ -116,7 +116,9 @@ You can pass `-A` and `-B` to `jj new` to indicate that you want to squish a new
 
 With this, when I notice a mistake in a change 3 levels back, I can just `jj edit <that-change-id>` (with my working copy remaining there for me to come back to), make a fix, which will auto-rebase all following changes (including my previous working change), and then `jj edit` to go back to my original working change.
 
-<insert demo>
+{{<rawhtml>}}
+<script src="https://asciinema.org/a/sGxxrDzQJPVbsgraq1HiYbj1j.js" id="asciicast-sGxxrDzQJPVbsgraq1HiYbj1j" async="true"></script>
+{{</rawhtml>}}
 
 Occasionally you also need to rebase (move) a set of changes onto some change x, you can do that by using `jj rebase -s <change-id-to-rebase> -d <destination-change>`. The `-s` will bring all descendants along with the rebased change. There are other variations of this command for different scenarios.
 
@@ -132,13 +134,37 @@ When you add changes on top of a change that a bookmark is attached to, the book
 
 ## Pattern: Stacked PRs
 
-A common use case with services like GitHub is to split up a big change into multiple PRs, let's say Multipart 1, Multipart 2 and Multipart 3 (from branches multipart-1, multipart-2, and multipart-3 respectively). Each of them is based on the previous one, so you effectively have the following linear graph, with bookmark pointers on the way:
+A common use case with services like GitHub is to split up a big change into multiple PRs, let's say Multipart 1, Multipart 2 and Multipart 3 (from branches multipart-1, multipart-2, and multipart-3 respectively). Each of them is based on the previous one, so you effectively have the following graph, with bookmark pointers on the way:
 
-<insert jj log output>
+{{<rawhtml>}}
+<pre style="font-size:14px;background-color:rgb(18, 19, 20);color:rgb(196,196,197);border-radius:6px;padding:12px;">
+<span style="font-weight:bold;"></span><span style="font-weight:bold;color:green;">@</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:purple;">vq</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">noywln</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;color:olive;">me@kubamartin.com</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">2025-01-30 18:57:23</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:blue;">50</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">e48038</span><span style="font-weight:bold;"></span>
+│  <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:green;">(empty)</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:green;">(no description set)</span><span style="font-weight:bold;"></span>
+<span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">◆</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">sz</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">myonyt</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:47:38</span> <span style="color:purple;">main</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">a7</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">9e03bf</span>
+│  another change on main
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">y</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">otmyvom</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:57:16</span> <span style="color:purple;">multipart-3</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">58</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">11d6f6</span>
+│ │  add 'hhhh'
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">z</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">zxlmyqq</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:57:16</span> <span style="color:purple;">multipart-2</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">4</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">ca0376a</span>
+│ │  add 'gggg'
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">sk</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">noxoxv</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:57:16</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">7</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">9356f49</span>
+│ │  add 'eeee' and 'ffff'
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">vt</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">rtywkl</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:51:08</span> <span style="color:purple;">multipart-1</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">5e</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">dec115</span>
+│ │  add 'cccc' and 'dddd' (broken)
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">ss</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">vuqlmr</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:27:29</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">a5</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">9123a7</span>
+├─╯  add 'aaaa' and 'bbbb'
+<span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">◆</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">n</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">nlnvpml</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 18:27:03</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">d</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">ee7ba99</span>
+│  initial
+~
+</pre>
+{{</rawhtml>}}
 
 Now let's say Multipart 1 got reviewed and I need to fix something. In Git, once I add a commit to it (or modify an existing one), I would have to manually rebase all the other branches. Annoying!
 
-How does jj help me here? I can just run `jj edit <buggy-change-id>` (TODO: insert correct change id), or `jj new -A <buggy-change-id>` (TODO: insert correct change id), make the fix, and run `jj git push -b "glob:multipart-*"`. Everything will be automatically rebased, and all the bookmarks will be updated and pushed. Effortless!
+How does jj help me here? I can just run `jj edit vt` (`vt` is a unique prefix of the broken change id), or `jj new -A vt`, make the fix, and run `jj git push -b "glob:multipart-*"`. Everything will be automatically rebased, and all the bookmarks will be updated and pushed. Effortless!
+
+{{<rawhtml>}}
+<script src="https://asciinema.org/a/UcUKhLlIyiAaE6iRXu4OdL1E7.js" id="asciicast-UcUKhLlIyiAaE6iRXu4OdL1E7" async="true"></script>
+{{</rawhtml>}}
 
 ## Conflicts
 
@@ -202,3 +228,5 @@ If you'd like to do some more readings about jj, I've used the below articles an
 - https://neugierig.org/software/blog/2024/12/jujutsu.html
 - https://tonyfinn.com/blog/jj/
 - https://v5.chriskrycho.com/journal/jujutsu-megamerges-and-jj-absorb/
+
+Finally, I of course recommend just reading the docs: https://jj-vcs.github.io/jj/latest/
