@@ -92,8 +92,6 @@ This whole thing about the working copy being a Change may sound weird, but it b
 
 In jj, I can just `jj new @-`, which will start a new change from the parent of my current working copy - leaving my working copy as a normal change, with all its file modifications "committed", so I can later come back to it via `jj edit`.
 
-<demo>
-
 {{< rawhtml >}}
 <div class="info-box">
     <div class="info-box-icon">
@@ -231,11 +229,26 @@ I've mentioned stacked PRs, but another situation you might have is working on t
 
 In order to have both things simultaneosuly active in your codebase, you can create a development change via `jj new thing-1 thing-2 -m "dev"`, that will be a merge between both of them, but will stay local and you'll never push it (`-m` just lets you give a description to a change when creating it, without a separate `jj describe` invocation). You will however `jj edit` this development change to do your work.
 
-<insert picture of jj log with the above workflow with multiple files>
+{{<rawhtml>}}
+<pre class="terminal-snippet">
+<span style="font-weight:bold;"></span><span style="font-weight:bold;color:green;">@</span>    <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:purple;">zv</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">tqnnxv</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;color:olive;">me@kubamartin.com</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">2025-01-30 22:42:29</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:blue;">5</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">28d6811</span><span style="font-weight:bold;"></span>
+├─╮  <span style="font-weight:bold;">dev</span>
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">zm</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">smpynx</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 22:36:26</span> <span style="color:purple;">thing-2</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">2</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">55cea26</span>
+│ │  changes to file2
+○ │  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">v</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">nxwrykm</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 22:35:43</span> <span style="color:purple;">thing-1</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">d</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">bcec585</span>
+├─╯  changes to file1
+○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">p</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">uxnvzsm</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 22:34:43</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">0b</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">98fe5b</span>
+│  initial
+<span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">◆</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">zz</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">zzzzzz</span> <span style="color:green;">root()</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">00</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">000000</span>
+</pre>
+{{</rawhtml>}}
 
 Then, whenever you want to move some modifications into one of the branches, you can use `jj squash --into <target-change-id> <files>` to move all modifications to a set of files down into one of the branches. There's also `--interactive` where you can use a diff tool to choose modifications to squash into another change, and finally there's a [newer `jj absorb` command](https://jj-vcs.github.io/jj/latest/cli-reference/#jj-absorb) which can automate this process in certain scenarios.
 
-<insert demo of the above>
+{{<rawhtml>}}
+<script src="https://asciinema.org/a/VAW2jZSzY3Z5qKYvhvBNLfjEf.js" id="asciicast-VAW2jZSzY3Z5qKYvhvBNLfjEf" async="true"></script>
+<div class="asciinema-caption">Editing files in a merged dev-change and<br> selectively squashing the changes into branches</div>
+{{</rawhtml>}}
 
 In conclusion, you can keep working in a local-only merge-change of your branches, and selectively push down any modifications to the relevant branch (This setup would've seemed pretty scary before jj, right? I hope it's a bit less scary now.), and then push just those branches themselves.
 
