@@ -75,3 +75,12 @@
 .terminal-snippet span[style*="color:dimgray"] {
     color: #808080 !important;
 }
+
+.asciinema-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -50px;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-align: center;
+}

@@ -2,7 +2,7 @@
 title: 'Introduction to the Jujutsu VCS'
 author: Kuba Martin
 type: posts
-date: 2025-01-29T18:19:19+01:00
+date: 2025-01-30T20:19:19+01:00
 tags:
   - vcs
   - jj
@@ -66,6 +66,7 @@ This much said, here's a quick demo of changing a file as part of a new change.
 
 {{< rawhtml >}}
 <script src="https://asciinema.org/a/XpE2I2f0bYp7EYudt1hH9lWlN.js" id="asciicast-XpE2I2f0bYp7EYudt1hH9lWlN" async="true"></script>
+<div class="asciinema-caption">Editing a file in a jj repo</div>
 {{< /rawhtml >}}
 
 `jj` on its own is an alias for `jj log`.
@@ -118,6 +119,7 @@ With this, when I notice a mistake in a change 3 levels back, I can just `jj edi
 
 {{<rawhtml>}}
 <script src="https://asciinema.org/a/sGxxrDzQJPVbsgraq1HiYbj1j.js" id="asciicast-sGxxrDzQJPVbsgraq1HiYbj1j" async="true"></script>
+<div class="asciinema-caption">Editing previous changes with automatic rebase</div>
 {{</rawhtml>}}
 
 Occasionally you also need to rebase (move) a set of changes onto some change x, you can do that by using `jj rebase -s <change-id-to-rebase> -d <destination-change>`. The `-s` will bring all descendants along with the rebased change. There are other variations of this command for different scenarios.
@@ -164,6 +166,7 @@ How does jj help me here? I can just run `jj edit vt` (`vt` is a unique prefix o
 
 {{<rawhtml>}}
 <script src="https://asciinema.org/a/UcUKhLlIyiAaE6iRXu4OdL1E7.js" id="asciicast-UcUKhLlIyiAaE6iRXu4OdL1E7" async="true"></script>
+<div class="asciinema-caption">Making fixes in stacked PRs</div>
 {{</rawhtml>}}
 
 ## Merges
@@ -219,6 +222,7 @@ Once you fix the conflict in a change, all descendants of this change will also 
 
 {{<rawhtml>}}
 <script src="https://asciinema.org/a/xwJxb5ue1pRJt6Iw1JZZhAHyN.js" id="asciicast-xwJxb5ue1pRJt6Iw1JZZhAHyN" async="true"></script>
+<div class="asciinema-caption">Merge conflict resolution</div>
 {{</rawhtml>}}
 
 ## Pattern: Working on Two Things at the Same Time
@@ -251,7 +255,10 @@ Another kind of stash I occasionally like to do is partial, where I temporarily 
 
 In jj the split command works well for this. Just `jj split --parallel modifiedFile.txt` will move the file into a parallel change. You can do whatever you want to do, and later run `jj squash --from parallel_change_id` to get the file modifications back into the current change.
 
-<demo with a Go function returning 42, a test checking that it's in fact 42, and an original state of the repo where the function is returning 41>
+{{<rawhtml>}}
+<script src="https://asciinema.org/a/SYe9MBwShu7uWuZJb2vJDffrk.js" id="asciicast-SYe9MBwShu7uWuZJb2vJDffrk" async="true"></script>
+<div class="asciinema-caption">Partial stash using <code>jj split --parallel</code></div>
+{{</rawhtml>}}
 
 ## Setting Up jj with an Existing Git Repo
 
