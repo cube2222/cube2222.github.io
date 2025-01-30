@@ -1,6 +1,6 @@
 ---
 title: 'How I Used DALL·E 2 to Generate The Logo for OctoSQL'
-author: Jacob Martin
+author: Kuba Martin
 type: posts
 date: 2022-08-02T13:19:19+00:00
 categories:
@@ -22,6 +22,7 @@ In practice, you'll see that the process looks a bit like the Westworld depictio
 
 **So TLDR, here's the logo I finally ended up with:**
 {{< rawhtml >}}
+
 <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;flex-wrap: wrap;">
     <figure style="display:inline-block;width: 30%;height: auto;padding: 4px;border-radius: 10px;">
         <img src="/images/dalle2/logo.jpg"></img>
@@ -217,7 +218,7 @@ Those do have their charm! Let's try to edit them and add some stuff into their 
 </div>
 {{< /rawhtml >}}
 
-Each time I've marked a part of the image to be replaced and let Dall-e do its thing. 
+Each time I've marked a part of the image to be replaced and let Dall-e do its thing.
 
 Those were fine, but I decided to do another try without the bells and whistles, but with the "logo" tag.
 

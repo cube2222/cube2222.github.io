@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+.post-content, .post-title, .post-meta {
+    font-family: "Open Sans";
+}
+
+.post-content {
+    text-align: justify;
+}
+
+.info-box {
+    background-color: #1e2a47;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 20px 0;
+    display: flex;
+    color: #e1e7f5;
+    font-size: 15px;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.info-box-icon {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.info-box-icon svg {
+    stroke: #64B5F6;
+    stroke-width: 2;
+    fill: none;
+}
+
+.info-box-content {
+    flex: 1;
+}
+
+.info-box code {
+    background-color: rgba(100,181,246,0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #64B5F6;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.terminal-snippet {
+    font-size:14px;
+    background-color:rgb(18, 19, 20);
+    color:rgb(196,196,197);
+    border-radius:6px;
+    padding:12px;
+    overflow-x: auto;
+}
+
+.terminal-snippet span[style*="color:green"] {
+    color: #00ff00 !important;
+}
+
+.terminal-snippet span[style*="color:purple"] {
+    color: #ff00ff !important;
+}
+
+.terminal-snippet span[style*="color:olive"] {
+    color: #ffa348 !important;
+}
+
+.terminal-snippet span[style*="color:teal"] {
+    color: #00ffff !important;
+}
+
+.terminal-snippet span[style*="color:blue"] {
+    color: #3b8eea !important;
+}
+
+.terminal-snippet span[style*="color:dimgray"] {
+    color: #808080 !important;
+}
+
+.asciinema-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -50px;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .asciinema-caption {
+        margin-top: -30px;
+    }
+}
+
+code {
+    white-space: nowrap;
+}

@@ -1,5 +1,5 @@
 baseURL: "https://kubamartin.com/"
-title: Jacob Martin
+title: Kuba Martin
 paginate: 5
 theme: PaperMod
 
@@ -17,9 +17,9 @@ minify:
 params:
     showAllPagesInArchive: true
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: Jacob Martin
+    title: Kuba Martin
     keywords: [Blog, Portfolio]
-    author: Jacob Martin
+    author: Kuba Martin
     # author: ["Me", "You"] # multiple authors
     images: ["images/avatar.jpg"]
     DateFormat: "January 2, 2006"
@@ -49,21 +49,23 @@ params:
     #    safari_pinned_tab: "<link / abs url>"
 
     label:
-        text: "Jacob Martin"
+        text: "Kuba Martin"
 
     # home-info mode
     homeInfoParams:
         Title: "Hey there! \U0001F44B"
         Content: |
-          I'm Kuba (short for Jacob), a Software Engineer with experience working in high scale distributed systems environments.
+          I'm Kuba (short for Jacob), a Software Engineer with experience in high scale distributed systems architecture, development and reliability engineering, designing systems with high availability and high throughput.
 
-          I've got a practical mindset of shipping, and building projects in as simple a way - but not simpler - as possible.
+          Interested in Cloud Native tooling with a practical mindset of shipping, and building projects in as simple a way - but not simpler - as possible.
 
-          I've got experience with most of the widely used programming paradigms, and fancy trying out new ones, though so far I'm mostly finding myself using Go professionaly.
+          I've got experienced with most of the widely used programming paradigms, and fancy trying out new ones, though recently I'm mostly finding myself using Go.
 
           On the side I develop [OctoSQL](https://github.com/cube2222/octosql), a SQL execution engine as CLI which lets you query multiple datasources and files simultaneously using SQL.
 
           At some point I've also created [jql](https://github.com/cube2222/jql), which is meant to be a simpler and more uniform (lispy) alternative to jq. It may seem dead on first glance, but it's simply finished. I'm using it daily.
+
+          Finally, I've been part of the founding team of [OpenTofu](https://opentofu.org), and its technical lead for almost the first year of its existence.
 
     socialIcons:
         - name: github
