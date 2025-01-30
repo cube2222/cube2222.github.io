@@ -2,7 +2,7 @@
 title: 'Introduction to the Jujutsu VCS'
 author: Kuba Martin
 type: posts
-date: 2025-01-31T01:00:01+01:00
+date: 2025-01-31T00:00:01+01:00
 tags:
   - vcs
   - jj
