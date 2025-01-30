@@ -43,3 +43,35 @@
     font-family: monospace;
     font-size: 14px;
 }
+
+.terminal-snippet {
+    font-size:14px;
+    background-color:rgb(18, 19, 20);
+    color:rgb(196,196,197);
+    border-radius:6px;
+    padding:12px;
+}
+
+.terminal-snippet span[style*="color:green"] {
+    color: #00ff00 !important;
+}
+
+.terminal-snippet span[style*="color:purple"] {
+    color: #ff00ff !important;
+}
+
+.terminal-snippet span[style*="color:olive"] {
+    color: #ffa348 !important;
+}
+
+.terminal-snippet span[style*="color:teal"] {
+    color: #00ffff !important;
+}
+
+.terminal-snippet span[style*="color:blue"] {
+    color: #3b8eea !important;
+}
+
+.terminal-snippet span[style*="color:dimgray"] {
+    color: #808080 !important;
+}
