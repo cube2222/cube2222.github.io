@@ -166,25 +166,60 @@ How does jj help me here? I can just run `jj edit vt` (`vt` is a unique prefix o
 <script src="https://asciinema.org/a/UcUKhLlIyiAaE6iRXu4OdL1E7.js" id="asciicast-UcUKhLlIyiAaE6iRXu4OdL1E7" async="true"></script>
 {{</rawhtml>}}
 
+## Merges
+
+Merges in jj are pretty boring - in a good way. You just create a change with multiple parents. E.g. `jj new x y z` will create a change with three parents.
+
 ## Conflicts
 
 One topic I haven't mentioned yet, and is surely by now giving you an unsettling feeling deep inside about all I've said before, are conflicts. With all this rebasing, that's **got** to become a pain, right? Well, it doesn't!
 
 As opposed to Git, where conflicts kind of break your workflow, in the sense that you have to resolve them prior to doing anything else, jj handles conflicts in a first-class manner. A change can just "be conflicted". You can switch away from a conflicted change, you can create a new change on top of an existing conflicted change (and that will in turn also start out conflicted), you can edit a conflicted change, you can do anything. `jj status` and `jj log` will mention the conflict, but it won't block you.
 
-<insert jj status and jj log conflict infos>
+{{<rawhtml>}}
+<pre class="terminal-snippet">
+<span style="color:green;">~&gt;</span> <span style="color:#005fd7;">jj</span><span style="color:dimgray;"></span> <span style="color:#00afff;">log</span>
+<span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:red;">@</span>    <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:purple;">u</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">uxrrmuw</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;color:olive;">me@kubamartin.com</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">2025-01-30 19:54:21</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:blue;">d</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">7f2700a</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:red;">conflict</span><span style="font-weight:bold;"></span>
+├─╮  <span style="font-weight:bold;">merge</span>
+│ ○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">q</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">lrwtlny</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 19:44:09</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">c</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">ae28ccf</span>
+│ │  add 'cccc'
+○ │  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">r</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">qtrswmw</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 19:43:59</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">5</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">6d6ab4a</span>
+├─╯  add 'bbbb'
+○  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">k</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">nklsqnp</span> <span style="color:olive;">me@kubamartin.com</span> <span style="color:teal;">2025-01-30 19:43:59</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">1</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">0b01706</span>
+│  add 'aaaa'
+<span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:teal;">◆</span>  <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">z</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">zzzzzzz</span> <span style="color:green;">root()</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">0</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">0000000</span>
+<span style="color:green;">~&gt;</span> <span style="color:#005fd7;">jj</span><span style="color:dimgray;"></span> <span style="color:#00afff;">status</span>
+Working copy changes:
+<span style="color:green;">A typescript</span>
+<span style="color:red;">There are unresolved conflicts at these paths:</span>
+file.txt    <span style="color:olive;">2-sided conflict</span>
+Working copy : <span style="font-weight:bold;"></span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:purple;">u</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">uxrrmuw</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:blue;">d</span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:dimgray;">7f2700a</span><span style="font-weight:bold;"> </span><span style="font-weight:bold;filter: contrast(70%) brightness(190%);color:red;">(conflict)</span><span style="font-weight:bold;"> merge</span>
+Parent commit: <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">r</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">qtrswmw</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">5</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">6d6ab4a</span> add 'bbbb'
+Parent commit: <span style="font-weight:bold;"></span><span style="font-weight:bold;color:purple;">q</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">lrwtlny</span> <span style="font-weight:bold;"></span><span style="font-weight:bold;color:blue;">c</span><span style="filter: contrast(70%) brightness(190%);color:dimgray;">ae28ccf</span> add 'cccc'
+</pre>
+{{</rawhtml>}}
 
 The conflict will be represented via conflict markers in the code:
 
-<insert example code snippet>
+{{<rawhtml>}}
+<pre class="terminal-snippet">
+aaaa
+<<<<<<< Conflict 1 of 1
+%%%%%%% Changes from base to side #1
++bbbb
++++++++ Contents of side #2
+cccc
+>>>>>>> Conflict 1 of 1 ends
+</pre>
+{{</rawhtml>}}
 
 and you can either manually resolve this conflict by editing the code itself, or use `jj resolve` to bring up your favorite three-way-merge tool (e.g. I've configured my jj to bring up a visual conflict resolver in Goland).
 
 Once you fix the conflict in a change, all descendants of this change will also cease being conflicted. You could leave a change conflicted and only resolve the conflict in a follow-up child change - that is a completely valid and supported approach.
 
-## Merges
-
-Merges in jj are pretty boring - in a good way. You just create a change with multiple parents. E.g. `jj new x y z` will create a change with three parents. If there are any conflicts, you can resolve them as described above, either in the merge change itself, or in a follow-up change.
+{{<rawhtml>}}
+<script src="https://asciinema.org/a/xwJxb5ue1pRJt6Iw1JZZhAHyN.js" id="asciicast-xwJxb5ue1pRJt6Iw1JZZhAHyN" async="true"></script>
+{{</rawhtml>}}
 
 ## Pattern: Working on Two Things at the Same Time
 
@@ -217,6 +252,12 @@ Another kind of stash I occasionally like to do is partial, where I temporarily 
 In jj the split command works well for this. Just `jj split --parallel modifiedFile.txt` will move the file into a parallel change. You can do whatever you want to do, and later run `jj squash --from parallel_change_id` to get the file modifications back into the current change.
 
 <demo with a Go function returning 42, a test checking that it's in fact 42, and an original state of the repo where the function is returning 41>
+
+## Setting Up jj with an Existing Git Repo
+
+It's trivial to start using jj with an existing git repo, though I'd advise cloning it fresh into a new directory.
+
+In a directory where you already have a git repo, you can just run `jj git init --colocate`. Your `.git` directory will stay in place, and jj will keep it updated, so e.g. your editor won't be confused what's happening. It integrates fairly well, with e.g. the working change - even though it's backed by a commit - being presented as the git index, so your editor can still show files "modified in this change".
 
 ## Conclusion
 
