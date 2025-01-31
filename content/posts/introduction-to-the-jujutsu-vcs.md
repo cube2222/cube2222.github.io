@@ -9,7 +9,7 @@ tags:
   - jj
 ---
 
-[Jujutsu](https://github.com/jj-vcs/jj) (jj), a new version control system, has popped up on my radar a few times over the past year. Looked interesting based on a cursory look, but being actually pretty satisfied with Git, and not having major problems with it, I haven't checked it out.
+[Jujutsu](https://github.com/jj-vcs/jj) (jj), a new version control system written in Rust, has popped up on my radar a few times over the past year. Looked interesting based on a cursory look, but being actually pretty satisfied with Git, and not having major problems with it, I haven't checked it out.
 
 That is, until last week, when I finally decided to give it a go! I dived into a couple blog posts for a few of hours, and surprisingly (noting that we're talking about a VCS) I found myself enjoying it a lot, seeing the consistent design, and overall simplicity it managed to achieve. This post is meant to give you a feel for what's special about jj, and also describe a few patterns that have been working well for me, and which really are the reason I'm enjoying it.
 
