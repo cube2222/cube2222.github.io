@@ -120,7 +120,7 @@ With this, when I notice a mistake in a change 3 levels back, I can just `jj edi
 <div class="asciinema-caption">Editing previous changes with automatic rebase</div>
 {{</rawhtml>}}
 
-Occasionally you also need to rebase (move) a set of changes onto some change x, you can do that by using `jj rebase -s <change-id-to-rebase> -d <destination-change>`. The `-s` will bring all descendants along with the rebased change, and there are other variations of this command for different scenarios.
+Occasionally you also need to rebase (move) a set of changes onto some change x, you can do that by using `jj rebase -s <change-id-to-rebase> -d <destination-change>`. The `-s` will bring all descendants along with the rebased change, and there are other variations of this command for different scenarios. E.g. `jj rebase -b <branch> -d <destination-change>` will rebase the entire given branch onto a change, and with no arguments it just defaults to `-b @`, so the current branch. In other words, to rebase the current branch onto main, it's enough to run `jj rebase -d main`.
 
 ### Pattern: Squishing a Fix Before the Current Change
 
