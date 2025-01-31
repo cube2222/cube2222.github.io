@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to the Jujutsu VCS'
+title: 'Jujutsu VCS Introduction and Patterns'
 author: Kuba Martin
 type: posts
 date: 2025-01-31T00:00:01+01:00
