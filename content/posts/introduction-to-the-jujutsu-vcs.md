@@ -292,6 +292,7 @@ If you'd like to do some more readings about jj, I've used the below articles an
 - https://v5.chriskrycho.com/essays/jj-init
 - https://neugierig.org/software/blog/2024/12/jujutsu.html
 - https://tonyfinn.com/blog/jj/
+- https://steveklabnik.github.io/jujutsu-tutorial/
 - https://v5.chriskrycho.com/journal/jujutsu-megamerges-and-jj-absorb/
 
 Finally, I of course recommend just reading the docs: https://jj-vcs.github.io/jj/latest/
